@@ -193,4 +193,4 @@ Thank you for your understanding and for contributing to the growth and improvem
 
 ---
 
-*For more information, please visit the [project repository](https://github.com/repo/DQMARC)*
+*For more information, please visit the [project repository](https://github.com/christie-nhs-data-science/DQMaRC)*
