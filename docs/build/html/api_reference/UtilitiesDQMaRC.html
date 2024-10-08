@@ -1,0 +1,648 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>UtilitiesDQMaRC &#8212; DQMaRC 1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=15c10f45" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../_static/documentation_options.js?v=a681ed88"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api_reference/UtilitiesDQMaRC';</script>
+    <script src="../_static/js/custom.js?v=d5440534"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Third-Party Licenses" href="../third_party_licenses.html" />
+    <link rel="prev" title="ShinyApp" href="ShinyApp.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">DQMaRC 1.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/welcome_page.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/Backend_Tutorial.html">Backend Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/Frontend_Tutorial.html">Frontend ShinyPy Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/deployment_guide.html">Deployment Guide</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="source.html">Source Documentation</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DataQuality.html">Data Quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Dimension.html">Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Accuracy.html">Accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Completeness.html">Completeness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Consistency.html">Consistency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Timeliness.html">Timeliness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Uniqueness.html">Uniqueness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Validity.html">Validity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ShinyApp.html">ShinyApp</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">UtilitiesDQMaRC</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../third_party_licenses.html">Third-Party Licenses</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/api_reference/UtilitiesDQMaRC.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>UtilitiesDQMaRC</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.overall_quality_fx"><code class="docutils literal notranslate"><span class="pre">overall_quality_fx()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.DonutChartGenerator"><code class="docutils literal notranslate"><span class="pre">DonutChartGenerator</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.DonutChartGenerator.data"><code class="docutils literal notranslate"><span class="pre">DonutChartGenerator.data</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.DonutChartGenerator.plot_donut_charts"><code class="docutils literal notranslate"><span class="pre">DonutChartGenerator.plot_donut_charts()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.BarPlotGenerator"><code class="docutils literal notranslate"><span class="pre">BarPlotGenerator</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.BarPlotGenerator.data"><code class="docutils literal notranslate"><span class="pre">BarPlotGenerator.data</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.BarPlotGenerator.chosen_metric"><code class="docutils literal notranslate"><span class="pre">BarPlotGenerator.chosen_metric</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.BarPlotGenerator.plot_bar"><code class="docutils literal notranslate"><span class="pre">BarPlotGenerator.plot_bar()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.MetricCalculator"><code class="docutils literal notranslate"><span class="pre">MetricCalculator</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.MetricCalculator.data"><code class="docutils literal notranslate"><span class="pre">MetricCalculator.data</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.MetricCalculator.result"><code class="docutils literal notranslate"><span class="pre">MetricCalculator.result</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.MetricCalculator.calculate_metrics"><code class="docutils literal notranslate"><span class="pre">MetricCalculator.calculate_metrics()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.col_bad"><code class="docutils literal notranslate"><span class="pre">col_bad()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.col_good"><code class="docutils literal notranslate"><span class="pre">col_good()</span></code></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-UtilitiesDQMaRC">
+<span id="utilitiesdqmarc"></span><span id="api-utilitiesdqmarc"></span><h1>UtilitiesDQMaRC<a class="headerlink" href="#module-UtilitiesDQMaRC" title="Link to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="UtilitiesDQMaRC.overall_quality_fx">
+<span class="sig-name descname"><span class="pre">overall_quality_fx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avg_prop_good</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UtilitiesDQMaRC.html#overall_quality_fx"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UtilitiesDQMaRC.overall_quality_fx" title="Link to this definition">#</a></dt>
+<dd><p>Determines the overall quality level based on the average proportion of ‘good’ data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>avg_prop_good</strong> (<em>float</em>) – The average proportion (percentage) of ‘good’ quality data across all metrics.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A string representing the overall quality level.
+Possible values are “Outstanding”, “Good”, “Requires Improvement”, or “Inadequate” with corresponding colours for background and text.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="UtilitiesDQMaRC.DonutChartGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DonutChartGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UtilitiesDQMaRC.html#DonutChartGenerator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UtilitiesDQMaRC.DonutChartGenerator" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class for generating donut charts to visualise data quality metrics.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UtilitiesDQMaRC.DonutChartGenerator.data">
+<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#UtilitiesDQMaRC.DonutChartGenerator.data" title="Link to this definition">#</a></dt>
+<dd><p>The data containing quality metrics to be visualised.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="UtilitiesDQMaRC.DonutChartGenerator.plot_donut_charts">
+<span class="sig-name descname"><span class="pre">plot_donut_charts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UtilitiesDQMaRC.html#DonutChartGenerator.plot_donut_charts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UtilitiesDQMaRC.DonutChartGenerator.plot_donut_charts" title="Link to this definition">#</a></dt>
+<dd><p>Generates a subplot of donut charts for each quality metric in the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A Plotly Figure object containing the subplot of donut charts.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objs._figure.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="UtilitiesDQMaRC.BarPlotGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BarPlotGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chosen_metric</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UtilitiesDQMaRC.html#BarPlotGenerator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UtilitiesDQMaRC.BarPlotGenerator" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class for generating bar plots to visualise data quality metrics for a chosen metric.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UtilitiesDQMaRC.BarPlotGenerator.data">
+<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#UtilitiesDQMaRC.BarPlotGenerator.data" title="Link to this definition">#</a></dt>
+<dd><p>The data containing quality metrics to be visualised.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UtilitiesDQMaRC.BarPlotGenerator.chosen_metric">
+<span class="sig-name descname"><span class="pre">chosen_metric</span></span><a class="headerlink" href="#UtilitiesDQMaRC.BarPlotGenerator.chosen_metric" title="Link to this definition">#</a></dt>
+<dd><p>The metric for which to generate the bar plot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="UtilitiesDQMaRC.BarPlotGenerator.plot_bar">
+<span class="sig-name descname"><span class="pre">plot_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UtilitiesDQMaRC.html#BarPlotGenerator.plot_bar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UtilitiesDQMaRC.BarPlotGenerator.plot_bar" title="Link to this definition">#</a></dt>
+<dd><p>Generates a bar plot for the chosen metric.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A Plotly Figure object containing the bar plot.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>plotly.graph_objs._figure.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="UtilitiesDQMaRC.MetricCalculator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MetricCalculator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UtilitiesDQMaRC.html#MetricCalculator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UtilitiesDQMaRC.MetricCalculator" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class designed to calculate and compile data quality metrics from a provided dataset.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UtilitiesDQMaRC.MetricCalculator.data">
+<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#UtilitiesDQMaRC.MetricCalculator.data" title="Link to this definition">#</a></dt>
+<dd><p>The input dataset containing various quality metrics and fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="UtilitiesDQMaRC.MetricCalculator.result">
+<span class="sig-name descname"><span class="pre">result</span></span><a class="headerlink" href="#UtilitiesDQMaRC.MetricCalculator.result" title="Link to this definition">#</a></dt>
+<dd><p>A DataFrame initialised to store the calculated metrics, including counts and proportions of good, bad, and N/A data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="UtilitiesDQMaRC.MetricCalculator.calculate_metrics">
+<span class="sig-name descname"><span class="pre">calculate_metrics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UtilitiesDQMaRC.html#MetricCalculator.calculate_metrics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UtilitiesDQMaRC.MetricCalculator.calculate_metrics" title="Link to this definition">#</a></dt>
+<dd><p>Calculates aggregate metrics for each field and metric combination present in the input data, updating the <cite>result</cite> attribute.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="UtilitiesDQMaRC.col_bad">
+<span class="sig-name descname"><span class="pre">col_bad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UtilitiesDQMaRC.html#col_bad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UtilitiesDQMaRC.col_bad" title="Link to this definition">#</a></dt>
+<dd><p>Assigns a color code to a data quality metric indicating a “bad” quality status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>row</strong> (<em>pandas.Series</em>) – A row from a DataFrame, expected to contain a ‘Metric’ column specifying the data quality metric.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A hexadecimal color code associated with the “bad” quality status of the specified metric.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The function maps different data quality metrics to specific color codes, enhancing visual distinction in graphical representations.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="UtilitiesDQMaRC.col_good">
+<span class="sig-name descname"><span class="pre">col_good</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/UtilitiesDQMaRC.html#col_good"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#UtilitiesDQMaRC.col_good" title="Link to this definition">#</a></dt>
+<dd><p>Assigns a color code to a data quality metric indicating a “good” quality status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>row</strong> (<em>pandas.Series</em>) – A row from a DataFrame, expected to contain a ‘Metric’ column specifying the data quality metric.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A hexadecimal color code associated with the “good” quality status of the specified metric.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Similar to <cite>col_bad</cite>, this function provides a way to visually differentiate between various data quality metrics in graphical representations by mapping them to specific color codes for “good” quality status.</p>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ShinyApp.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">ShinyApp</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../third_party_licenses.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Third-Party Licenses</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.overall_quality_fx"><code class="docutils literal notranslate"><span class="pre">overall_quality_fx()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.DonutChartGenerator"><code class="docutils literal notranslate"><span class="pre">DonutChartGenerator</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.DonutChartGenerator.data"><code class="docutils literal notranslate"><span class="pre">DonutChartGenerator.data</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.DonutChartGenerator.plot_donut_charts"><code class="docutils literal notranslate"><span class="pre">DonutChartGenerator.plot_donut_charts()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.BarPlotGenerator"><code class="docutils literal notranslate"><span class="pre">BarPlotGenerator</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.BarPlotGenerator.data"><code class="docutils literal notranslate"><span class="pre">BarPlotGenerator.data</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.BarPlotGenerator.chosen_metric"><code class="docutils literal notranslate"><span class="pre">BarPlotGenerator.chosen_metric</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.BarPlotGenerator.plot_bar"><code class="docutils literal notranslate"><span class="pre">BarPlotGenerator.plot_bar()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.MetricCalculator"><code class="docutils literal notranslate"><span class="pre">MetricCalculator</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.MetricCalculator.data"><code class="docutils literal notranslate"><span class="pre">MetricCalculator.data</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.MetricCalculator.result"><code class="docutils literal notranslate"><span class="pre">MetricCalculator.result</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.MetricCalculator.calculate_metrics"><code class="docutils literal notranslate"><span class="pre">MetricCalculator.calculate_metrics()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.col_bad"><code class="docutils literal notranslate"><span class="pre">col_bad()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#UtilitiesDQMaRC.col_good"><code class="docutils literal notranslate"><span class="pre">col_good()</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Anthony Lighterness and Michael Adcock
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Anthony Lighterness and Michael Adcock.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

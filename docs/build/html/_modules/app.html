@@ -1,0 +1,1043 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>app &#8212; DQMaRC 1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=15c10f45" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../_static/documentation_options.js?v=a681ed88"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="../_static/tabs.js?v=3030b3cb"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/app';</script>
+    <script src="../_static/js/custom.js?v=d5440534"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">DQMaRC 1.0 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/welcome_page.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/Backend_Tutorial.html">Backend Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/Frontend_Tutorial.html">Frontend ShinyPy Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/deployment_guide.html">Deployment Guide</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api_reference/source.html">Source Documentation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/DataQuality.html">Data Quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Dimension.html">Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Accuracy.html">Accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Completeness.html">Completeness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Consistency.html">Consistency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Timeliness.html">Timeliness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Uniqueness.html">Uniqueness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Validity.html">Validity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/ShinyApp.html">ShinyApp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/UtilitiesDQMaRC.html">UtilitiesDQMaRC</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../third_party_licenses.html">Third-Party Licenses</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for app</h1><div class="highlight"><pre>
+<span></span><span class="c1"># ================</span>
+<span class="c1"># === Packages ===</span>
+<span class="c1"># ================</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># === shiny packages === </span>
+<span class="kn">from</span> <span class="nn">shiny</span> <span class="kn">import</span> <span class="n">App</span><span class="p">,</span> <span class="n">reactive</span><span class="p">,</span> <span class="n">render</span><span class="p">,</span> <span class="n">ui</span>
+<span class="kn">from</span> <span class="nn">shiny.types</span> <span class="kn">import</span> <span class="n">FileInfo</span>
+<span class="kn">from</span> <span class="nn">shiny</span> <span class="kn">import</span> <span class="n">reactive</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="kn">from</span> <span class="nn">shinywidgets</span> <span class="kn">import</span> <span class="n">output_widget</span><span class="p">,</span> <span class="n">render_widget</span><span class="p">,</span> <span class="n">register_widget</span>
+
+<span class="c1"># Conditional import of shinywidgets</span>
+<span class="k">if</span> <span class="s1">&#39;shiny&#39;</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">ipydatagrid</span> <span class="kn">import</span> <span class="n">DataGrid</span><span class="p">,</span> <span class="n">TextRenderer</span>
+    <span class="kn">from</span> <span class="nn">shinywidgets</span> <span class="kn">import</span> <span class="n">output_widget</span><span class="p">,</span> <span class="n">render_widget</span><span class="p">,</span> <span class="n">register_widget</span>
+
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="c1"># === custom modules ===</span>
+<span class="kn">from</span> <span class="nn">DQMaRC</span> <span class="kn">import</span> <span class="n">DataQuality</span>
+<span class="kn">from</span> <span class="nn">DQMaRC.UtilitiesDQMaRC</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">MetricCalculator</span><span class="p">,</span> 
+    <span class="n">BarPlotGenerator</span><span class="p">,</span> 
+    <span class="n">DonutChartGenerator</span><span class="p">,</span> 
+    <span class="n">overall_quality_fx</span><span class="p">,</span> <span class="n">col_good</span><span class="p">,</span> <span class="n">col_bad</span><span class="p">,</span>
+    <span class="n">about_text</span><span class="p">,</span> <span class="n">key_features_text</span><span class="p">,</span> <span class="n">get_started_text</span><span class="p">,</span> 
+    <span class="n">error_input_df_text</span>
+<span class="p">)</span>
+
+
+<span class="c1"># ==================================================================</span>
+<span class="c1"># =============================== UI ===============================</span>
+<span class="c1"># ==================================================================</span>
+
+<span class="n">app_ui</span> <span class="o">=</span> <span class="n">ui</span><span class="o">.</span><span class="n">page_fillable</span><span class="p">(</span>
+        <span class="n">ui</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">head</span><span class="p">(</span>
+            <span class="c1"># Custom CSS rules</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">style</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                .btn.action-button {</span>
+<span class="s2">                    background-color: #a6cee3 !important; /* Light blue background */</span>
+<span class="s2">                    color: #252525 !important; /* White text color */</span>
+<span class="s2">                }</span>
+<span class="s2">                .btn-file {</span>
+<span class="s2">                    background-color: #a6cee3 !important; /* Light blue background */</span>
+<span class="s2">                    color: #252525 !important; /* White text color */</span>
+<span class="s2">                }</span>
+<span class="s2">                /* Additional styles for hover effect */</span>
+<span class="s2">                .btn-file:hover {</span>
+<span class="s2">                    background-color: #95c8d8 !important; /* Slightly darker light blue on hover */</span>
+<span class="s2">                }</span>
+<span class="s2">                .shiny-download-link, .btn-default.shiny-download-link {</span>
+<span class="s2">                    background-color: #a6cee3 !important; /* Light blue background */</span>
+<span class="s2">                    color: #252525 !important; /* White text color */</span>
+<span class="s2">                }</span>
+<span class="s2">                /* Additional styles for hover effect */</span>
+<span class="s2">                .shiny-download-link:hover, .btn-default.shiny-download-link:hover {</span>
+<span class="s2">                    background-color: #95c8d8 !important; /* Slightly darker light blue on hover */</span>
+<span class="s2">                }</span>
+
+<span class="s2">            &quot;&quot;&quot;</span><span class="p">)</span>
+        <span class="p">),</span>
+
+    <span class="c1"># Title</span>
+    <span class="n">ui</span><span class="o">.</span><span class="n">p</span><span class="p">(</span>
+        <span class="n">ui</span><span class="o">.</span><span class="n">strong</span><span class="p">(</span><span class="n">ui</span><span class="o">.</span><span class="n">h1</span><span class="p">(</span>
+            <span class="s2">&quot;DQMaRC: Data Quality Profiling&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">),</span> 
+    <span class="p">),</span>
+
+    <span class="n">ui</span><span class="o">.</span><span class="n">navset_tab</span><span class="p">(</span>
+
+        <span class="c1"># ==== tab 1. Welcome Page &amp; Instructions ====</span>
+        <span class="n">ui</span><span class="o">.</span><span class="n">nav_panel</span><span class="p">(</span>
+            <span class="s2">&quot;1. Welcome&quot;</span><span class="p">,</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">card</span><span class="p">(</span>
+                <span class="n">about_text</span><span class="p">,</span>
+            <span class="p">),</span>
+            <span class="c1"># DQ Dims Explanatory Text</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">layout_column_wrap</span><span class="p">(</span>
+                <span class="n">ui</span><span class="o">.</span><span class="n">card</span><span class="p">(</span>
+                    <span class="n">key_features_text</span><span class="p">,</span>
+                <span class="p">),</span>
+                <span class="n">ui</span><span class="o">.</span><span class="n">card</span><span class="p">(</span>
+                    <span class="n">get_started_text</span><span class="p">,</span>
+                <span class="p">),</span>
+                <span class="n">width</span><span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span>
+                <span class="p">),</span>
+            <span class="p">),</span>
+
+        <span class="c1"># ==== tab 2. Data Upload ====</span>
+        <span class="n">ui</span><span class="o">.</span><span class="n">nav_panel</span><span class="p">(</span>
+            <span class="s2">&quot;2. Data Upload&quot;</span><span class="p">,</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">layout_column_wrap</span><span class="p">(</span>
+                <span class="n">ui</span><span class="o">.</span><span class="n">card</span><span class="p">(</span>
+                    <span class="n">ui</span><span class="o">.</span><span class="n">help_text</span><span class="p">(</span><span class="s2">&quot;Upload your data here&quot;</span><span class="p">),</span>
+
+                    <span class="c1"># upload data </span>
+                    <span class="n">ui</span><span class="o">.</span><span class="n">input_file</span><span class="p">(</span>
+                        <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;upload_data_file&quot;</span><span class="p">,</span> 
+                        <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> 
+                        <span class="n">button_label</span> <span class="o">=</span> <span class="s2">&quot;Browse&quot;</span><span class="p">,</span>
+                        <span class="n">accept</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;.xlsx&quot;</span><span class="p">]</span>
+                        <span class="p">),</span>
+                    <span class="p">),</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">card</span><span class="p">(</span>
+                <span class="n">ui</span><span class="o">.</span><span class="n">help_text</span><span class="p">(</span><span class="s2">&quot;Input Data Shape&quot;</span><span class="p">),</span>
+                <span class="n">ui</span><span class="o">.</span><span class="n">output_ui</span><span class="p">(</span><span class="s2">&quot;input_data_shape&quot;</span><span class="p">)),</span>
+            <span class="p">),</span>
+            <span class="c1"># view uploaded dataset</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">card</span><span class="p">(</span>
+                <span class="n">ui</span><span class="o">.</span><span class="n">output_data_frame</span><span class="p">(</span><span class="s2">&quot;view_input_data&quot;</span><span class="p">),</span>
+            <span class="p">)</span>
+        <span class="p">),</span>
+
+        <span class="c1"># ==== tab 3. Test Params =====</span>
+        <span class="n">ui</span><span class="o">.</span><span class="n">nav_panel</span><span class="p">(</span>
+            <span class="s2">&quot;3. Test Parameters&quot;</span><span class="p">,</span>
+            <span class="c1"># test params action buttons</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">card</span><span class="p">(</span>
+                <span class="n">ui</span><span class="o">.</span><span class="n">layout_column_wrap</span><span class="p">(</span>
+
+                    <span class="c1">#initialise test params</span>
+                    <span class="n">ui</span><span class="o">.</span><span class="n">input_action_button</span><span class="p">(</span>
+                        <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;initialise_params&quot;</span><span class="p">,</span>
+                        <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Initialise Parameters&quot;</span><span class="p">,</span>
+                        <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;custom-class&quot;</span>
+                    <span class="p">),</span>
+                    
+                    <span class="c1"># upload test params</span>
+                    <span class="n">ui</span><span class="o">.</span><span class="n">input_file</span><span class="p">(</span>
+                        <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;upload_test_params_file&quot;</span><span class="p">,</span> 
+                        <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> 
+                        <span class="n">button_label</span> <span class="o">=</span> <span class="s2">&quot;Upload Parameters&quot;</span><span class="p">,</span>
+                        <span class="n">accept</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;.xls&quot;</span><span class="p">]</span>
+                    <span class="p">),</span>
+
+                    <span class="c1"># download test params</span>
+                    <span class="n">ui</span><span class="o">.</span><span class="n">download_button</span><span class="p">(</span>
+                        <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;download_params&quot;</span><span class="p">,</span>
+                        <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Download Parameters&quot;</span><span class="p">,</span>
+                        <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;custom-class&quot;</span>
+                    <span class="p">),</span>
+                <span class="p">)</span>
+            <span class="p">),</span>
+              
+            <span class="c1"># test params table</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">card</span><span class="p">(</span>
+                <span class="n">output_widget</span><span class="p">(</span><span class="s2">&quot;render_test_params&quot;</span><span class="p">),</span>
+                <span class="c1"># max_height=&quot;600px&quot;,</span>
+                <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;my-custom-card-class&quot;</span> <span class="c1"># optional for future custom CSS classes</span>
+                <span class="p">),</span>
+            <span class="p">),</span>
+                
+        <span class="c1"># ==== tab 4. DQ Dashboard ====</span>
+        <span class="n">ui</span><span class="o">.</span><span class="n">nav_panel</span><span class="p">(</span>
+            <span class="s2">&quot;4. DQ Dashboard&quot;</span><span class="p">,</span>
+
+            <span class="n">ui</span><span class="o">.</span><span class="n">card</span><span class="p">(</span>
+                <span class="n">ui</span><span class="o">.</span><span class="n">input_action_button</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;run_parameters&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Set and Run Parameters&quot;</span><span class="p">)</span>
+            <span class="p">),</span>
+            
+            <span class="n">ui</span><span class="o">.</span><span class="n">card</span><span class="p">(</span>
+                <span class="n">ui</span><span class="o">.</span><span class="n">panel_conditional</span><span class="p">(</span>
+                <span class="s2">&quot;input.choose_metric&quot;</span><span class="p">,</span>
+
+                <span class="c1"># overall quality label</span>
+                <span class="n">ui</span><span class="o">.</span><span class="n">card</span><span class="p">(</span>
+                    <span class="n">ui</span><span class="o">.</span><span class="n">h2</span><span class="p">(</span><span class="n">ui</span><span class="o">.</span><span class="n">output_ui</span><span class="p">(</span><span class="s2">&quot;overall_quality_label&quot;</span><span class="p">))</span>
+                <span class="p">),</span>
+
+                <span class="c1"># donut</span>
+                <span class="n">ui</span><span class="o">.</span><span class="n">card</span><span class="p">(</span>
+                    <span class="n">output_widget</span><span class="p">(</span><span class="s2">&quot;donutchart&quot;</span><span class="p">)</span>
+                <span class="p">),</span>
+
+                <span class="c1"># barplot + error records</span>
+                <span class="n">ui</span><span class="o">.</span><span class="n">layout_column_wrap</span><span class="p">(</span>
+                    <span class="c1"># barplot</span>
+                    <span class="n">ui</span><span class="o">.</span><span class="n">card</span><span class="p">(</span>
+                        <span class="n">output_widget</span><span class="p">(</span><span class="s2">&quot;barplot_chart&quot;</span><span class="p">),</span> <span class="n">full_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                    
+                    <span class="c1"># DQ metric explanatory text</span>
+                    <span class="n">ui</span><span class="o">.</span><span class="n">card</span><span class="p">(</span><span class="n">ui</span><span class="o">.</span><span class="n">layout_column_wrap</span><span class="p">(</span>
+                        <span class="c1"># choose a metric</span>
+                        <span class="n">ui</span><span class="o">.</span><span class="n">input_select</span><span class="p">(</span>
+                        <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;choose_metric&quot;</span><span class="p">,</span>
+                        <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Choose a Dimension&quot;</span><span class="p">,</span>
+                        <span class="n">selected</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                        <span class="n">choices</span> <span class="o">=</span> <span class="p">[]</span>
+                        <span class="p">),</span>
+                        <span class="c1"># choose a variable</span>
+                        <span class="n">ui</span><span class="o">.</span><span class="n">input_select</span><span class="p">(</span>
+                        <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;choose_variable&quot;</span><span class="p">,</span>
+                        <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Choose a Variable&quot;</span><span class="p">,</span>
+                        <span class="n">selected</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                        <span class="n">choices</span> <span class="o">=</span> <span class="p">[]</span>
+                        <span class="p">),</span> 
+                        <span class="n">width</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span>
+                    <span class="p">),</span>
+                        <span class="c1"># filtered erroneous records</span>
+                        <span class="n">output_widget</span><span class="p">(</span><span class="s2">&quot;error_records_datagrid&quot;</span><span class="p">),</span>
+                        <span class="n">full_screen</span><span class="o">=</span><span class="kc">True</span>
+                    <span class="p">),</span>
+                    <span class="n">width</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span>
+                <span class="p">),</span>
+
+                <span class="c1"># Download results</span>
+                <span class="n">ui</span><span class="o">.</span><span class="n">card</span><span class="p">(</span>
+                    <span class="n">ui</span><span class="o">.</span><span class="n">layout_column_wrap</span><span class="p">(</span>
+
+                        <span class="c1"># download full raw results</span>
+                        <span class="n">ui</span><span class="o">.</span><span class="n">download_button</span><span class="p">(</span>
+                            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;download_full_results&quot;</span><span class="p">,</span>
+                            <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Download Full Results&quot;</span><span class="p">,</span>
+                        <span class="p">),</span>
+
+                        <span class="c1"># download summary results</span>
+                        <span class="n">ui</span><span class="o">.</span><span class="n">download_button</span><span class="p">(</span>
+                            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;download_summary_results&quot;</span><span class="p">,</span>
+                            <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Download Summary Results&quot;</span><span class="p">,</span>
+                        <span class="p">)</span>
+                    <span class="p">),</span>
+                <span class="p">)</span> <span class="c1"># download results layout column wrap</span>
+            <span class="p">)</span>
+            <span class="p">)</span> <span class="c1"># panel conditional</span>
+        <span class="p">)</span> <span class="c1"># nav panel</span>
+    <span class="p">)</span> <span class="c1"># navset tab</span>
+<span class="p">)</span> <span class="c1"># ui</span>
+
+<span class="c1"># ==================================================================</span>
+<span class="c1"># ============================= SERVER =============================</span>
+<span class="c1"># ==================================================================</span>
+
+<div class="viewcode-block" id="server">
+<a class="viewcode-back" href="../api_reference/ShinyApp.html#app.server">[docs]</a>
+<span class="k">def</span> <span class="nf">server</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Defines the server logic for handling user inputs, processing data,</span>
+<span class="sd">    and generating outputs for DQMaRC.</span>
+
+<span class="sd">    Functions</span>
+<span class="sd">    ---------</span>
+<span class="sd">    handle_source_data_upload()</span>
+<span class="sd">        Handles the upload of the source data file.</span>
+<span class="sd">    show_error_input_df_text(df_input, id_num)</span>
+<span class="sd">        Displays an error message if no dataset is found.</span>
+<span class="sd">    input_data()</span>
+<span class="sd">        Renders the uploaded DataFrame for viewing.</span>
+<span class="sd">    input_data_shape_fx()</span>
+<span class="sd">        Displays the shape of the uploaded DataFrame.</span>
+<span class="sd">    initialise_test_params()</span>
+<span class="sd">        Initialises test parameters based on the uploaded data.</span>
+<span class="sd">    handle_test_params_upload()</span>
+<span class="sd">        Handles the upload of test parameters file.</span>
+<span class="sd">    initialise_DQ_tool()</span>
+<span class="sd">        Initialises the DataQuality tool with the uploaded data.</span>
+<span class="sd">    render_test_params()</span>
+<span class="sd">        Renders the test parameters UI for editing.</span>
+<span class="sd">    run_metrics()</span>
+<span class="sd">        Runs the data quality metrics based on the test parameters.</span>
+<span class="sd">    download_full_results()</span>
+<span class="sd">        Downloads the full results of the DQ checks.</span>
+<span class="sd">    download_summary_results()</span>
+<span class="sd">        Downloads the summary results of the DQ checks.</span>
+<span class="sd">    overall_quality_label_fx()</span>
+<span class="sd">        Displays the overall quality label based on the summary results.</span>
+<span class="sd">    donutchart_fx()</span>
+<span class="sd">        Generates donut charts for the DQ metrics.</span>
+<span class="sd">    barplot_chart_fx()</span>
+<span class="sd">        Generates bar charts for the selected DQ metric.</span>
+<span class="sd">    update_metric_choices()</span>
+<span class="sd">        Updates the metric choices based on the summary results.</span>
+<span class="sd">    update_variable_choices()</span>
+<span class="sd">        Updates the variable choices based on the selected metric.</span>
+<span class="sd">    display_error_records_fx()</span>
+<span class="sd">        Displays the error records based on the selected metric and variable.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># global variables</span>
+    <span class="n">input_df_global</span> <span class="o">=</span> <span class="n">reactive</span><span class="o">.</span><span class="n">Value</span><span class="p">()</span> <span class="c1"># needed to set and run params</span>
+    <span class="n">test_params_global</span> <span class="o">=</span> <span class="n">reactive</span><span class="o">.</span><span class="n">Value</span><span class="p">()</span> <span class="c1"># needed to set and run params</span>
+    <span class="n">test_params_global_updated</span> <span class="o">=</span> <span class="n">reactive</span><span class="o">.</span><span class="n">Value</span><span class="p">()</span> <span class="c1"># updated test params global</span>
+    <span class="n">summary_results_global</span> <span class="o">=</span> <span class="n">reactive</span><span class="o">.</span><span class="n">Value</span><span class="p">()</span>
+    <span class="n">source_df_raw_global</span> <span class="o">=</span> <span class="n">reactive</span><span class="o">.</span><span class="n">Value</span><span class="p">()</span>
+
+    <span class="c1"># ==================================</span>
+    <span class="c1"># ========== Input Data ============</span>
+    <span class="c1"># ==================================</span>
+    <span class="c1"># Handle the upload of source data file</span>
+    <span class="nd">@reactive</span><span class="o">.</span><span class="n">Effect</span>
+    <span class="nd">@reactive</span><span class="o">.</span><span class="n">event</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">upload_data_file</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">handle_source_data_upload</span><span class="p">():</span>
+        <span class="n">source_data_file</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">upload_data_file</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">source_data_file</span><span class="p">:</span>
+            <span class="n">df_source_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">source_data_file</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;datapath&quot;</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">na_filter</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">input_df_global</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">df_source_data</span><span class="p">)</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">notification_show</span><span class="p">(</span><span class="s2">&quot;Input data successfully uploaded.&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">notification_show</span><span class="p">(</span><span class="s2">&quot;Please upload an input dataset CSV file.&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;error&#39;</span><span class="p">)</span>
+
+    <span class="c1">#===================================</span>
+    <span class="k">def</span> <span class="nf">show_error_input_df_text</span><span class="p">(</span><span class="n">df_input</span><span class="p">,</span> <span class="n">id_num</span><span class="p">):</span>
+        <span class="nd">@output</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">id_num</span><span class="p">))</span>
+        <span class="nd">@render</span><span class="o">.</span><span class="n">text</span>
+        <span class="k">def</span> <span class="nf">error_input_df_fx</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">df_input</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span> 
+                <span class="c1"># Display an error message if no dataset is found</span>
+                <span class="k">return</span> <span class="n">error_input_df_text</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+    <span class="c1">#===================================</span>
+    <span class="nd">@output</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;view_input_data&quot;</span><span class="p">)</span>
+    <span class="nd">@render</span><span class="o">.</span><span class="n">data_frame</span>
+    <span class="k">def</span> <span class="nf">input_data</span><span class="p">():</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Renders the DataFrame created from the uploaded file for viewing, or an error message if no data is available.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">input_df_global</span><span class="p">()</span>
+        <span class="n">show_error_input_df_text</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;error_input_df&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">df</span>
+
+    <span class="c1">#===================================</span>
+    <span class="nd">@output</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;input_data_shape&quot;</span><span class="p">)</span>
+    <span class="nd">@render</span><span class="o">.</span><span class="n">text</span>
+    <span class="k">def</span> <span class="nf">input_data_shape_fx</span><span class="p">():</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Displays the shape of the uploaded DataFrame.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">input_df_global</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">df</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">error_input_df_text</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">out_shape_text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Rows: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">, Columns: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="k">return</span> <span class="n">out_shape_text</span>
+
+    <span class="c1"># ==================================</span>
+    <span class="c1"># ========= TEST PARAMS ============</span>
+    <span class="c1"># ==================================</span>
+    <span class="c1"># you can have one of two test params csv/df&#39;s: default or pre-defined (upload)</span>
+    <span class="c1"># test_params (TP) = None else default else uploaded_TP</span>
+    <span class="c1"># Initialise or Upload Test Params</span>
+    <span class="nd">@reactive</span><span class="o">.</span><span class="n">Effect</span>
+    <span class="nd">@reactive</span><span class="o">.</span><span class="n">event</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">initialise_params</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">initialise_test_params</span><span class="p">():</span>
+        <span class="n">df_input</span> <span class="o">=</span> <span class="n">input_df_global</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">df_input</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">df_input</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="n">dq_tool</span> <span class="o">=</span> <span class="n">DataQuality</span><span class="p">(</span><span class="n">df_input</span><span class="p">)</span>
+            <span class="n">test_params_df</span> <span class="o">=</span> <span class="n">dq_tool</span><span class="o">.</span><span class="n">get_test_params</span><span class="p">()</span>
+            <span class="n">test_params_global</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">test_params_df</span><span class="p">)</span>
+            <span class="n">test_params_global_updated</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">test_params_df</span><span class="p">)</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">notification_show</span><span class="p">(</span><span class="s2">&quot;Test parameters initialised.&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">notification_show</span><span class="p">(</span><span class="s2">&quot;Please upload an input dataset before initialising parameters.&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;error&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Handle the upload of test parameters file</span>
+    <span class="nd">@reactive</span><span class="o">.</span><span class="n">Effect</span>
+    <span class="nd">@reactive</span><span class="o">.</span><span class="n">event</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">upload_test_params_file</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">handle_test_params_upload</span><span class="p">():</span>
+        <span class="n">file</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">upload_test_params_file</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">file</span><span class="p">:</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;datapath&quot;</span><span class="p">])</span>
+            <span class="n">test_params_global</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+            <span class="n">test_params_global_updated</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">notification_show</span><span class="p">(</span><span class="s2">&quot;Test parameters file uploaded successfully.&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">notification_show</span><span class="p">(</span><span class="s2">&quot;Please select a test parameters file to upload.&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;error&#39;</span><span class="p">)</span>
+
+    <span class="c1"># initialise DQ tool</span>
+    <span class="nd">@reactive</span><span class="o">.</span><span class="n">Calc</span>
+    <span class="nd">@reactive</span><span class="o">.</span><span class="n">event</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">initialise_params</span><span class="p">,</span> <span class="nb">input</span><span class="o">.</span><span class="n">run_parameters</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">initialise_DQ_tool</span><span class="p">():</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">input_df_global</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">df</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">df</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="c1"># Show notification if no data is uploaded</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">notification_show</span><span class="p">(</span>
+                <span class="n">ui</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="s2">&quot;Please upload an input dataset&quot;</span><span class="p">),</span>
+                <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;error&#39;</span><span class="p">,</span> 
+                <span class="n">duration</span><span class="o">=</span><span class="mi">5</span>  <span class="c1"># Adjust duration as needed</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">dq</span> <span class="o">=</span> <span class="n">DataQuality</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">dq</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;!! error in initialise DQ tool&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># render editable test parameters </span>
+    <span class="nd">@render_widget</span>
+    <span class="nd">@reactive</span><span class="o">.</span><span class="n">event</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">initialise_params</span><span class="p">,</span> <span class="nb">input</span><span class="o">.</span><span class="n">upload_test_params_file</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">render_test_params</span><span class="p">():</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Renders the test parameters UI allowing for editing and interaction.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">test_params</span> <span class="o">=</span> <span class="n">test_params_global</span><span class="p">()</span>
+            <span class="n">test_params</span> <span class="o">=</span> <span class="n">DataGrid</span><span class="p">(</span>
+                <span class="n">test_params</span><span class="p">,</span> 
+                <span class="n">editable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                <span class="n">header_visibility</span><span class="o">=</span><span class="s1">&#39;column&#39;</span><span class="p">,</span>
+                <span class="n">base_column_size</span> <span class="o">=</span> <span class="mi">180</span><span class="p">,</span>
+                <span class="n">base_column_header_size</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
+                <span class="n">header_renderer</span><span class="o">=</span><span class="n">TextRenderer</span><span class="p">(</span><span class="n">background_color</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">),</span>
+                <span class="n">grid_style</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;header_background_color&quot;</span><span class="p">:</span> <span class="s2">&quot;lightblue&quot;</span><span class="p">}</span>  
+                <span class="p">)</span>
+            <span class="n">register_widget</span><span class="p">(</span><span class="s2">&quot;params_table&quot;</span><span class="p">,</span> <span class="n">test_params</span><span class="p">)</span>
+
+            <span class="c1"># Create a reactive value for tracking cell changes</span>
+            <span class="n">cell_changes</span> <span class="o">=</span> <span class="n">reactive</span><span class="o">.</span><span class="n">Value</span><span class="p">()</span>
+
+            <span class="k">def</span> <span class="nf">on_cell_changed</span><span class="p">(</span><span class="n">cell</span><span class="p">):</span>
+                <span class="n">cell_changes</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">cell</span><span class="p">))</span>
+                <span class="n">test_params_global_updated</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">test_params</span><span class="o">.</span><span class="n">get_visible_data</span><span class="p">())</span> 
+
+            <span class="c1"># register cell change callback</span>
+            <span class="n">test_params</span><span class="o">.</span><span class="n">on_cell_change</span><span class="p">(</span><span class="n">on_cell_changed</span><span class="p">)</span>
+
+            <span class="c1"># download test parameters</span>
+            <span class="nd">@render</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H.%M.%S&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">_test_params.csv&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8-sig&#39;</span><span class="p">)</span>
+            <span class="k">def</span> <span class="nf">download_params</span><span class="p">():</span>
+                <span class="k">yield</span> <span class="n">test_params</span><span class="o">.</span><span class="n">get_visible_data</span><span class="p">()</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">test_params</span>
+        
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">notification_show</span><span class="p">(</span>
+                <span class="n">ui</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="s2">&quot;Error in render_test_params.&quot;</span><span class="p">),</span>
+                <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;error&#39;</span><span class="p">,</span> 
+                <span class="n">duration</span><span class="o">=</span><span class="mi">5</span>  <span class="c1"># Adjust duration as needed</span>
+            <span class="p">)</span>
+
+    <span class="c1"># ======================================</span>
+    <span class="c1"># ====== set &amp; run current params ======</span>
+    <span class="c1"># this is for checking test params output in raw table output position</span>
+    <span class="c1"># Set and Run Test Parameters</span>
+    <span class="nd">@reactive</span><span class="o">.</span><span class="n">Effect</span>
+    <span class="nd">@reactive</span><span class="o">.</span><span class="n">event</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">run_parameters</span><span class="p">)</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">run_metrics</span><span class="p">():</span>
+        <span class="n">df_input</span> <span class="o">=</span> <span class="n">input_df_global</span><span class="p">()</span>
+        <span class="c1"># Call the function once and use the result multiple times</span>
+        <span class="n">updated_params</span> <span class="o">=</span> <span class="n">test_params_global_updated</span><span class="p">()</span>
+
+        <span class="c1"># Check if updated_params is None or empty, and use a default if so</span>
+        <span class="n">df_params</span> <span class="o">=</span> <span class="n">updated_params</span> <span class="k">if</span> <span class="n">updated_params</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">updated_params</span><span class="o">.</span><span class="n">empty</span> <span class="k">else</span> <span class="n">test_params_global</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">df_input</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">df_input</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">notification_show</span><span class="p">(</span><span class="s2">&quot;Please upload an input dataset before running tests.&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;error&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">df_params</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">df_params</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">notification_show</span><span class="p">(</span><span class="s2">&quot;Please initialise or upload test parameters before running them.&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;error&#39;</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Proceed with running metrics...</span>
+            <span class="k">with</span> <span class="n">ui</span><span class="o">.</span><span class="n">Progress</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span> <span class="k">as</span> <span class="n">progress</span><span class="p">:</span>  <span class="c1"># Adjust the max value based on the number of steps</span>
+                <span class="n">progress</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;(1/8) Initialising test parameters.&quot;</span><span class="p">)</span>
+                <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># Wait for 1 second</span>
+
+                <span class="c1"># Simulate processing steps with progress updates</span>
+                <span class="n">progress</span><span class="o">.</span><span class="n">inc</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;(2/8) Test parameters loaded.&quot;</span><span class="p">)</span>
+                <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># Wait for 1 second</span>
+
+                <span class="n">dq</span> <span class="o">=</span> <span class="n">initialise_DQ_tool</span><span class="p">()</span>
+                <span class="n">progress</span><span class="o">.</span><span class="n">inc</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;(3/8) Data Quality tool initialised.&quot;</span><span class="p">)</span>
+                <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># Wait for 1 second</span>
+
+                <span class="n">dq</span><span class="o">.</span><span class="n">set_test_params</span><span class="p">(</span><span class="n">df_params</span><span class="p">)</span>
+                <span class="n">progress</span><span class="o">.</span><span class="n">inc</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;(4/8) Test parameters set.&quot;</span><span class="p">)</span>
+                <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># Wait for 1 second</span>
+                
+                <span class="c1"># Simulate the metrics computation step</span>
+                <span class="n">dq</span><span class="o">.</span><span class="n">run_all_metrics</span><span class="p">()</span>
+                <span class="n">progress</span><span class="o">.</span><span class="n">inc</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;(5/8) Running metrics.&quot;</span><span class="p">)</span>
+                <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># Wait for 1 second</span>
+                
+                <span class="c1"># raw results joined to source/input df</span>
+                <span class="n">raw</span> <span class="o">=</span> <span class="n">dq</span><span class="o">.</span><span class="n">raw_results</span><span class="p">()</span>
+                <span class="n">source_df_raw</span> <span class="o">=</span> <span class="n">input_df_global</span><span class="p">()</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+                <span class="n">source_df_raw_global</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">source_df_raw</span><span class="p">)</span>
+
+                <span class="c1"># prepare results for DQ dashboard, first by subsetting final sums/counts of DQ dimensions</span>
+                <span class="n">raw_subset</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s1">&#39;completeness|validity|consistency|uniqueness_count|accuracy|timeliness&#39;</span><span class="p">)</span>
+                <span class="n">calculator</span> <span class="o">=</span> <span class="n">MetricCalculator</span><span class="p">(</span><span class="n">raw_subset</span><span class="p">)</span>
+                <span class="n">progress</span><span class="o">.</span><span class="n">inc</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;(6/8) Calculating results.&quot;</span><span class="p">)</span>
+                <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># Wait for 1 second</span>
+                
+                <span class="c1"># Simulate the calculation step, calculate aggregates</span>
+                <span class="n">calculator</span><span class="o">.</span><span class="n">calculate_metrics</span><span class="p">()</span>
+                <span class="n">progress</span><span class="o">.</span><span class="n">inc</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;(7/8) Finalising calculation.&quot;</span><span class="p">)</span>
+                <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Wait for 1 second</span>
+                
+                <span class="n">summary_results</span> <span class="o">=</span> <span class="n">calculator</span><span class="o">.</span><span class="n">result</span>
+                <span class="n">summary_results</span><span class="p">[</span><span class="s1">&#39;Colour_Good&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">summary_results</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">col_good</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">summary_results</span><span class="p">[</span><span class="s1">&#39;Colour_Bad&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">summary_results</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">col_bad</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">summary_results</span><span class="p">[</span><span class="s1">&#39;Colour_NA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;#B2C3C6&#39;</span>
+                <span class="n">summary_results_global</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">summary_results</span><span class="p">)</span>
+
+                <span class="n">progress</span><span class="o">.</span><span class="n">inc</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="s2">&quot;(8/8) Results ready.&quot;</span><span class="p">)</span>
+                <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Wait for 1 second</span>
+                
+                <span class="c1"># update set parameters input action button to &quot;Rerun...&quot;</span>
+                <span class="n">ui</span><span class="o">.</span><span class="n">update_action_button</span><span class="p">(</span><span class="s2">&quot;run_parameters&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Re-run Test Parameters&quot;</span><span class="p">)</span>
+
+                <span class="c1"># Finish progress</span>
+                <span class="n">progress</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="c1"># Simulate a long-running operation</span>
+            <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">notification_show</span><span class="p">(</span><span class="s2">&quot;Metrics computation completed successfully.&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>
+            <span class="c1"># Update UI elements or global state as necessary</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">notification_show</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;An error occurred while running metrics: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;error&#39;</span><span class="p">)</span>
+
+    <span class="c1"># ======================================</span>
+    <span class="c1"># ======= DOWNLOAD Full Results ========</span>
+    <span class="nd">@render</span><span class="o">.</span><span class="n">download</span><span class="p">(</span>
+            <span class="n">filename</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">_full_results.csv&quot;</span>
+    <span class="p">)</span>
+    <span class="k">def</span> <span class="nf">download_full_results</span><span class="p">():</span>
+        <span class="k">yield</span> <span class="n">source_df_raw_global</span><span class="p">()</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="c1"># ======================================</span>
+    <span class="c1"># ====== DOWNLOAD Summary Results ======</span>
+    <span class="nd">@render</span><span class="o">.</span><span class="n">download</span><span class="p">(</span>
+            <span class="n">filename</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">_summary_results.csv&quot;</span>
+    <span class="p">)</span>
+    <span class="k">def</span> <span class="nf">download_summary_results</span><span class="p">():</span>
+        <span class="k">yield</span> <span class="n">summary_results_global</span><span class="p">()[[</span><span class="s1">&#39;Field&#39;</span><span class="p">,</span> <span class="s1">&#39;Metric&#39;</span><span class="p">,</span> <span class="s1">&#39;Count&#39;</span><span class="p">,</span><span class="s1">&#39;Prop_Bad&#39;</span><span class="p">,</span><span class="s1">&#39;Prop_Good&#39;</span><span class="p">,</span><span class="s1">&#39;Prop_NA&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="c1"># ===================================</span>
+        
+    <span class="c1"># overall DQ label</span>
+    <span class="nd">@output</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;overall_quality_label&quot;</span><span class="p">)</span>
+    <span class="nd">@render</span><span class="o">.</span><span class="n">ui</span>
+    <span class="k">def</span> <span class="nf">overall_quality_label_fx</span><span class="p">():</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">summary_results_global</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="n">data1</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Prop_NA&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+            <span class="n">avg_prop_good</span> <span class="o">=</span> <span class="n">data1</span><span class="p">[</span><span class="s1">&#39;Prop_Good&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+            <span class="n">overall_quality_level</span> <span class="o">=</span> <span class="n">overall_quality_fx</span><span class="p">(</span><span class="n">avg_prop_good</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">background_color</span> <span class="o">=</span> <span class="n">overall_quality_fx</span><span class="p">(</span><span class="n">avg_prop_good</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">text_colour</span> <span class="o">=</span> <span class="n">overall_quality_fx</span><span class="p">(</span><span class="n">avg_prop_good</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">overall_quality_text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Overall Quality: </span><span class="si">{</span><span class="n">overall_quality_level</span><span class="si">}</span><span class="s2">&quot;</span>
+
+            <span class="k">return</span> <span class="n">ui</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">div</span><span class="p">(</span>
+                <span class="n">overall_quality_text</span><span class="p">,</span>
+                <span class="n">style</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                    background-color: </span><span class="si">{</span><span class="n">background_color</span><span class="si">}</span><span class="s2">; </span>
+<span class="s2">                    padding: 10px; </span>
+<span class="s2">                    border-radius: 5px; </span>
+<span class="s2">                    color: </span><span class="si">{</span><span class="n">text_colour</span><span class="si">}</span><span class="s2">; </span>
+<span class="s2">                    border: 2px solid </span><span class="si">{</span><span class="n">text_colour</span><span class="si">}</span><span class="s2">;</span>
+<span class="s2">                    text-align: center;&quot;&quot;&quot;</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Fallback content if data is empty</span>
+            <span class="k">return</span> <span class="n">ui</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="s2">&quot;No data available&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;text-align: center;&quot;</span><span class="p">)</span>
+
+    <span class="c1">#===================================</span>
+    <span class="c1"># Donut charts</span>
+    <span class="nd">@output</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;donutchart&quot;</span><span class="p">)</span>
+    <span class="nd">@render_widget</span>
+    <span class="k">def</span> <span class="nf">donutchart_fx</span><span class="p">():</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">summary_results_global</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">DonutChartGenerator</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">plot_donut_charts</span><span class="p">()</span>
+  
+    <span class="c1">#===================================</span>
+    <span class="c1"># bar chart</span>
+    <span class="nd">@output</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;barplot_chart&quot;</span><span class="p">)</span>
+    <span class="nd">@render_widget</span>
+    <span class="k">def</span> <span class="nf">barplot_chart_fx</span><span class="p">():</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">summary_results_global</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">metric</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">choose_metric</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">BarPlotGenerator</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">metric</span><span class="p">)</span><span class="o">.</span><span class="n">plot_bar</span><span class="p">()</span>
+
+<span class="c1"># =============================</span>
+    <span class="nd">@reactive</span><span class="o">.</span><span class="n">Effect</span>
+    <span class="k">def</span> <span class="nf">update_metric_choices</span><span class="p">():</span>
+        <span class="n">summary_results</span> <span class="o">=</span> <span class="n">summary_results_global</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">summary_results</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">summary_results</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="n">metrics</span> <span class="o">=</span> <span class="n">summary_results</span><span class="p">[</span><span class="s1">&#39;Metric&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">update_select</span><span class="p">(</span><span class="s2">&quot;choose_metric&quot;</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">metrics</span><span class="p">)</span>
+
+    <span class="nd">@reactive</span><span class="o">.</span><span class="n">Effect</span>
+    <span class="k">def</span> <span class="nf">update_variable_choices</span><span class="p">():</span>
+        <span class="n">summary_results</span> <span class="o">=</span> <span class="n">summary_results_global</span><span class="p">()</span>
+        <span class="n">selected_metric</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">choose_metric</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">summary_results</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">summary_results</span><span class="o">.</span><span class="n">empty</span> <span class="ow">and</span> <span class="n">selected_metric</span><span class="p">:</span>
+            <span class="c1"># Filter summary_results to exclude rows where Prop_NA == 100 for the selected metric</span>
+            <span class="n">valid_fields</span> <span class="o">=</span> <span class="n">summary_results</span><span class="p">[(</span><span class="n">summary_results</span><span class="p">[</span><span class="s1">&#39;Metric&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">selected_metric</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">summary_results</span><span class="p">[</span><span class="s1">&#39;Prop_NA&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">100</span><span class="p">)][</span><span class="s1">&#39;Field&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+            <span class="n">ui</span><span class="o">.</span><span class="n">update_select</span><span class="p">(</span><span class="s2">&quot;choose_variable&quot;</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">valid_fields</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_unique_variables_message</span><span class="p">(</span><span class="n">test_params</span><span class="p">):</span>
+        <span class="n">unique_variables</span> <span class="o">=</span> <span class="n">test_params</span><span class="p">[</span><span class="n">test_params</span><span class="p">[</span><span class="s2">&quot;Uniqueness_Rows&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">][</span><span class="s2">&quot;Field&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">unique_variables</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Variables Included&quot;</span><span class="p">:</span> <span class="n">unique_variables</span><span class="p">})</span>
+        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Message&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;No unique variables found&quot;</span><span class="p">]})</span>
+    
+    <span class="k">def</span> <span class="nf">get_consistency_comparison</span><span class="p">(</span><span class="n">full_results</span><span class="p">,</span> <span class="n">test_params</span><span class="p">,</span> <span class="n">selected_variable</span><span class="p">,</span> <span class="n">error_column</span><span class="p">):</span>
+        <span class="c1"># Check if the selected variable exists in the test_params table</span>
+        <span class="k">if</span> <span class="n">selected_variable</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">test_params</span><span class="p">[</span><span class="s2">&quot;Field&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Message&quot;</span><span class="p">:</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Variable &#39;</span><span class="si">{</span><span class="n">selected_variable</span><span class="si">}</span><span class="s2">&#39; not found in test parameters&quot;</span><span class="p">]})</span>
+        
+        <span class="n">test_param_row</span> <span class="o">=</span> <span class="n">test_params</span><span class="p">[</span><span class="n">test_params</span><span class="p">[</span><span class="s2">&quot;Field&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">selected_variable</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        
+        <span class="c1"># Determine which comparison approach to use</span>
+        <span class="k">if</span> <span class="n">test_param_row</span><span class="p">[</span><span class="s2">&quot;Consistency_Compare&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">compare_variable</span> <span class="o">=</span> <span class="n">test_param_row</span><span class="p">[</span><span class="s2">&quot;Consistency_Compare_Field&quot;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">test_param_row</span><span class="p">[</span><span class="s2">&quot;Consistency_Date_Relations&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">compare_variable</span> <span class="o">=</span> <span class="n">test_param_row</span><span class="p">[</span><span class="s2">&quot;Consistency_Date_Relations_Field&quot;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">test_param_row</span><span class="p">[</span><span class="s2">&quot;Timeliness_Date_Diff&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">compare_variable</span> <span class="o">=</span> <span class="n">test_param_row</span><span class="p">[</span><span class="s2">&quot;Timeliness_Date_Diff_Field&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Message&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Neither Consistency_Compare nor Consistency_Date_Relations is set to True for selected variable&quot;</span><span class="p">]})</span>
+        
+        <span class="c1"># Check for NA values in compare_variable</span>
+        <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">compare_variable</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Message&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Comparison variable not found or is NA&quot;</span><span class="p">]})</span>
+        
+        <span class="c1"># Ensure selected_variable and, if applicable, compare_variable exist in the full_results</span>
+        <span class="c1"># if selected_variable not in full_results.columns or (compare_variable not in full_results.columns and compare_variable != &quot;Consistency_Date_Relations&quot;):</span>
+        <span class="k">if</span> <span class="n">selected_variable</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">full_results</span><span class="o">.</span><span class="n">columns</span> <span class="ow">or</span> <span class="n">compare_variable</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">full_results</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Message&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Selected or comparison variable not found in data&quot;</span><span class="p">]})</span>
+        
+        <span class="c1"># Ensure the error column exists in full_results</span>
+        <span class="k">if</span> <span class="n">error_column</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">full_results</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Message&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Error column not found in data&quot;</span><span class="p">]})</span>
+              
+        <span class="c1"># Proceed with comparison for other cases</span>
+        <span class="n">error_records</span> <span class="o">=</span> <span class="n">full_results</span><span class="p">[</span><span class="n">full_results</span><span class="p">[</span><span class="n">error_column</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="n">relevant_data</span> <span class="o">=</span> <span class="n">error_records</span><span class="p">[[</span><span class="n">selected_variable</span><span class="p">,</span> <span class="n">compare_variable</span><span class="p">,</span> <span class="n">error_column</span><span class="p">]]</span>
+        <span class="k">if</span> <span class="n">error_records</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Message&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;No errors found&quot;</span><span class="p">]})</span>
+
+        <span class="k">if</span> <span class="n">relevant_data</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Message&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;No relevant data found for consistency comparison&quot;</span><span class="p">]})</span>
+        
+        <span class="n">aggregated_data</span> <span class="o">=</span> <span class="n">relevant_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">selected_variable</span><span class="p">,</span> <span class="n">compare_variable</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">aggregated_data</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Message&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;No consistency errors found between variables&quot;</span><span class="p">]})</span>
+        
+        <span class="n">aggregated_data_sorted</span> <span class="o">=</span> <span class="n">aggregated_data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;Count&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">aggregated_data_sorted</span>
+
+    <span class="k">def</span> <span class="nf">get_error_records</span><span class="p">(</span><span class="n">full_results</span><span class="p">,</span> <span class="n">selected_variable</span><span class="p">,</span> <span class="n">error_column</span><span class="p">):</span>
+        <span class="n">error_records</span> <span class="o">=</span> <span class="n">full_results</span><span class="p">[</span><span class="n">full_results</span><span class="p">[</span><span class="n">error_column</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">error_records</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Message&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;No errors found&quot;</span><span class="p">]})</span>
+        <span class="n">aggregated_errors</span> <span class="o">=</span> <span class="n">error_records</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">selected_variable</span><span class="p">)[</span><span class="n">error_column</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+        <span class="n">aggregated_errors_renamed</span> <span class="o">=</span> <span class="n">aggregated_errors</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">error_column</span><span class="p">:</span> <span class="s2">&quot;Count&quot;</span><span class="p">})</span>
+        <span class="k">return</span> <span class="n">aggregated_errors_renamed</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;Count&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">display_filtered_errors</span><span class="p">():</span>
+        <span class="n">full_results</span> <span class="o">=</span> <span class="n">source_df_raw_global</span><span class="p">()</span>
+        <span class="n">test_params</span> <span class="o">=</span> <span class="n">test_params_global</span><span class="p">()</span>
+        <span class="n">selected_metric</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">choose_metric</span><span class="p">()</span>
+        <span class="n">selected_variable</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">choose_variable</span><span class="p">()</span>
+        <span class="n">error_column</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">selected_metric</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s2">_count_|_</span><span class="si">{</span><span class="n">selected_variable</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="k">if</span> <span class="n">selected_metric</span> <span class="o">==</span> <span class="s2">&quot;uniqueness&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">get_unique_variables_message</span><span class="p">(</span><span class="n">test_params</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">selected_metric</span> <span class="o">==</span> <span class="s2">&quot;consistency&quot;</span> <span class="ow">or</span> <span class="n">selected_metric</span> <span class="o">==</span> <span class="s2">&quot;timeliness&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">get_consistency_comparison</span><span class="p">(</span><span class="n">full_results</span><span class="p">,</span> <span class="n">test_params</span><span class="p">,</span> <span class="n">selected_variable</span><span class="p">,</span> <span class="n">error_column</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">full_results</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">full_results</span><span class="o">.</span><span class="n">empty</span> <span class="ow">and</span> <span class="n">selected_metric</span> <span class="ow">and</span> <span class="n">selected_variable</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">error_column</span> <span class="ow">in</span> <span class="n">full_results</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">get_error_records</span><span class="p">(</span><span class="n">full_results</span><span class="p">,</span> <span class="n">selected_variable</span><span class="p">,</span> <span class="n">error_column</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Message&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Error column not found&quot;</span><span class="p">]})</span>
+
+        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Message&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Please select both metric and variable&quot;</span><span class="p">]})</span>
+
+    <span class="nd">@output</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;error_records_datagrid&quot;</span><span class="p">)</span>
+    <span class="nd">@render_widget</span>
+    <span class="k">def</span> <span class="nf">display_error_records_fx</span><span class="p">():</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">display_filtered_errors</span><span class="p">()</span>
+        <span class="n">data_datagrid</span> <span class="o">=</span> <span class="n">DataGrid</span><span class="p">(</span>
+            <span class="n">data</span><span class="p">,</span> 
+            <span class="n">header_visibility</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span>
+            <span class="n">base_column_header_size</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+            <span class="n">auto_fit_columns</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="n">selection_mode</span> <span class="o">=</span> <span class="s1">&#39;cell&#39;</span><span class="p">,</span>
+            <span class="n">header_renderer</span><span class="o">=</span><span class="n">TextRenderer</span><span class="p">(</span><span class="n">background_color</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">),</span>
+            <span class="n">grid_style</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;header_background_color&quot;</span><span class="p">:</span> <span class="s2">&quot;lightblue&quot;</span><span class="p">}</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">data_datagrid</span>    </div>
+
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">App</span><span class="p">(</span><span class="n">app_ui</span><span class="p">,</span> <span class="n">server</span><span class="p">)</span>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Anthony Lighterness and Michael Adcock
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Anthony Lighterness and Michael Adcock.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
