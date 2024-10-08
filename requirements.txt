@@ -1,0 +1,9 @@
+pandas
+numpy<2.0
+ipywidgets
+plotly
+shiny
+ipydatagrid
+nbconvert
+nbformat
+jupyterlab

@@ -1,0 +1,30 @@
+Test Parameter,Python_Data_Type,Example_Data,Description
+Field,String,Metastatic_Indicator,Name of the fields of the source input data.
+Date_Format,String,%d/%m/%Y %H:%M,The datetime format pattern specified by ISO standards.
+Completeness_NULL,Boolean,TRUE or FALSE,"Count of ""NULL"" values."
+Completeness_Empty,Boolean,TRUE or FALSE,Count of empty records.
+Completeness_Encoded,Boolean,TRUE or FALSE,"TRUE/FALSE indicator if field uses codes to indicate missingness, e.g. ""Unknown"" or ""999""."
+Completeness_Encoded_Mapping,String,Missing|N/A|Empty,A list of values or codes that represent missingness of data. Each possible unique value is separated by a pipe delimiter.
+Uniqueness_Rows,Boolean,TRUE or FALSE,"TRUE/FALSE indicator if field is expected to be unique, e.g. patient identifier."
+Consistency_Compare,Boolean,TRUE or FALSE,TRUE/FALSE to indicate if field should be compared with another from the same input dataset for consistency checks.
+Consistency_Compare_Field,String,Tumour_M_Stage,"Enter the name of the field to compare against. To do this, ""Consistency_Compare"" must equal ""TRUE"" for field 1. Then the comparison field (field 2) is named here."
+Consistency_Compare_Mapping,Pandas dictionary,"{""Present"": [""M1"", ""M1a""]}","Map the permissible correct comparison values between Field 1 and Field 2, respectively. For example a one-to-one comparison Field 1 : Field 2 values may be {""Apples"":""Oranges"", ""Wolves"":""Bears""}. A one-to-many or many-to-many comparison is possible using lists, e.g. {[""Fruit""]:[""Apples"", ""Oranges""]}."
+Consistency_Date_Relations,Boolean,TRUE or FALSE,TRUE/FALSE if a date field should be compared with another.
+Consistency_Date_Relationship,String,"<, >, <=, >=","Relationship of the comparison (<, >, <=, or >=), e.g. ""Date of Birth"" < ""Date of Death""."
+Consistency_Date_Relations_Field,String,Date_of_Birth,"Name of the compared datetime field if ""Consistency_Date_Relations"" = ""TRUE""."
+Timeliness_Date_Diff,Boolean,TRUE or FALSE,Indicator to perform a calculation between two datetime fields. 
+Timeliness_Date_Diff_Field,String,Datetime_Logging1,"If ""Timeliness_Date_Diff"" = ""TRUE"", here you specify which field in the same dataset to calculate a time-difference from."
+Timeliness_Date_Diff_Threshold,Integer,10,"What is the permissible threshold (in minutes) for the date time difference? For example, raise an error if (Datetime_Logging1 - Datetime_Event1) >= 10 minutes."
+Validity_Dates_Future,Boolean,TRUE or FALSE,TRUE/FALSE indicator to raise an error if a future date is found.
+Validity_Date_Range,Boolean,TRUE or FALSE,TRUE/FALSE if a date range is applicable.
+Validity_Date_Range_Min,String,01/01/1900,"If ""Validity_Dates_Future"" = ""TRUE"", what is the minimum permissible date."
+Validity_Date_Range_Max,String,01/01/2025,"If ""Validity_Dates_Future"" = ""TRUE"", what is the maximum permissible date."
+Validity_NHS_Number,Boolean,TRUE or FALSE,TRUE/FALSE if the NHS validity algorithm checker is applicable.
+Validity_Postcode_UK,Boolean,TRUE or FALSE,TRUE/FALSE to raise an error if invalid UK postcodes are detected.
+Validity_Lookup_Table,Boolean,TRUE or FALSE,TRUE/FALSE if a data standard is applicable.
+Validity_Lookup_Table_Filename,String,LU_toydf_ICD10_v5.csv,"If ""Validity_Lookup_Table""=""TRUE"", what is the filename of the data standard. Ensure the csv/xlsx file is available in the proper directory. DQMaRC assumes the file is in current directory + '/../src/data/lookups'."
+Validity_Range,Boolean,TRUE or FALSE,"TRUE/FALSE if a numerical range applicable, e.g. 0-100?"
+Validity_Range_Numeric,String,0|110,"If ""Validity_Range""=""TRUE"", supply the numerical range permissible. The min and max range values are separated by a pipe delimiter."
+Validity_Pattern,Boolean,TRUE or FALSE,TRUE/FALSE if a valid pattern is applicable. 
+Validity_Pattern_Regex,String,[0-9]{2}/[0-9]{2}/[0-9]{2},"If ""Validity_Pattern""=""TRUE"", supply the permissible pattern in regex form, e.g. [0-9]{2}/[0-9]{2}/[0-9]{2} or (\d{2})/(\d{2})/(\d{4}) (\d{2}):(\d{2})"
+Accuracy_Gold_Standard,Boolean,TRUE or FALSE,TRUE/FALSE if a gold standard reference dataset is applicable.
