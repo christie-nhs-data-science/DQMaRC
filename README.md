@@ -169,7 +169,7 @@ Contributions to DQMaRC are welcome! Please read the [CONTRIBUTING.md](CONTRIBUT
 
 ## License
 
-DQMaRC is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+DQMaRC is licensed under the MIT License. See the [MIT LICENSE](LICENSE.md) and [OPEN GOVERNMENT LICENSE V3](LICENSE.txt) file for more details.
 
 ## Acknowledgments
 
