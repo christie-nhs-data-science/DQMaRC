@@ -178,7 +178,7 @@ This project was developed by Anthony Lighterness and Michael Adcock. Special th
 ## Citation
 Please use the following citation if you use DQMaRC:
 
-Lighterness, A., Adcock, M.A., and Price, G. (2024). DQMaRC: A Python Tool for Structured Data Quality Profiling (Version 1.1.0) [Software]. Available from https://github.com/christie-nhs-data-science/DQMaRC.
+Lighterness, A., Adcock, M. T., Scanlon, L. A., & Price, G. (2024). DQMaRC: Data Quality Markup and Ready-to-Connect (Version 1.0.0) [Computer software]. Available from https://github.com/christie-nhs-data-science/DQMaRC.
 
 ## Notice on Maintenance and Support
 
