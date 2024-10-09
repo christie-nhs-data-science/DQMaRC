@@ -1,0 +1,20 @@
+cff-version: 1.0.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Lighterness"
+  given-names: "Anthony"
+  orcid: "https://orcid.org/0000-0001-6898-6265"
+- family-names: "Adcock"
+  given-names: "Michael Thomas"
+  orcid: "https://orcid.org/0009-0009-5111-380X"
+- family-names: "Scanlon"
+  given-names: "Lauren Abiqail"
+  orcid: "https://orcid.org/0000-0001-7380-7145"
+- family-names: "Price"
+  given-names: "Gareth"
+  orcid: "https://orcid.org/0000-0003-4353-3360"
+title: "DQMaRC: Data Quality Markup and Ready-to-Connect"
+version: 1.0.0
+doi: [zenodo doi]
+date-released: 2024-10-10
+url: "https://github.com/christie-nhs-data-science/DQMaRC"
