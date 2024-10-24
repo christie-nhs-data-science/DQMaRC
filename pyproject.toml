@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DQMaRC"
+authors = [
+  {name = "Anthony Lighterness", email = "anthony.lighterness@nhs.net"},
+  {name = "Michael Adcock", email = "michael.adcock2@nhs.net"}
+]
+maintainers = [
+  {name = "Anthony Lighterness", email = "tony.lighterness@gmail.com"},
+  {name = "Michael Adcock", email = "michael.adcock2@nhs.net"}
+]
+dynamic = ["version", "description"]
+dependencies = [
+	"pandas",
+	"numpy<2.0",
+	"ipywidgets",
+	"plotly",
+	"shiny",
+	"ipydatagrid",
+	"nbconvert",
+	"nbformat",
+	"jupyterlab"
+]
+requires-python = ">= 3.9"
+readme = "README.md"
+license = [
+	{file = "LICENSE.txt"},
+	{file = "LICENSE.md"}
+	]
+keywords = [
+	"data quality", 
+	"data quality profiling"
+	]
+classifiers = [
+  # How mature is this project? Common values are
+  #   3 - Alpha
+  #   4 - Beta
+  #   5 - Production/Stable
+  "Development Status :: 4 - Beta",
+
+  # Indicate who your project is intended for
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+
+  # Pick your license as you wish (see also "license" above)
+  "License :: OSI Approved :: MIT License",
+
+  # Specify the Python versions you support here.
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10"
+]
+[project.urls]
+Documentation = "https://readthedocs.org"
+Repository = "https://github.com/christie-nhs-data-science/DQMaRC"
+Issues = "https://github.com/christie-nhs-data-science/DQMaRC/issues"
