@@ -1,0 +1,13 @@
+pandas
+numpy<2.0
+ipywidgets
+plotly
+shiny
+ipydatagrid
+nbconvert
+nbformat
+jupyterlab
+sphinx
+sphinx_rtd_theme
+ghp-import
+pytest
