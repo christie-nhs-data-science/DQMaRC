@@ -3,6 +3,7 @@ numpy<2.0
 ipywidgets
 plotly
 shiny
+shinywidgets
 ipydatagrid
 nbconvert
 nbformat
@@ -16,3 +17,4 @@ sphinx-book-theme
 sphinx-click
 sphinx-copybutton
 sphinx-tabs
+nbsphinx
