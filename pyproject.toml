@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "DQMaRC"
 authors = [
-  {name = "Anthony Lighterness", email = "anthony.lighterness@nhs.net"},
+  {name = "Anthony Lighterness", email = "tony.lighterness@gmail.com"},
   {name = "Michael Adcock", email = "michael.adcock2@nhs.net"}
 ]
 maintainers = [
@@ -53,3 +53,7 @@ classifiers = [
 Documentation = "https://readthedocs.org"
 Repository = "https://github.com/christie-nhs-data-science/DQMaRC"
 Issues = "https://github.com/christie-nhs-data-science/DQMaRC/issues"
+
+[tool.setuptools.dynamic]
+description = { file = "README.md" }
+
