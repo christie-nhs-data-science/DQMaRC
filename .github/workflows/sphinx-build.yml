@@ -43,10 +43,10 @@ jobs:
           pip install -r docs/docs_requirements.txt  # file in docs/... folder
 
       # step 4: build docs
-      - name: build sphinx HTML docs
-        run: |
-          ./docs/make clean html
-          ./docs/make html
+      - name: Build HTML
+        run: | 
+          cd docs/
+          make html
 
       - name: Run ghp-import
         run: | 
