@@ -41,6 +41,7 @@ jobs:
         run: | # pipe for multiple action lines
           python -m pip install --upgrade pip
           pip install -r docs/docs_requirements.txt  # file in docs/... folder
+          pip install .    # Install DQMaRC from the current directory
 
       # step 4: build docs
       - name: Build HTML
