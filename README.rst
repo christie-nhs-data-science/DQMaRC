@@ -121,10 +121,12 @@ To run the Shiny app, use the following command in your terminal:
 
 For deploying the Shiny app on a server, follow the `official Shiny for Python deployment guide <https://shiny.posit.co/py/docs/install-create-run.html>`_.
 
+You can test the DQMaRC ShinyLive Demo by copying and pasting the URL located [HERE](https://github.com/christie-nhs-data-science/DQMaRC/blob/main/DQMaRC_ShinyLiveEditor_link) into your webbrowser.
+
 Documentation
 -------------
 
-Comprehensive documentation for DQMaRC, including detailed API references and user guides, is available `HERE <https://readthedocs.com/dqmarc>`_ or in the project ``docs/`` directory.
+Comprehensive documentation for DQMaRC, including detailed API references and user guides, is available `HERE <https://christie-nhs-data-science.github.io/DQMaRC/>`_ or in the project ``docs/`` directory.
 
 Repo Structure
 --------------
@@ -177,7 +179,7 @@ Contributions to DQMaRC are welcome! Please read the ``CONTRIBUTING.md`` file fo
 License
 -------
 
-DQMaRC is licensed under the MIT License. See the ``LICENSE`` file for more details.
+DQMaRC is licensed under the Open Government License v3 and MIT Licenses. See the ``LICENSE`` file for more details.
 
 Acknowledgments
 ---------------
@@ -189,7 +191,7 @@ Citation
 
 Please use the following citation if you use DQMaRC:
 
-Lighterness, A., Adcock, M.A., and Price, G. (2024). DQMaRC: A Python Tool for Structured Data Quality Profiling (Version 1.1.0) [Software]. Available from https://github.com/DQMaRC.
+Lighterness, A., Adcock, M.A., and Price, G. (2024). DQMaRC: A Python Tool for Structured Data Quality Profiling (Version 1.0.0) [Software]. Available from https://github.com/christie-nhs-data-science/DQMaRC.
 
 
 Notice on Maintenance and Support
@@ -203,4 +205,4 @@ Thank you for your understanding and for contributing to the growth and improvem
 
 ---
 
-*For more information, please visit the `project repository <https://github.com/repo/DQMARC>`_*
+*For more information, please visit the `project repository <https://github.com/christie-nhs-data-science/DQMaRC>`_*
