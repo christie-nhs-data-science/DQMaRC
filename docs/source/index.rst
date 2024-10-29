@@ -63,7 +63,7 @@ Please navigate through the links below to get familiar with how to setup and ru
 Citation
 --------
 
-Lighterness, A., Adcock, M.A., and Price, G. (2024). DQMaRC: A Python Tool for Structured Data Quality Profiling (Version 1.0.0) [Software]. Available from https://github.com/DQMaRC. Accessed on: 01 January 2024.
+Lighterness, A., Adcock, M.A., and Price, G. (2024). DQMaRC: A Python Tool for Structured Data Quality Profiling (Version 1.0.0) [Software]. Available from https://github.com/christie-nhs-data-science/DQMaRC.
 
 
 Notice on Maintenance and Support
