@@ -851,25 +851,16 @@ Other countries' postcodes can be validated using pattern validation as shown be
                 grid_style={"header_background_color": "lightblue"})
 
 
-Invalid ICD10 Codes
-"""""""""""""""""""
+Invalid Gender Codes
+""""""""""""""""""""
 This is one example of a validation test applied to a categorical or coded source variable. In this case, we validate ICD10 codes by comparing
 against a list of valid codes set by the World Health Organisation. We must provide the code list as a csv file and the name of it in the 
 ``test parameters`` dataset.
 
 .. jupyter-execute::
 
-    validity_codes_conditions = (df_DQ_full['Validity_Lookup_Table_|_ICD_10_Code']>0)
-    df_DQ_full[['ICD_10_Code','Validity_Lookup_Table_|_ICD_10_Code']].loc[(validity_codes_conditions)]
-
-..
-    DataGrid(df_DQ_full[['ICD_10_Code','Validity_Lookup_Table_|_ICD_10_Code']].loc[(validity_codes_conditions)],
-                header_visibility='column',
-                base_column_size = 180,
-                base_column_header_size = 30,
-                layout={"height": "300px"},
-                header_renderer=TextRenderer(background_color='lightblue'),
-                grid_style={"header_background_color": "lightblue"})
+    validity_codes_conditions = (df_DQ_full['Validity_Lookup_|_Gender']>0)
+    df_DQ_full[['Gender','Validity_Lookup_|_Gender']].loc[(validity_codes_conditions)]
 
 
 Numerical Outliers
