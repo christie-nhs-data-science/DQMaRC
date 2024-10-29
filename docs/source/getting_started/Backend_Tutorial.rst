@@ -319,9 +319,9 @@ Data :ref:`api.validity` describes data that conform to the expected standards, 
         .. jupyter-execute::
 
             # (6a) Data Standards
-            #lu_filename_user_made = './data/lookups/LU_toydf_gender_user_made.csv'
-            lu_filename_user_made = 'LU_toydf_gender_user_made.csv'
-            # dq.save_user_lookup(pd.DataFrame({'Code': ['Male', 'Female']}), lu_filename_user_made)
+            test_params.loc[test_params['Field']=='Tumour_M_Stage', 'Validity_Lookup'] = True
+            test_params.loc[test_params['Field']=='Tumour_M_Stage', 'Validity_Lookup_Type'] = 'Values'
+            test_params.loc[test_params['Field']=='Tumour_M_Stage', 'Validity_Lookup_Codes'] = 'M0|M1|M1b|pM1'
 
 
     #. Or access a pre-defined list saved as a csv file
@@ -332,8 +332,9 @@ Data :ref:`api.validity` describes data that conform to the expected standards, 
             lu_filename = '..DQMaRC/data/lookups/LU_toydf_gender.csv'
 
             # Here we will apply a pre-defined data standard for "gender"
-            test_params.loc[test_params['Field']=='Gender', 'Validity_Lookup_Table'] = True
-            test_params.loc[test_params['Field']=='Gender', 'Validity_Lookup_Table_Filename'] = lu_filename
+            test_params.loc[test_params['Field']=='Gender', 'Validity_Lookup'] = True
+            test_params.loc[test_params['Field']=='Gender', 'Validity_Lookup_Type'] = 'File'
+            test_params.loc[test_params['Field']=='Gender', 'Validity_Lookup_Codes'] = lu_filename
 
 
 #. **Regular Expression Pattern**: checks if data conform to expected pattern as defined by regular expression (see :py:meth:`test_pattern_validity() method <DQMaRC.Validity.test_pattern_validity>`).
