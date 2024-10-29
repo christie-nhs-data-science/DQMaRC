@@ -5,7 +5,7 @@ Frontend ShinyPy Tutorial
 ============================
 
 We built a frontend user interface to give non-python users easy access to :ref:`DQMaRC <api.DQMaRC>` for data quality profiling. 
-This frontend was built using `shiny for python` `pandas <https://pandas.pydata.org/docs/index.html>`_ and is accessible freely by following this link: `DQMaRC Shiny Front End <https://placeholder.link>`_.
+This frontend was built using `shiny for python` `pandas <https://pandas.pydata.org/docs/index.html>`_ and is accessible freely by following this link: `DQMaRC Shiny Front End <https://github.com/christie-nhs-data-science/DQMaRC/blob/main/DQMaRC_ShinyLiveEditor_link>`_.
 
 We explain how to use this frontend user interface in three simple steps:
 
