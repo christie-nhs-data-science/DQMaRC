@@ -88,17 +88,15 @@ class Dimension:
             try:
                 if dm_row[test].item() == 1:
                     result = func(col)
-                    print(f"{test} result {col}: {result}", "\n") # debugging
+                    # print(f"{test} result {col}: {result}", "\n") # debugging
                     result.name = test + '_|_' + col
                     # print("result BEFORE MERGE INSIDE run_metric: \n", result)
                     error_df = pd.merge(error_df, result, left_index=True, right_index=True)
                     # print("error_df AFTER MERGE INSIDE run_metric: \n", error_df)
 
             except ValueError as e:
-                print(f"ValueError in column {col} during {test}: {e}")
-                # print(col + ' error in ' + test)
-                # print(e)
-                # print()
+                # print(f"ValueError in column {col} during {test}: {e}")
+                print(e)
 
         # print(f"Error DataFrame after {test}: {error_df}") # debugging
 
@@ -151,4 +149,5 @@ class Dimension:
         if format_series.empty or pd.isnull(format_series.values[0]):
             return self.default_date_format
         else:
-            print("format series not null:", format_series.values[0])
+            # print("format series not null:", format_series.values[0])
+            print("format series not null:")
