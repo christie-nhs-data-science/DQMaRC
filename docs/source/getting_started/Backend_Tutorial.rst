@@ -859,8 +859,8 @@ against a list of valid codes. We must provide the code list as a csv file and t
 
 .. jupyter-execute::
 
-    #validity_codes_conditions = (df_DQ_full['Validity_Lookup_Table_|_Tumour_Stage']>0)
-    #df_DQ_full[['Tumour_Stage','Validity_Lookup_Table_|_Tumour_Stage']].loc[(validity_codes_conditions)]
+    validity_codes_conditions = (df_DQ_full['Validity_Lookup_Table_|_Tumour_Stage']>0)
+    df_DQ_full[['Tumour_Stage','Validity_Lookup_Table_|_Tumour_Stage']].loc[(validity_codes_conditions)]
 
 
 Numerical Outliers
