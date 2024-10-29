@@ -47,7 +47,7 @@ class TestValidity(unittest.TestCase):
                                     False, False, False, False, False],
             'Validity_Postcode_UK': [False, False, False, True, 
                                      False, False, False, False, False],
-            'Validity_Lookup_Table': [False, 
+            'Validity_Lookup': [False, 
                                       True,  # Gender
                                       False, False, 
                                       True, # ICD_10_Code
@@ -115,7 +115,7 @@ class TestValidity(unittest.TestCase):
 
     def test_lookup_table(self):
         # Test lookup table validation (mocked as passed)
-        self.validity.test_against_lookup_tables('Validity_Lookup_Table')
+        self.validity.test_against_lookup_tables('Validity_Lookup')
         results = self.validity.get_results()[['Validity_Lookup_Table_|_Gender', 
                                                'Validity_Lookup_Table_|_ICD_10_Code',
                                                'Validity_Lookup_Table_|_Tumour_M_Stage']]
