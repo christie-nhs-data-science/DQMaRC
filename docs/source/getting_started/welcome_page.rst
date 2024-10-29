@@ -252,7 +252,7 @@ If you prefer a graphical interface, please refer to the :ref:`Frontend ShinyPy 
 This guide will walk you through the installation and use of the Shiny for Python interface to run DQMaRC without writing any code.
 We have built a frontend graphical user interface using `shiny for python <https://shiny.posit.co/py/>`_ to encourage non-python users to use ``DQMaRC``.
 
-You can access a serverless, web-hosted version here: `DQMaRC Shiny Front End <https://placeholder.link>`_. 
+You can access a serverless, web-hosted version here: `DQMaRC Shiny Front End <https://github.com/christie-nhs-data-science/DQMaRC/blob/main/DQMaRC_ShinyLiveEditor_link>`_. 
 Please note this will run in your local web browser. For more information refer to `Shinylive web hosting <https://shiny.posit.co/py/docs/shinylive.html>`_
 
 If you installed ``DQMaRC`` using pip or conda, you can also run the ``shiny app`` in terminal, bash, or Anaconda Powershell:
@@ -261,7 +261,7 @@ If you installed ``DQMaRC`` using pip or conda, you can also run the ``shiny app
 
     .. tab:: Serverless Web-Browser
 
-        You can access a serverless, web-hosted version here: `DQMaRC Shiny Front End <https://placeholder.link>`_. 
+        You can access a serverless, web-hosted version here: `DQMaRC Shiny Front End <https://github.com/christie-nhs-data-science/DQMaRC/blob/main/DQMaRC_ShinyLiveEditor_link>`_. 
 
 
     .. tab:: Cloned from GitHub
@@ -304,22 +304,7 @@ Cite DQMaRC
 
 Please use the following citation if you use DQMaRC:
 
-Lighterness, A., Adcock, M.A., and Price, G. (2024). DQMaRC: A Python Tool for Structured Data Quality Profiling (Version 1.1.0) [Software]. 
-Available from https://github.com/DQMaRC.
-
-If you use ``DQMaRC`` in a scientific publication, we would appreciate
-citations to the following paper::
-
-  @article{JOSS:volume0:pp12-345,
-  author  = {Anthony Lighterness, Michael Adcock, and Gareth Price},
-  title   = {DQMaRC: A Python Tool for Structured Data Quality Profiling.},
-  journal = {Journal of Open Source Software},
-  year    = {2024},
-  volume  = {0},
-  number  = {0},
-  pages   = {12-345},
-  url     = {http://joss.org/papers/...}
-  }
+Lighterness, A., Adcock, M.A., and Price, G. (2024). DQMaRC: A Python Tool for Structured Data Quality Profiling (Version 1.0.0) [Software]. Available from https://github.com/christie-nhs-data-science/DQMaRC.
 
 
 References
