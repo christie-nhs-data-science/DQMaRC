@@ -142,7 +142,7 @@ class Validity(Dimension):
             # 'Validity_Lookup_Table': {'method': self.test_against_lookup_tables, 
             #                           'default': False, 
             #                           'arg1': 'Validity_Lookup_Table_Filename'},
-            'Validity_Lookup': {'method': self.test_against_lookup_tables, 
+            'Validity_Lookup_Table': {'method': self.test_against_lookup_tables, 
                                       'default': False, 
                                       'arg1': 'Validity_Lookup_Type',
                                       'arg2': 'Validity_Lookup_Codes'},
