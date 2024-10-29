@@ -45,15 +45,15 @@ class Validity(Dimension):
         
         Uses a regular expression to match UK postcode formats. Postcodes that do not match the pattern are flagged as invalid.
 
-    test_against_lookup_tables(test)
-        Verifies if values in the dataset match against specified lookup tables.
+    test_against_lookup(test)
+        Verifies if values in the dataset match against specified value list or lookup tables.
 
         Parameters
         ----------
         test : str
             The name of the test to be executed, indicating the column and the associated lookup table for validation.
         
-        The lookup table is expected to be a CSV file containing valid codes or values. Values not found in the lookup table are flagged as invalid.
+        The lookup table is expected to be a CSV file containing valid codes or values or a pipe separated list of permissible values. Values not found in the lookup table are flagged as invalid.
 
     test_ranges(test)
         Checks if numeric values in the dataset fall within specified ranges.
@@ -142,7 +142,7 @@ class Validity(Dimension):
             # 'Validity_Lookup_Table': {'method': self.test_against_lookup_tables, 
             #                           'default': False, 
             #                           'arg1': 'Validity_Lookup_Table_Filename'},
-            'Validity_Lookup_Table': {'method': self.test_against_lookup_tables, 
+            'Validity_Lookup': {'method': self.test_against_lookup_tables, 
                                       'default': False, 
                                       'arg1': 'Validity_Lookup_Type',
                                       'arg2': 'Validity_Lookup_Codes'},
