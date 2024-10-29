@@ -1,0 +1,19 @@
+﻿Field,Date_Format,Completeness_NULL,Completeness_Empty,Completeness_Encoded,Completeness_Encoded_Mapping,Uniqueness_Rows,Consistency_Compare,Consistency_Compare_Field,Consistency_Compare_Mapping,Consistency_Date_Relations,Consistency_Date_Relationship,Consistency_Date_Relations_Field,Timeliness_Date_Diff,Timeliness_Date_Diff_Field,Timeliness_Date_Diff_Threshold,Validity_Dates_Future,Validity_Date_Range,Validity_Date_Range_Min,Validity_Date_Range_Max,Validity_NHS_Number,Validity_Postcode_UK,Validity_Lookup_Table,Validity_Lookup_Type,Validity_Lookup_Codes,Validity_Range,Validity_Range_Numeric,Validity_Pattern,Validity_Pattern_Regex,Accuracy_Gold_Standard
+Patient_ID,,TRUE,TRUE,FALSE,,TRUE,FALSE,,,FALSE,,,FALSE,,,FALSE,FALSE,,,FALSE,FALSE,FALSE,,,FALSE,,FALSE,,FALSE
+Gender,,TRUE,TRUE,TRUE,.|unknown|null|not known|na|n/a|none,FALSE,FALSE,,,FALSE,,,FALSE,,,FALSE,FALSE,,,FALSE,FALSE,TRUE,File,LU_toydf_gender.csv,FALSE,,FALSE,,FALSE
+Date_of_Diagnosis,%d/%m/%Y,TRUE,TRUE,FALSE,,FALSE,FALSE,,,TRUE,>,Date_of_Birth,FALSE,,,TRUE,TRUE,01/01/2020,01/01/2024,FALSE,FALSE,FALSE,,,FALSE,,TRUE,(\d{2})/(\d{2})/(\d{4}),FALSE
+Date_of_Birth,%d/%m/%Y,TRUE,TRUE,FALSE,,FALSE,FALSE,,,TRUE,<,Date_of_Diagnosis,FALSE,,,TRUE,FALSE,,,FALSE,FALSE,FALSE,,,FALSE,,TRUE,(\d{2})/(\d{2})/(\d{4}),FALSE
+Age,,TRUE,TRUE,FALSE,,FALSE,FALSE,,,FALSE,,,FALSE,,,FALSE,FALSE,,,,,FALSE,,,TRUE,0|110,FALSE,,FALSE
+Weight_kg,,TRUE,TRUE,FALSE,,FALSE,FALSE,,,FALSE,,,FALSE,,,FALSE,FALSE,,,,,FALSE,,,TRUE,5|150,FALSE,,FALSE
+Height_cm,,TRUE,TRUE,FALSE,,FALSE,FALSE,,,FALSE,,,FALSE,,,FALSE,FALSE,,,,,FALSE,,,TRUE,10|200,FALSE,,FALSE
+BMI,,TRUE,TRUE,FALSE,,FALSE,FALSE,,,FALSE,,,FALSE,,,FALSE,FALSE,,,,,FALSE,,,TRUE,5|60,FALSE,,FALSE
+Postcode,,TRUE,TRUE,TRUE,.|unknown|null|not known|na|n/a|none,FALSE,FALSE,,,FALSE,,,FALSE,,,FALSE,FALSE,,,FALSE,TRUE,FALSE,,,FALSE,,FALSE,,FALSE
+ICD_10_Code,,TRUE,TRUE,TRUE,.|unknown|Unknown|null|not known|na|n/a|N/A|none,FALSE,FALSE,,,FALSE,,,FALSE,,,FALSE,FALSE,,,FALSE,FALSE,FALSE,,,FALSE,,FALSE,,FALSE
+Tumour_Stage,,TRUE,TRUE,TRUE,None|N/A|Incomplete Stage|Incomplete Stage2,FALSE,FALSE,,,FALSE,,,FALSE,,,FALSE,FALSE,,,FALSE,FALSE,TRUE,File,LU_toydf_tumour_stage.csv,FALSE,,FALSE,,FALSE
+Metastatic_Indicator,,TRUE,TRUE,FALSE,,FALSE,TRUE,Tumour_M_Stage,"{""Absent"": [""M0""], ""Present"": [""M1"", ""M1a"", ""M1b"", ""M1c"", ""M1d"", ""pM1"", ""pM1a"", ""pM1b"", ""pM1c"", ""pM1d""]}",FALSE,,,FALSE,,,FALSE,FALSE,,,FALSE,FALSE,FALSE,,,FALSE,,FALSE,,FALSE
+Tumour_M_Stage,,TRUE,TRUE,FALSE,,FALSE,FALSE,,,FALSE,,,FALSE,,,FALSE,FALSE,,,FALSE,FALSE,TRUE,Values,M0|M1|M1b|pM1,FALSE,,FALSE,,FALSE
+Regimen_Start_Date,%d/%m/%Y,TRUE,TRUE,FALSE,,FALSE,FALSE,,,FALSE,,,FALSE,,,TRUE,FALSE,,,FALSE,FALSE,FALSE,,,FALSE,,TRUE,[0-9]{2}/[0-9]{2}/[0-9]{2},FALSE
+Datetime_Event1,%d/%m/%Y %H:%M,TRUE,TRUE,FALSE,,FALSE,FALSE,,,TRUE,<,Datetime_Logging1,TRUE,Datetime_Logging1,10,TRUE,FALSE,,,FALSE,FALSE,FALSE,,,FALSE,,TRUE,(\d{2})/(\d{2})/(\d{4}) (\d{2}):(\d{2}),FALSE
+Datetime_Logging1,%d/%m/%Y %H:%M,TRUE,TRUE,FALSE,,FALSE,FALSE,,,TRUE,>,Datetime_Event1,FALSE,,,TRUE,FALSE,,,FALSE,FALSE,FALSE,,,FALSE,,TRUE,(\d{2})/(\d{2})/(\d{4}) (\d{2}):(\d{2}),FALSE
+Datetime_Event2,%d/%m/%Y %H:%M,TRUE,TRUE,FALSE,,FALSE,FALSE,,,TRUE,<,Datetime_Logging2,TRUE,Datetime_Logging2,10,TRUE,FALSE,,,FALSE,FALSE,FALSE,,,FALSE,,TRUE,[0-9]{2}/[0-9]{2}/[0-9]{4} [0-9]{2}:[0-9]{2},FALSE
+Datetime_Logging2,%d/%m/%Y %H:%M,TRUE,TRUE,FALSE,,FALSE,FALSE,,,FALSE,,,FALSE,,,TRUE,FALSE,,,FALSE,FALSE,FALSE,,,FALSE,,TRUE,(\d{2})/(\d{2})/(\d{4}) (\d{2}):(\d{2}),FALSE
