@@ -5,7 +5,6 @@ DQMaRC: A Python Tool for Structured Data Quality Profiling
 **Author:** Anthony Lighterness and Michael Adcock  
 **License:** MIT License  
 
----
 
 Overview
 --------
@@ -109,6 +108,11 @@ Using the Shiny App
 
 In addition to programmatic usage, DQMaRC includes an interactive Shiny web app for Python that allows users to explore and visualise data quality issues.
 
+You can test the DQMaRC ShinyLive Demo by copying and pasting the URL located `HERE <https://github.com/christie-nhs-data-science/DQMaRC/blob/main/DQMaRC_ShinyLiveEditor_link>`_ into your webbrowser. This link will take you to a ShinyLive Editor where you can test the DQMaRC functionality. If you encounter an error, try refreshing the webpage once or twice. If you still encounter an error after this, please feel free to get in touch by contacting us or raising an issue on our repository.
+
+**PLEASE NOTE**
+The ShinyLive UI is recommended only for **testing** and getting used to the DQMaRC too functionality. This interface is deployed on your machine, meaning it is only as secure as your machine is. It will store data you upload in its local memory before being wiped when you exit the app.
+
 ### Running the Shiny App
 
 To run the Shiny app, use the following command in your terminal:
@@ -120,8 +124,6 @@ To run the Shiny app, use the following command in your terminal:
 ### Deploying the Shiny App
 
 For deploying the Shiny app on a server, follow the `official Shiny for Python deployment guide <https://shiny.posit.co/py/docs/install-create-run.html>`_.
-
-You can test the DQMaRC ShinyLive Demo by copying and pasting the URL located [HERE](https://github.com/christie-nhs-data-science/DQMaRC/blob/main/DQMaRC_ShinyLiveEditor_link) into your webbrowser.
 
 Documentation
 -------------
