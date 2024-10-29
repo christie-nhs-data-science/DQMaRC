@@ -1,0 +1,6 @@
+﻿NHS_number,Gender,Age,Postcode,ICD_10_Code,Metastatic_Indicator,Tumour_M_Stage,Datetime_Event1,Datetime_Logging1
+3417315905,Male,72,BS5 0NQ,Y743,Present,M0,13/03/2024 00:00,13/03/2024 00:11
+3417315905,Female,181,BT78 3PN,Y743,Absent,M0,25/03/2022 00:00,25/03/2022 00:02
+12345,.,140,UB7 0JP,Unkown,Present,M1,21/03/2024 00:00,21/03/2034 00:31
+none,      ,-15,NULL,   ,Absent,pM1a,12/03/2024 00:00,12/03/2024 00:08
+8832794853,unknown,,B63  3QX,       ,Present,M1a,005/03/2024  00:00:00,005/03/2024  00:10:00

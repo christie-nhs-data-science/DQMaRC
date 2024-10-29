@@ -1,0 +1,67 @@
+NHS_number,3417315905,3417315905,12345,none,8832794853
+Gender,Male,Female,.,      ,unknown
+Age,72,181,140,-15,
+Postcode,BS5 0NQ,BT78 3PN,UB7 0JP,NULL,B63  3QX
+ICD_10_Code,Y743,Y743,Unkown,   ,       
+Metastatic_Indicator,Present,Absent,Present,Absent,Present
+Tumour_M_Stage,M0,M0,M1,pM1a,M1a
+Datetime_Event1,13/03/2024 00:00,25/03/2022 00:00,21/03/2024 00:00,12/03/2024 00:00,005/03/2024  00:00:00
+Datetime_Logging1,13/03/2024 00:11,25/03/2022 00:02,21/03/2034 00:31,12/03/2024 00:08,005/03/2024  00:10:00
+Completeness_NULL_|_NHS_number,0,0,0,0,0
+Completeness_NULL_|_Gender,0,0,0,0,0
+Completeness_NULL_|_Age,0,0,0,0,0
+Completeness_NULL_|_Postcode,0,0,0,1,0
+Completeness_NULL_|_ICD_10_Code,0,0,0,0,0
+Completeness_NULL_|_Metastatic_Indicator,0,0,0,0,0
+Completeness_NULL_|_Tumour_M_Stage,0,0,0,0,0
+Completeness_NULL_|_Datetime_Event1,0,0,0,0,0
+Completeness_NULL_|_Datetime_Logging1,0,0,0,0,0
+Completeness_Empty_|_NHS_number,0,0,0,0,0
+Completeness_Empty_|_Gender,0,0,0,1,0
+Completeness_Empty_|_Age,0,0,0,0,1
+Completeness_Empty_|_Postcode,0,0,0,0,0
+Completeness_Empty_|_ICD_10_Code,0,0,0,1,1
+Completeness_Empty_|_Metastatic_Indicator,0,0,0,0,0
+Completeness_Empty_|_Tumour_M_Stage,0,0,0,0,0
+Completeness_Empty_|_Datetime_Event1,0,0,0,0,0
+Completeness_Empty_|_Datetime_Logging1,0,0,0,0,0
+Completeness_Encoded_|_NHS_number,0,0,0,1,0
+Completeness_Encoded_|_Gender,0,0,1,0,1
+Completeness_Encoded_|_Postcode,0,0,0,0,0
+Completeness_Encoded_|_ICD_10_Code,0,0,0,0,0
+completeness_count_|_Age,0,0,0,0,1
+completeness_count_|_Datetime_Event1,0,0,0,0,0
+completeness_count_|_Datetime_Logging1,0,0,0,0,0
+completeness_count_|_Gender,0,0,1,1,1
+completeness_count_|_ICD_10_Code,0,0,0,1,1
+completeness_count_|_Metastatic_Indicator,0,0,0,0,0
+completeness_count_|_NHS_number,0,0,0,1,0
+completeness_count_|_Postcode,0,0,0,0,0
+completeness_count_|_Tumour_M_Stage,0,0,0,0,0
+row_uniqueness_|_full_row_uniqueness,1,0,0,0,0
+uniqueness_count_|_full_row_uniqueness,1,0,0,0,0
+Consistency_Compare_|_Metastatic_Indicator,1,0,0,1,0
+Consistency_Date_Relations_|_Datetime_Event1,0,0,0,0,0
+Consistency_Date_Relations_|_Datetime_Logging1,0,0,0,0,0
+consistency_count_|_Datetime_Event1,0,0,0,0,0
+consistency_count_|_Datetime_Logging1,0,0,0,0,0
+consistency_count_|_Metastatic_Indicator,1,0,0,1,0
+Timeliness_Date_Diff_|_Datetime_Event1,1,0,1,0,1
+timeliness_count_|_Datetime_Event1,1,0,1,0,1
+Validity_Dates_Future_|_Datetime_Event1,0,0,0,1,0
+Validity_Dates_Future_|_Datetime_Logging1,0,0,1,1,0
+Validity_Date_Range_|_Datetime_Event1,0,1,0,0,0
+Validity_NHS_Number_|_NHS_number,0,0,1,0,0
+Validity_Postcode_UK_|_Postcode,0,0,1,0,1
+Validity_Lookup_Table_|_Gender,0,0,0,0,0
+Validity_Lookup_Table_|_ICD_10_Code,0,0,1,0,0
+Validity_Lookup_Table_|_Tumour_M_Stage,0,0,0,0,0
+Validity_Pattern_|_Datetime_Event1,0,0,0,0,1
+Validity_Pattern_|_Datetime_Logging1,0,0,0,0,1
+validity_count_|_Datetime_Event1,0,1,0,1,1
+validity_count_|_Datetime_Logging1,0,0,1,1,1
+validity_count_|_Gender,0,0,0,0,0
+validity_count_|_ICD_10_Code,0,0,1,0,0
+validity_count_|_NHS_number,0,0,1,0,0
+validity_count_|_Postcode,0,0,0,1,1
+validity_count_|_Tumour_M_Stage,0,0,0,0,0
