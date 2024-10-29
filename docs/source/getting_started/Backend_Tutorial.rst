@@ -851,16 +851,16 @@ Other countries' postcodes can be validated using pattern validation as shown be
                 grid_style={"header_background_color": "lightblue"})
 
 
-Invalid Gender Codes
-""""""""""""""""""""
-This is one example of a validation test applied to a categorical or coded source variable. In this case, we validate ICD10 codes by comparing
-against a list of valid codes set by the World Health Organisation. We must provide the code list as a csv file and the name of it in the 
+Invalid Tumour Stage Codes
+""""""""""""""""""""""""""
+This is one example of a validation test applied to a categorical or coded source variable. In this case, we validate Tumour_Stage codes by comparing
+against a list of valid codes. We must provide the code list as a csv file and the name of it in the 
 ``test parameters`` dataset.
 
 .. jupyter-execute::
 
-    validity_codes_conditions = (df_DQ_full['Validity_Lookup_|_Gender']>0)
-    df_DQ_full[['Gender','Validity_Lookup_|_Gender']].loc[(validity_codes_conditions)]
+    validity_codes_conditions = (df_DQ_full['Validity_Lookup_Table_|_Tumour_Stage']>0)
+    df_DQ_full[['Tumour_Stage','Validity_Lookup_Table_|_Tumour_Stage']].loc[(validity_codes_conditions)]
 
 
 Numerical Outliers
