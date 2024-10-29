@@ -3,6 +3,8 @@ from datetime import datetime
 import re
 from pkg_resources import resource_filename
 from .Dimension import Dimension
+# from Dimension import Dimension # for shinylive version
+from pathlib import Path
 
 class Validity(Dimension):
     """
@@ -131,10 +133,19 @@ class Validity(Dimension):
         # Define various tests for validity checks
         self.tests = {
             'Validity_Dates_Future': {'method': self.test_future_dates, 'default': False},
-            'Validity_Date_Range': {'method': self.min_max_dates, 'default': False, 'arg1': 'Validity_Date_Range_Min', 'arg2': 'Validity_Date_Range_Max'},
+            'Validity_Date_Range': {'method': self.min_max_dates, 
+                                    'default': False, 
+                                    'arg1': 'Validity_Date_Range_Min', 
+                                    'arg2': 'Validity_Date_Range_Max'},
             'Validity_NHS_Number': {'method': self.test_nhs_numbers, 'default': False},
             'Validity_Postcode_UK': {'method': self.test_postcode, 'default': False},
-            'Validity_Lookup_Table': {'method': self.test_against_lookup_tables, 'default': False, 'arg1': 'Validity_Lookup_Table_Filename'},
+            # 'Validity_Lookup_Table': {'method': self.test_against_lookup_tables, 
+            #                           'default': False, 
+            #                           'arg1': 'Validity_Lookup_Table_Filename'},
+            'Validity_Lookup_Table': {'method': self.test_against_lookup_tables, 
+                                      'default': False, 
+                                      'arg1': 'Validity_Lookup_Type',
+                                      'arg2': 'Validity_Lookup_Codes'},
             'Validity_Range': {'method': self.test_ranges, 'default': False, 'arg1': 'Validity_Range_Numeric'},
             'Validity_Pattern': {'method': self.test_pattern_validity, 'default': False, 'arg1': 'Validity_Pattern_Regex'}
             }
@@ -172,26 +183,56 @@ class Validity(Dimension):
 
         self.run_metric(test, func)
 
+    # def test_against_lookup_tables(self, test):
+    #     # """
+    #     # Verifies if values in a specified column match against a predefined lookup table of valid values.
+        
+    #     # Parameters
+    #     # ----------
+    #     # test : str
+    #     #     The name of the test to be executed, indicating the column and the associated lookup table for validation.
+        
+    #     # The lookup table is expected to be a CSV file containing valid codes or values. Values not found in the lookup table are flagged as invalid.
+    #     # """
+    #     def func(col, extra_args=None):
+    #         lookup_name = self.test_params[self.test_params['Field'] == col][self.tests[test]['arg1']].item()
+
+    #         lookup_path = resource_filename('DQMaRC', f'data/lookups/{lookup_name}')
+    #         lookup = pd.read_csv(lookup_path)
+
+
+    #         lookup = lookup.rename({'Code2': 'Code'}, axis=1)
+    #         return ~self.df[col].apply(lambda x: str(x).strip() in set(lookup['Code'].astype(str)))
+
+    #     self.run_metric(test, func)
+
     def test_against_lookup_tables(self, test):
-        # """
-        # Verifies if values in a specified column match against a predefined lookup table of valid values.
-        
-        # Parameters
-        # ----------
-        # test : str
-        #     The name of the test to be executed, indicating the column and the associated lookup table for validation.
-        
-        # The lookup table is expected to be a CSV file containing valid codes or values. Values not found in the lookup table are flagged as invalid.
-        # """
         def func(col, extra_args=None):
-            lookup_name = self.test_params[self.test_params['Field'] == col][self.tests[test]['arg1']].item()
+            # Retrieve the lookup type and codes (if any) from test parameters
+            lookup_type = self.test_params[self.test_params['Field'] == col][self.tests[test]['arg1']].item()
+            lookup_codes = self.test_params[self.test_params['Field'] == col][self.tests[test]['arg2']].item()
 
-            lookup_path = resource_filename('DQMaRC', f'data/lookups/{lookup_name}')
-            lookup = pd.read_csv(lookup_path)
+            if lookup_type == "File":
+                try:
+                    # First path using resource_filename
+                    infile = Path(__file__).parent / f'{lookup_codes}'
+                    lookup = pd.read_csv(infile)
+                except FileNotFoundError:
+                    # Second path using the parent directory of the script
+                    lookup_path = resource_filename('DQMaRC', f'data/lookups/{lookup_codes}')
+                    lookup = pd.read_csv(lookup_path)
 
+                # Extract valid codes from the first column
+                valid_codes_set = set(lookup.iloc[:, 0].astype(str).str.strip())
+                
+            elif lookup_type == "Values":
+                # Split comma-separated codes into a set
+                valid_codes_set = set(code.strip() for code in lookup_codes.split("|"))
+            else:
+                raise ValueError("Lookup type must be 'Table' or 'Codes'")
 
-            lookup = lookup.rename({'Code2': 'Code'}, axis=1)
-            return ~self.df[col].apply(lambda x: str(x).strip() in set(lookup['Code'].astype(str)))
+            # Apply validation by checking if each value is in the valid codes set
+            return ~self.df[col].apply(lambda x: str(x).strip() in valid_codes_set)
 
         self.run_metric(test, func)
 
@@ -207,7 +248,8 @@ class Validity(Dimension):
         # The valid range is specified as two numbers separated by '||'. Values outside this range are flagged as invalid.
         # """
         def func(col, extra_args=None):
-            ranges = self.test_params[self.test_params['Field'] == col][self.tests[test]['arg1']].item().split('||')
+            # ranges = self.test_params[self.test_params['Field'] == col][self.tests[test]['arg1']].item().split('||')
+            ranges = self.test_params[self.test_params['Field'] == col][self.tests[test]['arg1']].item().split('|') # to make consistent
             return self.df[col].apply(lambda x: float(x) < float(ranges[0]) or float(x) > float(ranges[1]))
 
         self.run_metric(test, func)
