@@ -45,15 +45,15 @@ class Validity(Dimension):
         
         Uses a regular expression to match UK postcode formats. Postcodes that do not match the pattern are flagged as invalid.
 
-    test_against_lookup(test)
-        Verifies if values in the dataset match against specified value list or lookup tables.
+    test_against_lookup_tables(test)
+        Verifies if values in the dataset match against specified lookup tables.
 
         Parameters
         ----------
         test : str
             The name of the test to be executed, indicating the column and the associated lookup table for validation.
         
-        The lookup table is expected to be a CSV file containing valid codes or values or a pipe separated list of permissible values. Values not found in the lookup table are flagged as invalid.
+        The lookup table is expected to be a CSV file containing valid codes or values. Values not found in the lookup table are flagged as invalid.
 
     test_ranges(test)
         Checks if numeric values in the dataset fall within specified ranges.
@@ -212,7 +212,7 @@ class Validity(Dimension):
             lookup_type = self.test_params[self.test_params['Field'] == col][self.tests[test]['arg1']].item()
             lookup_codes = self.test_params[self.test_params['Field'] == col][self.tests[test]['arg2']].item()
 
-            if lookup_type == "File":
+            if lookup_type == 'File':
                 try:
                     # First path using resource_filename
                     infile = Path(__file__).parent / f'{lookup_codes}'
@@ -225,11 +225,11 @@ class Validity(Dimension):
                 # Extract valid codes from the first column
                 valid_codes_set = set(lookup.iloc[:, 0].astype(str).str.strip())
                 
-            elif lookup_type == "Values":
+            elif lookup_type == 'Values':
                 # Split comma-separated codes into a set
                 valid_codes_set = set(code.strip() for code in lookup_codes.split("|"))
             else:
-                raise ValueError("Lookup type must be 'Table' or 'Codes'")
+                raise ValueError("Lookup type must be 'File' or 'Values'")
 
             # Apply validation by checking if each value is in the valid codes set
             return ~self.df[col].apply(lambda x: str(x).strip() in valid_codes_set)
