@@ -98,7 +98,7 @@ If you want to run :ref:`DQMaRC <api.DQMaRC>` as a Python user, please follow th
 
 To install :ref:`DQMaRC <api.DQMaRC>` into your python environment, please follow the instructions below.
 
-To view the package dependencies, you can access the `requirements.txt` and/or `environment.yml` file from the `DQMaRC GitHub Repository <https://github.com/yourusername/DQMaRC>`_.
+To view the package dependencies, you can access the `requirements.txt` and/or `environment.yml` file from the `DQMaRC GitHub Repository <https://github.com/christie-nhs-data-science/DQMaRC>`_.
 
 The key dependencies are: 
     * Python (>= 3.9)
