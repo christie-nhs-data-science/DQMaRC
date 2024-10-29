@@ -1,0 +1,50 @@
+name: Run Unit Tests
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  unittests: # name of this job
+    runs-on: ubuntu-latest # virtual machine name to run github actions
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
+  # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # step 2: Set up Python and install dependencies
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'  # Specify Python version
+
+      # step 3: Set up Python and install dependencies
+      - name: Install dependencies
+        run: | # pipe for multiple action lines
+          python -m pip install --upgrade pip
+          pip install -r docs/docs_requirements.txt  # file in docs/... folder
+          pip install pytest
+
+      # step 4: run unit tests
+      - name: Run unit tests
+        run: |
+          python -m unittest tests/test_import.py
+          python -m unittest tests/test_accuracy.py
+          python -m unittest tests/test_completeness.py
+          python -m unittest tests/test_consistency.py
+          python -m unittest tests/test_timeliness.py
+          python -m unittest tests/test_uniqueness.py
+          python -m unittest tests/test_validity.py
