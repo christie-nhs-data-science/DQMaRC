@@ -79,24 +79,3 @@ jobs:
         user: __token__
         password: ${{ secrets.pypi_password }}
         repository-url: https://upload.pypi.org/legacy/
-
-  publish-to-conda:
-    name: Publish to Conda
-    needs: publish-to-pypi
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Install conda-build and anaconda-client
-        shell: bash -l {0}  # Load the shell with Conda initialized
-        run: |
-          conda install -y conda-build anaconda-client
-          source $(conda info --base)/etc/profile.d/conda.sh
-          conda activate base
-          anaconda login --username "${{ secrets.conda_username }}" --password "${{ secrets.conda_password }}"
-
-      - name: Build Conda package
-        run: conda build ../conda_recipe
-
-      - name: Upload to Conda
-        run: |
-          anaconda upload ./dist/dqmarc-1.0.2-*.tar.bz2 --user "${{ secrets.conda_username }}"
