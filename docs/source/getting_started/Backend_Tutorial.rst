@@ -50,7 +50,6 @@ Data Import
 -----------
 
 .. figure:: ../images/mockaroo.png
-    :scale: 100%
     :alt: A screenshot image showing the image icon for synthetic data generator website Mockaroo.
     :target: https://mockaroo.com/
 
