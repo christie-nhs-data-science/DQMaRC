@@ -50,7 +50,7 @@ classifiers = [
   "Programming Language :: Python :: 3.10"
 ]
 [project.urls]
-Documentation = "https://readthedocs.org"
+Documentation = "https://christie-nhs-data-science.github.io/DQMaRC/"
 Repository = "https://github.com/christie-nhs-data-science/DQMaRC"
 Issues = "https://github.com/christie-nhs-data-science/DQMaRC/issues"
 
