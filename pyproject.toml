@@ -4,7 +4,6 @@ build-backend = "setuptools.build_meta"
 
 [project]
 dynamic = ["version", "description"]
-version = "1.0.0"
 name = "DQMaRC"
 authors = [
   {name = "Anthony Lighterness", email = "anthony.lighterness@nhs.net"},
