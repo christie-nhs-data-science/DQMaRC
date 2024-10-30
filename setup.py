@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-import yaml
 from pathlib import Path
 
 def parse_requirements(filename):
@@ -11,7 +10,7 @@ requirements = parse_requirements('requirements.txt')
 
 setup(
     name='DQMaRC',
-    version='1.0.1',
+    version='1.0.0',
     author='Anthony Lighterness and Michael Adcock',
     author_email='tony.lighterness@gmail.com',
     
