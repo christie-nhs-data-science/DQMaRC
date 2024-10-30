@@ -90,7 +90,7 @@ Overall, the workflow when using :ref:`DQMaRC <api.DQMaRC>` can be described in 
 
 How To Access DQMaRC? 
 ---------------------
-See below how you can access :ref:`DQMaRC <api.DQMaRC>` either by installing it through pip or conda, or by accessing the user friendly graphical user interface (GUI).
+See below how you can access :ref:`DQMaRC <api.DQMaRC>` either by installing it through pip, or by accessing the user friendly graphical user interface (GUI).
 
 Python Installation
 ^^^^^^^^^^^^^^^^^^^
@@ -113,64 +113,6 @@ The key dependencies are:
 
 .. tabs::
     
-    .. tab:: Conda Virtual Environment
-
-        1. **Install Conda**:
-
-        Make sure you have Conda installed. If not, download and install it from the `Anaconda <https://www.anaconda.com/products/distribution>`_ 
-        website or the `Miniconda <https://docs.conda.io/en/latest/miniconda.html>`_ website.
-
-        2. **Navigate to the Directory Containing `environment.yml`**:
-
-        Open a terminal (or Anaconda Powershell) and navigate to your project directory.
-        You can also download the ``DQMaRC`` `environment.yml` file and place it here if you prefer to setup a conda
-        environment using the yml file.
-
-        3. **Create the Conda Environment**:
-
-        Create your conda environment either from scratch or using the environment.yml file:
-
-        A new conda environment: 
-
-        .. code-block:: bash
-
-            conda create -n myenv python=3.9 pandas numpy
-        
-        From the yml file:
-        
-        .. code-block:: bash
-
-            conda env create -f environment.yml
-
-
-        4. **Activate the Conda Environment**:
-
-        Once the environment is created, activate it using:
-
-        .. code-block:: bash
-            
-            conda activate <environment_name>
-
-        Replace `<environment_name>` with your conda environment name or the name specified in the `environment.yml` file.
-
-        5. **Verify the Environment**:
-
-        You can verify that the environment is active and working by checking the installed packages:
-        
-        .. code-block:: bash
-
-            conda list
-
-        6. **Conda Install DQMaRC**
-
-        .. code-block:: console
-
-            $ conda install -c conda-forge DQMaRC
-
-            $ git clone https://github.com/The-Christie-NHS-FT/DQMaRC
-
-
-
     .. tab:: Python Virtual Environment
 
         1. **Install Python>=3.9**:
@@ -255,7 +197,7 @@ We have built a frontend graphical user interface using `shiny for python <https
 You can access a serverless, web-hosted version here: `DQMaRC Shiny Front End <https://github.com/christie-nhs-data-science/DQMaRC/blob/main/DQMaRC_ShinyLiveEditor_link>`_. 
 Please note this will run in your local web browser. For more information refer to `Shinylive web hosting <https://shiny.posit.co/py/docs/shinylive.html>`_
 
-If you installed ``DQMaRC`` using pip or conda, you can also run the ``shiny app`` in terminal, bash, or Anaconda Powershell:
+If you installed ``DQMaRC`` using pip, you can also run the ``shiny app`` in terminal, bash, or Anaconda Powershell:
 
 .. tabs::
 
@@ -273,9 +215,9 @@ If you installed ``DQMaRC`` using pip or conda, you can also run the ``shiny app
             shiny run --reload --launch-browser "C:\Users\...\pip_env_dqmarc1\Lib\site-packages\DQMaRC\app.py"
 
 
-    .. tab:: Installed via Pip or Conda
+    .. tab:: Installed via Pip
 
-        Once you have installed ``DQMaRC`` using pip or conda and have your pip or conda virtual environment setup, run the following code in terminal or anaconda powershell. 
+        Once you have installed ``DQMaRC`` using pip and have your pip or conda virtual environment setup, run the following code in terminal or anaconda powershell. 
         This will deploy the app.py script to your local web-browser at localhost. 
         Please adjust the directory string below to point to where you have DQMaRC installed. 
 
