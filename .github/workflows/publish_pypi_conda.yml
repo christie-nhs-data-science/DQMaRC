@@ -95,7 +95,7 @@ jobs:
           anaconda login --username "${{ secrets.conda_username }}" --password "${{ secrets.conda_password }}"
 
       - name: Build Conda package
-        run: conda build ./DQMaRC/conda_recipe
+        run: conda build conda_recipe
 
       - name: Upload to Conda
         run: |
