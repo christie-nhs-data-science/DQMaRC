@@ -3,16 +3,18 @@ requires = ["setuptools >= 61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
+dynamic = ["version", "description"]
+version = "1.0.0"
 name = "DQMaRC"
 authors = [
-  {name = "Anthony Lighterness", email = "tony.lighterness@gmail.com"},
+  {name = "Anthony Lighterness", email = "anthony.lighterness@nhs.net"},
   {name = "Michael Adcock", email = "michael.adcock2@nhs.net"}
 ]
 maintainers = [
   {name = "Anthony Lighterness", email = "tony.lighterness@gmail.com"},
   {name = "Michael Adcock", email = "michael.adcock2@nhs.net"}
 ]
-dynamic = ["version", "description"]
+requires-python = ">= 3.9"
 dependencies = [
 	"pandas",
 	"numpy<2.0",
@@ -24,13 +26,17 @@ dependencies = [
 	"nbformat",
 	"jupyterlab"
 ]
-requires-python = ">= 3.9"
+
+description = "A Python Tool for Structured Data Quality Profiling"
 readme = "README.md"
-license = {file = "LICENSE.txt"}
+
+license = { file = "LICENSE.txt" }
+
 keywords = [
 	"data quality", 
 	"data quality profiling"
 	]
+
 classifiers = [
   # How mature is this project? Common values are
   #   3 - Alpha
@@ -49,11 +55,11 @@ classifiers = [
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10"
 ]
+
 [project.urls]
 Documentation = "https://christie-nhs-data-science.github.io/DQMaRC/"
 Repository = "https://github.com/christie-nhs-data-science/DQMaRC"
 Issues = "https://github.com/christie-nhs-data-science/DQMaRC/issues"
 
-[tool.setuptools.dynamic]
-description = { file = "README.md" }
-
+[project.scripts]
+DQMaRC = "DQMaRC:main"
