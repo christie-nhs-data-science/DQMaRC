@@ -6,7 +6,7 @@ with open("requirements.txt", encoding="utf-8-sig") as f:
 
 setup(
     name='DQMaRC',
-    version='1.0.0',
+    version='1.0.1',
     author='Anthony Lighterness and Michael Adcock',
     author_email='tony.lighterness@gmail.com',
     
