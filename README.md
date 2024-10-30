@@ -1,10 +1,10 @@
 # DQMaRC: A Python Tool for Structured Data Quality Profiling
 
-**Version:** 1.0.0  
+**Version:** 1.0.2
 **Author:** Anthony Lighterness and Michael Adcock  
 **License:** MIT License and Open Government License v3
 
-[![Project Status: Suspended – Initial development has started, but there has not yet been a stable, usable release; work has been stopped for the time being but the author(s) intend on resuming work.](https://www.repostatus.org/badges/latest/suspended.svg)](https://www.repostatus.org/#suspended)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
 ---
 
