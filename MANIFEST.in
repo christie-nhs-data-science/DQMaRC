@@ -3,6 +3,7 @@ include pyproject.toml
 include setup.py
 include README.md
 include LICENSE.txt
+include requirements.txt
 include docs/*
 include DQMaRC/data/*.csv
 include DQMaRC/data/lookups/*.csv
