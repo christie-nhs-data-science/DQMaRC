@@ -13,17 +13,17 @@ jobs:
       uses: angus-g/conda-package-publish-action@master
     #   if: "!contains(github.ref, 'beta')"
       with:
-        subDir: '.'
+        subDir: './conda-recipe'
         AnacondaUsername: ${{ secrets.ANACONDA_USERNAME }}
         AnacondaPassword: ${{ secrets.ANACONDA_PASSWORD }}
         label: main
-        channels: angus-g conda-forge
+        channels: conda-forge
     - name: Publish beta release
       uses: angus-g/conda-package-publish-action@master
     #   if: "contains(github.ref, 'beta')"
       with:
-        subDir: '.'
+        subDir: './conda-recipe'
         AnacondaUsername: ${{ secrets.ANACONDA_USERNAME }}
         AnacondaPassword: ${{ secrets.ANACONDA_PASSWORD }}
         label: beta
-        channels: angus-g conda-forge
+        channels: conda-forge
