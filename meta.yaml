@@ -1,0 +1,31 @@
+package:
+  name: dqmarc
+  version: "1.0.2"
+
+source:
+  path: ./DQMaRC
+
+build:
+  noarch: python
+  script: python -m pip install .
+
+requirements:
+  host:
+    - python >=3.9
+    - pip
+  run:
+    - python >=3.9
+    - pandas
+    - numpy
+    - ipydatagrid
+    - ipywidgets
+    - plotly
+    - shiny
+    - shinywidgets
+    - jupyterlab
+
+about:
+  home: https://github.com/christie-nhs-data-science/DQMaRC
+  license: MIT License and Open Government License v3
+  summary: DQMaRC is a python tool for data quality profiling of structured tabular data.
+  documentation: https://christie-nhs-data-science.github.io/DQMaRC/
