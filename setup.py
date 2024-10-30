@@ -1,12 +1,8 @@
 from setuptools import setup, find_packages
 from pathlib import Path
 
-def parse_requirements(filename):
-    with open(filename, 'r') as f:
-        return f.read().splitlines()
-
-# Parse the requirements.txt file
-requirements = parse_requirements('requirements.txt')
+with open("requirements.txt", encoding="utf-8-sig") as f:
+    requirements = f.read().splitlines()
 
 setup(
     name='DQMaRC',
