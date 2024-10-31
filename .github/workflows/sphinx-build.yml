@@ -3,12 +3,12 @@ name: Build and Deploy Sphinx Documentation
 # credit to: https://redandgreen.co.uk/sphinx-to-github-pages-via-github-actions/
 
 # Controls when the workflow will run
+# on: push # if you want it triggered on every push
+
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    paths:
+      - "setup.py" # trigger if change to setup (e.g. version change)
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
