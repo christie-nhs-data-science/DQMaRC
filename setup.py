@@ -10,6 +10,17 @@ with open(os.path.join("DQMaRC", "__version__.py")) as f:
 with open("requirements.txt", encoding="utf-8-sig") as f:
     requirements = f.read().splitlines()
 
+import re
+from DQMaRC.__version__ import __version__
+
+with open("README.md", "r") as readme:
+    content = readme.read()
+
+content = re.sub(r"\{VERSION\}", __version__, content)
+
+with open("README.md", "w") as readme:
+    readme.write(content)
+
 setup(
     name='DQMaRC',
     version=version["__version__"],  # Use the extracted version
