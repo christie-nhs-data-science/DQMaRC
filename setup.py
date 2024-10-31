@@ -13,13 +13,14 @@ with open("requirements.txt", encoding="utf-8-sig") as f:
 import re
 from DQMaRC.__version__ import __version__
 
-with open("README.md", "r") as readme:
-    content = readme.read()
+for filename in ["README.md", "README.rst"]:
+    with open(filename, "r") as file:
+        content = file.read()
 
-content = re.sub(r"\{VERSION\}", __version__, content)
+    content = re.sub(r"\{VERSION\}", __version__, content)
 
-with open("README.md", "w") as readme:
-    readme.write(content)
+    with open(filename, "w") as file:
+        file.write(content)
 
 setup(
     name='DQMaRC',
