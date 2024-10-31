@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.abspath("../../DQMaRC"))
 
 # -- Project information -----------------------------------------------------
 version = {}
-with open(os.path.join("DQMaRC", "__version__.py")) as f:
+with open(os.path.join("../../DQMaRC", "__version__.py")) as f:
     exec(f.read(), version)
 __version__ = version["__version__"]
 
