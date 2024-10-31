@@ -24,16 +24,12 @@ DQMaRC can be used both programmatically within Python scripts and interactively
 
 ## Installation
 
-### Using Pip or Conda
+### Using Pip
 
 You can install DQMaRC using pip or conda. Ensure you have a virtual environment activated.
 
 ```bash
 pip DQMaRC
-```
-
-```bash
-conda install DQMaRC
 ```
 
 ### Dependencies
