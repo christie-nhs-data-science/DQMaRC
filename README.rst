@@ -1,7 +1,7 @@
 DQMaRC: A Python Tool for Structured Data Quality Profiling
 ===========================================================
 
-- **Version:** 1.0.0  
+- **Version:** {VERSION}
 - **Author:** Anthony Lighterness and Michael Adcock  
 - **License:** MIT License and Open Government License v3
 
