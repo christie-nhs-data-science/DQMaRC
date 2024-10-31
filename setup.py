@@ -11,8 +11,6 @@ with open("requirements.txt", encoding="utf-8-sig") as f:
     requirements = f.read().splitlines()
 
 import re
-from DQMaRC.__version__ import __version__
-
 for filename in ["README.md", "README.rst"]:
     with open(filename, "r") as file:
         content = file.read()
