@@ -22,7 +22,8 @@ for filename in ["README.md", "README.rst"]:
 
 setup(
     name='DQMaRC',
-    version=version["__version__"],  # Use the extracted version
+    # version=version["__version__"],  # Use the extracted version
+    version=version,  # Use the extracted version
     author='Anthony Lighterness and Michael Adcock',
     author_email='tony.lighterness@gmail.com',
     
