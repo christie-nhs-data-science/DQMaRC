@@ -6,7 +6,7 @@ import re
 version = {}
 with open(os.path.join("DQMaRC", "__version__.py")) as f:
     exec(f.read(), version)
-__version__ = version["__version__"]
+version = version["__version__"]
 
 # Read requirements
 with open("requirements.txt", encoding="utf-8-sig") as f:
@@ -15,7 +15,7 @@ with open("requirements.txt", encoding="utf-8-sig") as f:
 # Insert version into README files
 for filename in ["README.md", "README.rst"]:
     with open(filename, "r+") as file:
-        content = re.sub(r"\{VERSION\}", __version__, file.read())
+        content = re.sub(r"\{VERSION\}", version, file.read())
         file.seek(0)
         file.write(content)
         file.truncate()
