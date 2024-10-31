@@ -21,7 +21,10 @@ jobs:
 
     - name: Install pypa/build
       run: python3 -m pip install build --user
-
+      
+    - name: Clean previous builds
+      run: rm -rf dist/
+      
     - name: Build a binary wheel and a source tarball
       run: python3 -m build
 
