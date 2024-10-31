@@ -91,7 +91,7 @@ html_theme = 'sphinx_book_theme'
 
 html_theme_options = {
     # "logo_only": True,
-    # "repository_url": "https://github.com/The-Christie-NHSFT/DQMaRC",
+    "repository_url": "https://github.com/christie-nhs-data-science/DQMaRC",
     # "use_repository_button": True,
     # "use_issues_button": True,
     # "use_edit_page_button": True,
