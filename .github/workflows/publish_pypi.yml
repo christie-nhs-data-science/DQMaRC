@@ -5,7 +5,7 @@ name: Publish Python 🐍 distribution 📦 to PyPI and TestPyPI
 on:
   push:
     paths:
-      - "setup.py" # trigger if change to setup (e.g. version change)
+      - "__version__.py" # trigger if change to version file (e.g. version change)
 
 jobs:
   build:
