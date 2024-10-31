@@ -19,13 +19,17 @@ sys.path.insert(0, os.path.abspath("./DQMaRC"))
 sys.path.insert(0, os.path.abspath("../../DQMaRC"))
 
 # -- Project information -----------------------------------------------------
+version = {}
+with open(os.path.join("DQMaRC", "__version__.py")) as f:
+    exec(f.read(), version)
+__version__ = version["__version__"]
 
 project = 'DQMaRC'
 copyright = '2024, Anthony Lighterness and Michael Adcock'
 author = 'Anthony Lighterness and Michael Adcock'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0.0'
+release = version["__version__"]
 
 
 # -- General configuration ---------------------------------------------------
