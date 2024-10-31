@@ -1,0 +1,611 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index &#8212; DQMaRC 1.0.4 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css?v=572af1d6" />
+    <link rel="stylesheet" type="text/css" href="_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=15c10f45" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=7ba0cc49"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/thebelab-helper.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
+    <script src="_static/js/custom.js?v=d5440534"></script>
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.0.4" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">DQMaRC 1.0.4 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="getting_started/welcome_page.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/Backend_Tutorial.html">Backend Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/Frontend_Tutorial.html">Frontend ShinyPy Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/deployment_guide.html">Deployment Guide</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api_reference/source.html">Source Documentation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_reference/DataQuality.html">Data Quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference/Dimension.html">Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference/Accuracy.html">Accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference/Completeness.html">Completeness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference/Consistency.html">Consistency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference/Timeliness.html">Timeliness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference/Uniqueness.html">Uniqueness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference/Validity.html">Validity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference/ShinyApp.html">ShinyApp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference/UtilitiesDQMaRC.html">UtilitiesDQMaRC</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="third_party_licenses.html">Third-Party Licenses</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ 
+</div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/Accuracy.html#DQMaRC.Accuracy">Accuracy (class in DQMaRC)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    app
+
+      <ul>
+        <li><a href="api_reference/ShinyApp.html#module-app">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.BarPlotGenerator">BarPlotGenerator (class in UtilitiesDQMaRC)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.MetricCalculator.calculate_metrics">calculate_metrics() (MetricCalculator method)</a>
+</li>
+      <li><a href="api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.BarPlotGenerator.chosen_metric">chosen_metric (BarPlotGenerator attribute)</a>
+</li>
+      <li><a href="api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.col_bad">col_bad() (in module UtilitiesDQMaRC)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.col_good">col_good() (in module UtilitiesDQMaRC)</a>
+</li>
+      <li><a href="api_reference/Completeness.html#DQMaRC.Completeness">Completeness (class in DQMaRC)</a>
+</li>
+      <li><a href="api_reference/Consistency.html#DQMaRC.Consistency">Consistency (class in DQMaRC)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.BarPlotGenerator.data">data (BarPlotGenerator attribute)</a>
+
+      <ul>
+        <li><a href="api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.DonutChartGenerator.data">(DonutChartGenerator attribute)</a>
+</li>
+        <li><a href="api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.MetricCalculator.data">(MetricCalculator attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api_reference/DataQuality.html#DQMaRC.DataQuality.data_info">data_info (DataQuality attribute)</a>
+</li>
+      <li><a href="api_reference/DataQuality.html#DQMaRC.DataQuality">DataQuality (class in DQMaRC)</a>
+</li>
+      <li><a href="api_reference/Timeliness.html#DQMaRC.Timeliness.date_diff_calc">date_diff_calc() (Timeliness method)</a>
+</li>
+      <li><a href="api_reference/Consistency.html#DQMaRC.Consistency.date_format">date_format (Consistency attribute)</a>
+
+      <ul>
+        <li><a href="api_reference/Timeliness.html#DQMaRC.Timeliness.date_format">(Timeliness attribute)</a>
+</li>
+        <li><a href="api_reference/Validity.html#DQMaRC.Validity.date_format">(Validity attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/Consistency.html#DQMaRC.Consistency.date_relationships">date_relationships() (Consistency method)</a>
+</li>
+      <li><a href="api_reference/Consistency.html#DQMaRC.Consistency.df">df (Consistency attribute)</a>
+
+      <ul>
+        <li><a href="api_reference/DataQuality.html#DQMaRC.DataQuality.df">(DataQuality attribute)</a>
+</li>
+        <li><a href="api_reference/Dimension.html#DQMaRC.Dimension.df">(Dimension attribute)</a>
+</li>
+        <li><a href="api_reference/Timeliness.html#DQMaRC.Timeliness.df">(Timeliness attribute)</a>
+</li>
+        <li><a href="api_reference/Uniqueness.html#DQMaRC.Uniqueness.df">(Uniqueness attribute)</a>
+</li>
+        <li><a href="api_reference/Validity.html#DQMaRC.Validity.df">(Validity attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api_reference/Dimension.html#DQMaRC.Dimension">Dimension (class in DQMaRC)</a>
+</li>
+      <li><a href="api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.DonutChartGenerator">DonutChartGenerator (class in UtilitiesDQMaRC)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/Uniqueness.html#DQMaRC.Uniqueness.get_uniqueness_errors">get_uniqueness_errors() (Uniqueness method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/Accuracy.html#DQMaRC.Accuracy.gold_standard_comparison">gold_standard_comparison() (Accuracy method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.MetricCalculator">MetricCalculator (class in UtilitiesDQMaRC)</a>
+</li>
+      <li><a href="api_reference/Validity.html#DQMaRC.Validity.min_max_dates">min_max_dates() (Validity method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    module
+
+      <ul>
+        <li><a href="api_reference/ShinyApp.html#module-app">app</a>
+</li>
+        <li><a href="api_reference/UtilitiesDQMaRC.html#module-UtilitiesDQMaRC">UtilitiesDQMaRC</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.overall_quality_fx">overall_quality_fx() (in module UtilitiesDQMaRC)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.BarPlotGenerator.plot_bar">plot_bar() (BarPlotGenerator method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.DonutChartGenerator.plot_donut_charts">plot_donut_charts() (DonutChartGenerator method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.MetricCalculator.result">result (MetricCalculator attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/Dimension.html#DQMaRC.Dimension.results">results (Dimension attribute)</a>
+</li>
+      <li><a href="api_reference/Uniqueness.html#DQMaRC.Uniqueness.run_metric">run_metric() (Uniqueness method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/ShinyApp.html#app.server">server() (in module app)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/Accuracy.html#DQMaRC.Accuracy.set_gold_standard">set_gold_standard() (Accuracy method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/Validity.html#DQMaRC.Validity.test_against_lookup_tables">test_against_lookup_tables() (Validity method)</a>
+</li>
+      <li><a href="api_reference/Completeness.html#DQMaRC.Completeness.test_empty">test_empty() (Completeness method)</a>
+</li>
+      <li><a href="api_reference/Validity.html#DQMaRC.Validity.test_future_dates">test_future_dates() (Validity method)</a>
+</li>
+      <li><a href="api_reference/Completeness.html#DQMaRC.Completeness.test_na_strings">test_na_strings() (Completeness method)</a>
+</li>
+      <li><a href="api_reference/Validity.html#DQMaRC.Validity.test_nhs_numbers">test_nhs_numbers() (Validity method)</a>
+</li>
+      <li><a href="api_reference/Completeness.html#DQMaRC.Completeness.test_null">test_null() (Completeness method)</a>
+</li>
+      <li><a href="api_reference/Consistency.html#DQMaRC.Consistency.test_one_to_one">test_one_to_one() (Consistency method)</a>
+</li>
+      <li><a href="api_reference/Consistency.html#DQMaRC.Consistency.test_params">test_params (Consistency attribute)</a>
+
+      <ul>
+        <li><a href="api_reference/DataQuality.html#DQMaRC.DataQuality.test_params">(DataQuality attribute)</a>
+</li>
+        <li><a href="api_reference/Dimension.html#DQMaRC.Dimension.test_params">(Dimension attribute)</a>
+</li>
+        <li><a href="api_reference/Timeliness.html#DQMaRC.Timeliness.test_params">(Timeliness attribute)</a>
+</li>
+        <li><a href="api_reference/Uniqueness.html#DQMaRC.Uniqueness.test_params">(Uniqueness attribute)</a>
+</li>
+        <li><a href="api_reference/Validity.html#DQMaRC.Validity.test_params">(Validity attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/Validity.html#DQMaRC.Validity.test_pattern_validity">test_pattern_validity() (Validity method)</a>
+</li>
+      <li><a href="api_reference/Validity.html#DQMaRC.Validity.test_postcode">test_postcode() (Validity method)</a>
+</li>
+      <li><a href="api_reference/Validity.html#DQMaRC.Validity.test_ranges">test_ranges() (Validity method)</a>
+</li>
+      <li><a href="api_reference/Uniqueness.html#DQMaRC.Uniqueness.test_row_uniqueness">test_row_uniqueness() (Uniqueness method)</a>
+</li>
+      <li><a href="api_reference/Consistency.html#DQMaRC.Consistency.tests">tests (Consistency attribute)</a>
+
+      <ul>
+        <li><a href="api_reference/Dimension.html#DQMaRC.Dimension.tests">(Dimension attribute)</a>
+</li>
+        <li><a href="api_reference/Timeliness.html#DQMaRC.Timeliness.tests">(Timeliness attribute)</a>
+</li>
+        <li><a href="api_reference/Uniqueness.html#DQMaRC.Uniqueness.tests">(Uniqueness attribute)</a>
+</li>
+        <li><a href="api_reference/Validity.html#DQMaRC.Validity.tests">(Validity attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api_reference/Timeliness.html#DQMaRC.Timeliness">Timeliness (class in DQMaRC)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/Uniqueness.html#DQMaRC.Uniqueness">Uniqueness (class in DQMaRC)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    UtilitiesDQMaRC
+
+      <ul>
+        <li><a href="api_reference/UtilitiesDQMaRC.html#module-UtilitiesDQMaRC">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/Validity.html#DQMaRC.Validity.validate_nhs_number">validate_nhs_number() (Validity method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api_reference/Validity.html#DQMaRC.Validity">Validity (class in DQMaRC)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Anthony Lighterness and Michael Adcock
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Anthony Lighterness and Michael Adcock.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,800 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UtilitiesDQMaRC &#8212; DQMaRC 1.0.4 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=15c10f45" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=7ba0cc49"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/UtilitiesDQMaRC';</script>
+    <script src="../_static/js/custom.js?v=d5440534"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.0.4" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">DQMaRC 1.0.4 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/welcome_page.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/Backend_Tutorial.html">Backend Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/Frontend_Tutorial.html">Frontend ShinyPy Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/deployment_guide.html">Deployment Guide</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api_reference/source.html">Source Documentation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/DataQuality.html">Data Quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Dimension.html">Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Accuracy.html">Accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Completeness.html">Completeness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Consistency.html">Consistency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Timeliness.html">Timeliness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Uniqueness.html">Uniqueness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Validity.html">Validity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/ShinyApp.html">ShinyApp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/UtilitiesDQMaRC.html">UtilitiesDQMaRC</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../third_party_licenses.html">Third-Party Licenses</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for UtilitiesDQMaRC</h1><div class="highlight"><pre>
+<span></span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">from</span> <span class="nn">plotly.subplots</span> <span class="kn">import</span> <span class="n">make_subplots</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">product</span>
+<span class="kn">from</span> <span class="nn">htmltools</span> <span class="kn">import</span> <span class="n">TagList</span><span class="p">,</span> <span class="n">tags</span>
+<span class="kn">from</span> <span class="nn">shiny</span> <span class="kn">import</span> <span class="n">ui</span>
+
+<div class="viewcode-block" id="overall_quality_fx">
+<a class="viewcode-back" href="../api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.overall_quality_fx">[docs]</a>
+<span class="k">def</span> <span class="nf">overall_quality_fx</span><span class="p">(</span><span class="n">avg_prop_good</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Determines the overall quality level based on the average proportion of &#39;good&#39; data.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    avg_prop_good : float</span>
+<span class="sd">        The average proportion (percentage) of &#39;good&#39; quality data across all metrics.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        A string representing the overall quality level. </span>
+<span class="sd">        Possible values are &quot;Outstanding&quot;, &quot;Good&quot;, &quot;Requires Improvement&quot;, or &quot;Inadequate&quot; with corresponding colours for background and text.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">avg_prop_good</span> <span class="o">&gt;</span> <span class="mi">90</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;Outstanding&quot;</span><span class="p">,</span> <span class="s2">&quot;#a6cee3&quot;</span><span class="p">,</span> <span class="s2">&quot;#1f78b4&quot;</span><span class="p">]</span>  <span class="c1"># Light blue for Outstanding </span>
+    <span class="k">elif</span> <span class="n">avg_prop_good</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;Good&quot;</span><span class="p">,</span> <span class="s2">&quot;#b2df8a&quot;</span><span class="p">,</span> <span class="s2">&quot;#33a02c&quot;</span><span class="p">]</span>  <span class="c1"># Green for Good</span>
+    <span class="k">elif</span> <span class="n">avg_prop_good</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;Requires Improvement&quot;</span><span class="p">,</span> <span class="s2">&quot;#fdbf6f&quot;</span><span class="p">,</span> <span class="s2">&quot;#ff7f00&quot;</span><span class="p">]</span>  <span class="c1"># Amber for Requires Improvement</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;Inadequate&quot;</span><span class="p">,</span> <span class="s2">&quot;#fb9a99&quot;</span><span class="p">,</span> <span class="s2">&quot;#e31a1c&quot;</span><span class="p">]</span>  <span class="c1"># Red for Inadequate</span></div>
+
+    
+<div class="viewcode-block" id="DonutChartGenerator">
+<a class="viewcode-back" href="../api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.DonutChartGenerator">[docs]</a>
+<span class="k">class</span> <span class="nc">DonutChartGenerator</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class for generating donut charts to visualise data quality metrics.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : pandas.DataFrame</span>
+<span class="sd">        The data containing quality metrics to be visualised.</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    plot_donut_charts()</span>
+<span class="sd">        Generates a subplot of donut charts for each quality metric in the data.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        plotly.graph_objs._figure.Figure</span>
+<span class="sd">            A Plotly Figure object containing the subplot of donut charts.</span>
+
+<span class="sd">            </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Initialises the DonutChartGenerator with data.</span>
+
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># data : pandas.DataFrame</span>
+        <span class="c1">#     The data containing quality metrics to be visualised.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+
+<div class="viewcode-block" id="DonutChartGenerator.plot_donut_charts">
+<a class="viewcode-back" href="../api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.DonutChartGenerator.plot_donut_charts">[docs]</a>
+    <span class="k">def</span> <span class="nf">plot_donut_charts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Generates and returns a subplot of donut charts for each unique quality metric in the data.</span>
+
+        <span class="c1"># Returns</span>
+        <span class="c1"># -------</span>
+        <span class="c1"># plotly.graph_objs._figure.Figure</span>
+        <span class="c1">#     A Plotly Figure object containing the subplot of donut charts.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Initialise variables and create subplot framework</span>
+        <span class="n">metrics</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Metric&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+        <span class="c1"># create subplots</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span>
+            <span class="n">rows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">cols</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">metrics</span><span class="p">),</span>
+            <span class="n">specs</span><span class="o">=</span><span class="p">[[{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;domain&#39;</span><span class="p">}]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">metrics</span><span class="p">)],</span>
+            <span class="n">subplot_titles</span><span class="o">=</span><span class="n">metrics</span>
+        <span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">metric</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">metrics</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">metric_data_copy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">metric_data</span> <span class="o">=</span> <span class="n">metric_data_copy</span><span class="p">[(</span><span class="n">metric_data_copy</span><span class="p">[</span><span class="s1">&#39;Metric&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">metric</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">metric_data_copy</span><span class="p">[</span><span class="s1">&#39;Prop_NA&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)]</span>
+            <span class="n">avg_prop_good</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">metric_data</span><span class="p">[</span><span class="s1">&#39;Prop_Good&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">avg_prop_bad</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">metric_data</span><span class="p">[</span><span class="s1">&#39;Prop_Bad&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span>
+
+            <span class="n">marker_vals</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="n">metric_data</span><span class="p">[[</span><span class="s1">&#39;Colour_Bad&#39;</span><span class="p">,</span> <span class="s1">&#39;Colour_Good&#39;</span><span class="p">]][:</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+
+            <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+                <span class="n">go</span><span class="o">.</span><span class="n">Pie</span><span class="p">(</span>
+                    <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Bad&#39;</span><span class="p">,</span> <span class="s1">&#39;Good&#39;</span><span class="p">],</span>  <span class="c1"># Updated labels</span>
+                    <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="n">avg_prop_bad</span><span class="p">,</span> <span class="n">avg_prop_good</span><span class="p">],</span>
+                    <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">avg_prop_good</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">,</span>
+                    <span class="n">titlefont_size</span><span class="o">=</span><span class="mi">22</span><span class="p">,</span>
+                    <span class="n">hole</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
+                    <span class="n">textposition</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span>
+                    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">marker</span><span class="o">=</span><span class="n">marker_vals</span>
+                <span class="p">),</span>
+                <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="n">i</span>
+            <span class="p">)</span>
+            <span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span>
+                <span class="n">showlegend</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="n">hoverinfo</span> <span class="o">=</span> <span class="s2">&quot;label+value&quot;</span>
+                <span class="p">)</span>
+
+        <span class="c1"># Customising subplot titles to be bold and larger text size</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ann</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fig</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">annotations</span><span class="p">):</span>
+            <span class="n">fig</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">annotations</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s2">&quot;Arial, bold&quot;</span><span class="p">)</span>
+            <span class="n">fig</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">annotations</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">ann</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>  <span class="c1"># Convert text to uppercase</span>
+
+        <span class="k">return</span> <span class="n">fig</span></div>
+</div>
+
+
+<div class="viewcode-block" id="BarPlotGenerator">
+<a class="viewcode-back" href="../api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.BarPlotGenerator">[docs]</a>
+<span class="k">class</span> <span class="nc">BarPlotGenerator</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class for generating bar plots to visualise data quality metrics for a chosen metric.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : pandas.DataFrame</span>
+<span class="sd">        The data containing quality metrics to be visualised.</span>
+<span class="sd">    chosen_metric : str</span>
+<span class="sd">        The metric for which to generate the bar plot.</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    plot_bar()</span>
+<span class="sd">        Generates a bar plot for the chosen metric.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        plotly.graph_objs._figure.Figure</span>
+<span class="sd">            A Plotly Figure object containing the bar plot.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">chosen_metric</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Initialises the BarPlotGenerator with data and the chosen metric.</span>
+
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># data : pandas.DataFrame</span>
+        <span class="c1">#     The data containing quality metrics to be visualised.</span>
+        <span class="c1"># chosen_metric : str</span>
+        <span class="c1">#     The metric for which to generate the bar plot.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chosen_metric</span> <span class="o">=</span> <span class="n">chosen_metric</span>
+    
+<div class="viewcode-block" id="BarPlotGenerator.plot_bar">
+<a class="viewcode-back" href="../api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.BarPlotGenerator.plot_bar">[docs]</a>
+    <span class="k">def</span> <span class="nf">plot_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Generates and returns a bar plot for the chosen quality metric in the data.</span>
+
+        <span class="c1"># Returns</span>
+        <span class="c1"># -------</span>
+        <span class="c1"># plotly.graph_objs._figure.Figure</span>
+        <span class="c1">#     A Plotly Figure object containing the bar plot.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        
+        <span class="c1"># Filter the data based on the chosen metric and non-NA values</span>
+        <span class="n">metric_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Metric&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">chosen_metric</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Prop_NA&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">100</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="c1"># Sort the filtered data</span>
+        <span class="n">metric_data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Prop_Good&#39;</span><span class="p">,</span> <span class="s1">&#39;Field&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        
+        <span class="c1"># Generate the figure and add bar traces for Good, Bad, and NA proportions</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+            <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Good&quot;</span><span class="p">,</span> 
+                <span class="n">x</span> <span class="o">=</span> <span class="n">metric_data</span><span class="p">[</span><span class="s1">&#39;Prop_Good&#39;</span><span class="p">],</span> 
+                <span class="n">y</span> <span class="o">=</span> <span class="n">metric_data</span><span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">],</span> 
+                <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;h&#39;</span><span class="p">,</span>
+                <span class="n">marker_color</span> <span class="o">=</span> <span class="n">metric_data</span><span class="p">[</span><span class="s1">&#39;Colour_Good&#39;</span><span class="p">]</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+            <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Bad&quot;</span><span class="p">,</span> 
+                <span class="n">x</span> <span class="o">=</span> <span class="n">metric_data</span><span class="p">[</span><span class="s1">&#39;Prop_Bad&#39;</span><span class="p">],</span> 
+                <span class="n">y</span> <span class="o">=</span> <span class="n">metric_data</span><span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">],</span> 
+                <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;h&#39;</span><span class="p">,</span>
+                <span class="n">marker_color</span> <span class="o">=</span> <span class="n">metric_data</span><span class="p">[</span><span class="s1">&#39;Colour_Bad&#39;</span><span class="p">]</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+            <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span><span class="p">,</span> 
+                <span class="n">x</span> <span class="o">=</span> <span class="n">metric_data</span><span class="p">[</span><span class="s1">&#39;Prop_NA&#39;</span><span class="p">],</span> 
+                <span class="n">y</span> <span class="o">=</span> <span class="n">metric_data</span><span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">],</span> 
+                <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;h&#39;</span><span class="p">,</span>
+                <span class="n">marker_color</span> <span class="o">=</span> <span class="n">metric_data</span><span class="p">[</span><span class="s1">&#39;Colour_NA&#39;</span><span class="p">]</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+            <span class="n">barmode</span> <span class="o">=</span> <span class="s1">&#39;stack&#39;</span>
+        <span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span>
+            <span class="n">showlegend</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="n">hoverinfo</span> <span class="o">=</span> <span class="s2">&quot;name+x&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">fig</span></div>
+</div>
+
+
+<div class="viewcode-block" id="MetricCalculator">
+<a class="viewcode-back" href="../api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.MetricCalculator">[docs]</a>
+<span class="k">class</span> <span class="nc">MetricCalculator</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class designed to calculate and compile data quality metrics from a provided dataset.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : pandas.DataFrame</span>
+<span class="sd">        The input dataset containing various quality metrics and fields.</span>
+<span class="sd">    result : pandas.DataFrame</span>
+<span class="sd">        A DataFrame initialised to store the calculated metrics, including counts and proportions of good, bad, and N/A data.</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    calculate_metrics()</span>
+<span class="sd">        Calculates aggregate metrics for each field and metric combination present in the input data, updating the `result` attribute.</span>
+<span class="sd">        </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Initialises the MetricCalculator with the given dataset.</span>
+
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># data : pandas.DataFrame</span>
+        <span class="c1">#     The input dataset from which data quality metrics will be calculated.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+<div class="viewcode-block" id="MetricCalculator.calculate_metrics">
+<a class="viewcode-back" href="../api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.MetricCalculator.calculate_metrics">[docs]</a>
+    <span class="k">def</span> <span class="nf">calculate_metrics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Processes the input dataset to calculate aggregate metrics for each unique field and metric combination.</span>
+
+        <span class="c1"># This method populates the `result` DataFrame with each field-metric combination&#39;s total count, and the proportion of good, bad, and N/A data. It relies on the naming convention in the dataset columns to identify and separate fields and metrics.</span>
+
+        <span class="c1"># The resulting DataFrame is structured to provide a comprehensive overview of data quality across multiple dimensions.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Extract unique fields and metrics from the dataset&#39;s column names</span>
+        <span class="n">fields</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="n">metrics</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="n">parts</span> <span class="o">=</span> <span class="n">column</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_count_|_&#39;</span><span class="p">)</span>
+            <span class="n">metric</span><span class="p">,</span> <span class="n">field</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">fields</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+            <span class="n">metrics</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">metric</span><span class="p">)</span>
+
+        <span class="c1"># Initialise the result DataFrame with combinations of fields and metrics</span>
+        <span class="n">field_metric_pairs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">product</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span> <span class="n">metrics</span><span class="p">))</span>
+        <span class="n">field_list</span><span class="p">,</span> <span class="n">metric_list</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">field_metric_pairs</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">field_list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;Metric&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metric_list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;Count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;Prop_Bad&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;Prop_Good&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;Prop_NA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+        <span class="c1"># Fill in data quality metrics for each field-metric pair</span>
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+            <span class="n">field</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">]</span>
+            <span class="n">metric</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Metric&#39;</span><span class="p">]</span>
+            <span class="n">column_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">metric</span><span class="si">}</span><span class="s1">_count_|_</span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s1">&#39;</span>
+
+            <span class="k">if</span> <span class="n">column_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+                <span class="n">prop_na</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+
+                <span class="k">if</span> <span class="n">prop_na</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">metric</span><span class="si">}</span><span class="s1">_count_|_</span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+                    <span class="n">prop_bad</span> <span class="o">=</span> <span class="p">(</span><span class="n">count</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">metric</span><span class="si">}</span><span class="s1">_count_|_</span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">count</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Count&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">count</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Prop_Bad&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">prop_bad</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Prop_Good&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">100</span> <span class="o">-</span> <span class="n">prop_bad</span>
+                
+                <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Prop_NA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">prop_na</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+            
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Prop_NA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">100.0</span>
+        
+        <span class="c1"># Finalise the result DataFrame structure</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">[[</span><span class="s1">&#39;Field&#39;</span><span class="p">,</span> <span class="s1">&#39;Metric&#39;</span><span class="p">,</span> <span class="s1">&#39;Count&#39;</span><span class="p">,</span> <span class="s1">&#39;Prop_Bad&#39;</span><span class="p">,</span> <span class="s1">&#39;Prop_Good&#39;</span><span class="p">,</span> <span class="s1">&#39;Prop_NA&#39;</span><span class="p">]]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">,</span><span class="s1">&#39;Metric&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">,</span> <span class="s1">&#39;Metric&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">[[</span><span class="s1">&#39;Prop_Bad&#39;</span><span class="p">,</span> <span class="s1">&#39;Prop_Good&#39;</span><span class="p">,</span> <span class="s1">&#39;Prop_NA&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">[[</span><span class="s1">&#39;Prop_Bad&#39;</span><span class="p">,</span> <span class="s1">&#39;Prop_Good&#39;</span><span class="p">,</span> <span class="s1">&#39;Prop_NA&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span></div>
+</div>
+
+
+<div class="viewcode-block" id="col_bad">
+<a class="viewcode-back" href="../api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.col_bad">[docs]</a>
+<span class="k">def</span> <span class="nf">col_bad</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Assigns a color code to a data quality metric indicating a &quot;bad&quot; quality status.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    row : pandas.Series</span>
+<span class="sd">        A row from a DataFrame, expected to contain a &#39;Metric&#39; column specifying the data quality metric.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        A hexadecimal color code associated with the &quot;bad&quot; quality status of the specified metric.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The function maps different data quality metrics to specific color codes, enhancing visual distinction in graphical representations.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Define color mappings for various data quality metrics indicating &quot;bad&quot; status</span>
+    <span class="n">metric_color_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;completeness&#39;</span><span class="p">:</span> <span class="s1">&#39;#a6cee3&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;consistency&#39;</span><span class="p">:</span> <span class="s1">&#39;#fb9a99&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;timeliness&#39;</span><span class="p">:</span> <span class="s1">&#39;#fdbf6f&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;uniqueness&#39;</span><span class="p">:</span> <span class="s1">&#39;#cab2d6&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;validity&#39;</span><span class="p">:</span> <span class="s1">&#39;#F49FA0&#39;</span><span class="p">,</span>  <span class="c1"># Updated color code from a commented-out alternative</span>
+        <span class="s1">&#39;accuracy&#39;</span><span class="p">:</span> <span class="s1">&#39;#fb9a99&#39;</span>
+    <span class="p">}</span>
+    <span class="c1"># Default color if metric is not in the predefined list</span>
+    <span class="n">default_color</span> <span class="o">=</span> <span class="s1">&#39;#a6cee3&#39;</span>
+
+    <span class="k">return</span> <span class="n">metric_color_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Metric&#39;</span><span class="p">],</span> <span class="n">default_color</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="col_good">
+<a class="viewcode-back" href="../api_reference/UtilitiesDQMaRC.html#UtilitiesDQMaRC.col_good">[docs]</a>
+<span class="k">def</span> <span class="nf">col_good</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Assigns a color code to a data quality metric indicating a &quot;good&quot; quality status.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    row : pandas.Series</span>
+<span class="sd">        A row from a DataFrame, expected to contain a &#39;Metric&#39; column specifying the data quality metric.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        A hexadecimal color code associated with the &quot;good&quot; quality status of the specified metric.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Similar to `col_bad`, this function provides a way to visually differentiate between various data quality metrics in graphical representations by mapping them to specific color codes for &quot;good&quot; quality status.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Define color mappings for various data quality metrics indicating &quot;good&quot; status</span>
+    <span class="n">metric_color_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;completeness&#39;</span><span class="p">:</span> <span class="s1">&#39;#1f78b4&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;consistency&#39;</span><span class="p">:</span> <span class="s1">&#39;#e31a1c&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;timeliness&#39;</span><span class="p">:</span> <span class="s1">&#39;#ff7f00&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;uniqueness&#39;</span><span class="p">:</span> <span class="s1">&#39;#6a3d9a&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;validity&#39;</span><span class="p">:</span> <span class="s1">&#39;#b15928&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;accuracy&#39;</span><span class="p">:</span> <span class="s1">&#39;#e31a1c&#39;</span>
+    <span class="p">}</span>
+    <span class="c1"># Default color if metric is not in the predefined list</span>
+    <span class="n">default_color</span> <span class="o">=</span> <span class="s1">&#39;#1f78b4&#39;</span>
+
+    <span class="k">return</span> <span class="n">metric_color_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Metric&#39;</span><span class="p">],</span> <span class="n">default_color</span><span class="p">)</span></div>
+
+
+<span class="n">about_text</span> <span class="o">=</span> <span class="n">TagList</span><span class="p">(</span>
+    <span class="n">tags</span><span class="o">.</span><span class="n">h3</span><span class="p">(</span><span class="s2">&quot;Welcome to the Data Quality Profiling Tool&quot;</span><span class="p">),</span>
+    <span class="n">tags</span><span class="o">.</span><span class="n">p</span><span class="p">(</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This is the front-end to a data quality </span>
+<span class="sd">        profiling tool that is built in python.</span>
+<span class="sd">        It provides a suite of data quality tests across six dimensions, </span>
+<span class="sd">        including &quot;&quot;&quot;</span><span class="p">,</span> 
+        <span class="n">tags</span><span class="o">.</span><span class="n">strong</span><span class="p">(</span><span class="s2">&quot;Completeness&quot;</span><span class="p">),</span> <span class="s2">&quot;, &quot;</span><span class="p">,</span>
+        <span class="n">tags</span><span class="o">.</span><span class="n">strong</span><span class="p">(</span><span class="s2">&quot;Validity&quot;</span><span class="p">),</span> <span class="s2">&quot;, &quot;</span><span class="p">,</span>
+        <span class="n">tags</span><span class="o">.</span><span class="n">strong</span><span class="p">(</span><span class="s2">&quot;Uniqueness&quot;</span><span class="p">),</span> <span class="s2">&quot;, &quot;</span><span class="p">,</span>
+        <span class="n">tags</span><span class="o">.</span><span class="n">strong</span><span class="p">(</span><span class="s2">&quot;Timeliness&quot;</span><span class="p">),</span> <span class="s2">&quot;, &quot;</span><span class="p">,</span>
+        <span class="n">tags</span><span class="o">.</span><span class="n">strong</span><span class="p">(</span><span class="s2">&quot;Consistency&quot;</span><span class="p">),</span> <span class="s2">&quot; and &quot;</span> <span class="p">,</span>
+        <span class="n">tags</span><span class="o">.</span><span class="n">strong</span><span class="p">(</span><span class="s2">&quot;Accuracy&quot;</span><span class="p">),</span><span class="s2">&quot;.&quot;</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        text-align: justify;</span>
+<span class="s2">        word-break:break-word;</span>
+<span class="s2">        hyphens: auto;</span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">key_features_text</span> <span class="o">=</span> <span class="n">TagList</span><span class="p">(</span>
+    <span class="n">tags</span><span class="o">.</span><span class="n">h4</span><span class="p">(</span><span class="s2">&quot;Key Features&quot;</span><span class="p">),</span>
+    <span class="n">tags</span><span class="o">.</span><span class="n">strong</span><span class="p">(</span><span class="s2">&quot;1) Comprehensive DQ Checks:&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;Dive deep into your data with checks across six critical dimensions of data quality.&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">.</span><span class="n">strong</span><span class="p">(</span><span class="s2">&quot;2) Custom Test Parameters: &quot;</span><span class="p">),</span>
+    <span class="s2">&quot;Tailor data quality checks to meet the unique needs of your dataset with customisable test parameters.&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">.</span><span class="n">strong</span><span class="p">(</span><span class="s2">&quot;3) Aggregated Results Overview: &quot;</span><span class="p">),</span>
+    <span class="s2">&quot;Gain a bird&#39;s-eye view of your data&#39;s quality through aggregated summaries and detailed error reporting.&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">.</span><span class="n">strong</span><span class="p">(</span><span class="s2">&quot;4) Dynamic Test Configuration: &quot;</span><span class="p">),</span>
+    <span class="s2">&quot;Easily configure and modify tests to adapt to your evolving data quality requirements.&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">.</span><span class="n">strong</span><span class="p">(</span><span class="s2">&quot;5) Interactive Results Analysis: &quot;</span><span class="p">),</span>                
+    <span class="s2">&quot;Explore error details with interactive reports that make pinpointing issues straightforward.&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">get_started_text</span> <span class="o">=</span> <span class="n">TagList</span><span class="p">(</span>
+    <span class="n">tags</span><span class="o">.</span><span class="n">h4</span><span class="p">(</span><span class="s2">&quot;Get Started&quot;</span><span class="p">),</span>
+    <span class="n">tags</span><span class="o">.</span><span class="n">strong</span><span class="p">(</span><span class="s2">&quot;1) Upload Your Dataset:&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;Begin by uploading a csv of the dataset you wish to analyse.&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">.</span><span class="n">strong</span><span class="p">(</span><span class="s2">&quot;2) Set Your Test Parameters: &quot;</span><span class="p">),</span>
+    <span class="s2">&quot;Customise your data quality checks by setting parameters tailored to your dataset&#39;s specific needs. You can do this by initialising a test parameter template based on your input dataset. &quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">.</span><span class="n">strong</span><span class="p">(</span><span class="s2">&quot;3) Run Data Quality Checks: &quot;</span><span class="p">),</span>
+    <span class="s2">&quot;Execute a comprehensive suite of tests across your dataset with just a click.&quot;</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">.</span><span class="n">strong</span><span class="p">(</span><span class="s2">&quot;4) Analyse Results: &quot;</span><span class="p">),</span>
+    <span class="s2">&quot;View aggregated summaries, explore detailed error reports, and make informed decisions to improve your data quality.&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">error_input_df_text</span> <span class="o">=</span> <span class="n">TagList</span><span class="p">(</span>
+    <span class="n">ui</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        No input dataset found. Please choose a **.csv** or **.xlsx** file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">error_test_params_text</span> <span class="o">=</span> <span class="n">TagList</span><span class="p">(</span>
+    <span class="n">ui</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        No test parameters found. </span>
+<span class="sd">        Please choose your test parameters either by initialising them</span>
+<span class="sd">        via the **&quot;Initialise Parameters&quot;** or by uploading a .csv or .xlsx </span>
+<span class="sd">        test parameters file via the **&quot;Upload Parameters&quot;** button.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">error_metric_variable_choice_text</span> <span class="o">=</span> <span class="n">TagList</span><span class="p">(</span>
+    <span class="n">ui</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        No errors were found for this combination of DQ metric and chosen variable.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Anthony Lighterness and Michael Adcock
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Anthony Lighterness and Michael Adcock.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,814 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DQMaRC.DataQuality &#8212; DQMaRC 1.0.4 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=15c10f45" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../_static/documentation_options.js?v=7ba0cc49"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/thebelab-helper.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/DQMaRC/DataQuality';</script>
+    <script src="../../_static/js/custom.js?v=d5440534"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.0.4" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">DQMaRC 1.0.4 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/welcome_page.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/Backend_Tutorial.html">Backend Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/Frontend_Tutorial.html">Frontend ShinyPy Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/deployment_guide.html">Deployment Guide</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../api_reference/source.html">Source Documentation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/DataQuality.html">Data Quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/Dimension.html">Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/Accuracy.html">Accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/Completeness.html">Completeness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/Consistency.html">Consistency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/Timeliness.html">Timeliness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/Uniqueness.html">Uniqueness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/Validity.html">Validity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/ShinyApp.html">ShinyApp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/UtilitiesDQMaRC.html">UtilitiesDQMaRC</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../third_party_licenses.html">Third-Party Licenses</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for DQMaRC.DataQuality</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">.Completeness</span> <span class="kn">import</span> <span class="n">Completeness</span>
+<span class="kn">from</span> <span class="nn">.Uniqueness</span> <span class="kn">import</span> <span class="n">Uniqueness</span>
+<span class="kn">from</span> <span class="nn">.Validity</span> <span class="kn">import</span> <span class="n">Validity</span>
+<span class="kn">from</span> <span class="nn">.Timeliness</span> <span class="kn">import</span> <span class="n">Timeliness</span>
+<span class="kn">from</span> <span class="nn">.Consistency</span> <span class="kn">import</span> <span class="n">Consistency</span>
+<span class="kn">from</span> <span class="nn">.Accuracy</span> <span class="kn">import</span> <span class="n">Accuracy</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<div class="viewcode-block" id="DataQuality">
+<a class="viewcode-back" href="../../api_reference/DataQuality.html#DQMaRC.DataQuality">[docs]</a>
+<span class="k">class</span> <span class="nc">DataQuality</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class to assess and manage data quality across multiple dimensions for a given dataset.</span>
+<span class="sd">    </span>
+<span class="sd">    The class supports operations such as initialising the data quality dimension instances, preparing and aggregating results, </span>
+<span class="sd">    and writing out results to CSV files. It allows for both detailed error analysis and aggregate summaries.</span>
+<span class="sd">    </span>
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">        df : pandas.DataFrame</span>
+<span class="sd">            The dataset on which data quality checks are performed.</span>
+<span class="sd">        test_params : pandas.DataFrame, optional</span>
+<span class="sd">            A DataFrame specifying parameters for data quality tests. If not provided, default parameters are used.</span>
+<span class="sd">        data_info : pandas.DataFrame</span>
+<span class="sd">            Metadata information about the dataset fields and the timestamp of data quality assessment.</span>
+<span class="sd">        completeness, validity, uniqueness, timeliness, consistency, accuracy : Object</span>
+<span class="sd">            Instances of data quality dimension classes for performing specific checks.</span>
+
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+
+<span class="sd">        raw_results(reduce_counts=False):</span>
+<span class="sd">            Compiles detailed error information across all data quality dimensions.</span>
+
+<span class="sd">            Parameters</span>
+<span class="sd">            ----------</span>
+<span class="sd">            reduce_counts : bool, optional</span>
+<span class="sd">                If True, reduces error counts to boolean values (error present or not). Defaults to False.</span>
+
+<span class="sd">            Returns</span>
+<span class="sd">            -------</span>
+<span class="sd">            pandas.DataFrame</span>
+<span class="sd">                A DataFrame containing detailed error information for each record in the dataset.</span>
+
+<span class="sd">        aggregate_rows(reduce_counts=False):</span>
+<span class="sd">            Aggregates error counts by row for a high-level summary.</span>
+
+<span class="sd">            Parameters</span>
+<span class="sd">            ----------</span>
+<span class="sd">            reduce_counts : bool, optional</span>
+<span class="sd">                If True, reduces error counts to boolean values before aggregation. Defaults to False.</span>
+<span class="sd">                </span>
+<span class="sd">            Returns</span>
+<span class="sd">            -------</span>
+<span class="sd">            pandas.DataFrame</span>
+<span class="sd">                A DataFrame with aggregated error counts by row.</span>
+<span class="sd">            </span>
+<span class="sd">        aggregate_results(reduce_counts=False):</span>
+<span class="sd">            Creates a field and metric level aggregate summary of errors.</span>
+
+<span class="sd">            Parameters</span>
+<span class="sd">            ----------</span>
+<span class="sd">            reduce_counts : bool, optional</span>
+<span class="sd">                Indicates whether to reduce error counts to binary indicators (True for any errors, False for no errors). </span>
+<span class="sd">                Defaults to False, preserving actual count values.</span>
+
+<span class="sd">            Returns</span>
+<span class="sd">            -------</span>
+<span class="sd">            pandas.DataFrame</span>
+<span class="sd">                A DataFrame with aggregated error counts for each field and metric, sorted by field names as they appear </span>
+<span class="sd">                in the original dataset.</span>
+
+<span class="sd">        results_prep(reduce_counts):</span>
+<span class="sd">            Prepares error results from different data quality dimensions for further processing.</span>
+
+<span class="sd">            Parameters</span>
+<span class="sd">            ----------</span>
+<span class="sd">            reduce_counts : bool</span>
+<span class="sd">                If True, converts error counts to binary values (1 for error present, 0 for no error). Useful for simplifying error aggregation.</span>
+
+<span class="sd">            Returns</span>
+<span class="sd">            -------</span>
+<span class="sd">            pandas.DataFrame</span>
+<span class="sd">                A DataFrame containing merged error data from all data quality checks, with options for reduced counts.</span>
+
+<span class="sd">            Notes</span>
+<span class="sd">            -----</span>
+<span class="sd">            Error data from each dimension is corrected for missing values based on completeness checks before merging. </span>
+<span class="sd">            This ensures that errors are accurately reflected even when data is missing.</span>
+
+<span class="sd">        write_out(out, output_table):</span>
+<span class="sd">            Writes the given DataFrame to a CSV file.</span>
+
+<span class="sd">            Parameters</span>
+<span class="sd">            ----------</span>
+<span class="sd">            out : pandas.DataFrame</span>
+<span class="sd">                The DataFrame to be written to a CSV file.</span>
+<span class="sd">            output_table : str</span>
+<span class="sd">                The name of the output file (excluding the file extension).</span>
+
+<span class="sd">        get_test_params():</span>
+<span class="sd">            Returns a copy of the test parameters being used.</span>
+
+<span class="sd">            Returns</span>
+<span class="sd">            -------</span>
+<span class="sd">            pandas.DataFrame</span>
+<span class="sd">                A DataFrame containing the test parameters for data quality dimensions.</span>
+
+<span class="sd">        get_data():</span>
+<span class="sd">            Returns a copy of the original dataset.</span>
+
+<span class="sd">            Returns</span>
+<span class="sd">            -------</span>
+<span class="sd">            pandas.DataFrame</span>
+<span class="sd">                The dataset that data quality checks are being performed on.</span>
+
+<span class="sd">        set_test_params(test_params):</span>
+<span class="sd">            Sets new test parameters for data quality checks and re-initialises dimension instances.</span>
+
+<span class="sd">            Parameters</span>
+<span class="sd">            ----------</span>
+<span class="sd">            test_params : pandas.DataFrame</span>
+<span class="sd">                A DataFrame specifying the new parameters for data quality tests.</span>
+
+<span class="sd">        get_param_template():</span>
+<span class="sd">            Generates a template DataFrame for specifying test parameters for each data quality dimension.</span>
+
+<span class="sd">            Returns</span>
+<span class="sd">            -------</span>
+<span class="sd">            pandas.DataFrame</span>
+<span class="sd">                A DataFrame serving as a template for specifying data quality test parameters.</span>
+
+<span class="sd">        save_user_lookup(user_lookup, file_name):</span>
+<span class="sd">            Saves a user-defined lookup table to a specified file.</span>
+
+<span class="sd">            Parameters</span>
+<span class="sd">            ----------</span>
+<span class="sd">            user_lookup : pandas.DataFrame</span>
+<span class="sd">                The user-defined lookup table to save.</span>
+<span class="sd">            file_name : str</span>
+<span class="sd">                The name of the file (excluding the file extension) to save the lookup table as.</span>
+<span class="sd">                </span>
+<span class="sd">        run_all_metrics():</span>
+<span class="sd">            Executes all configured data quality checks across the dataset.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">test_params</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Initialises the DataQuality object with a dataset and optionally specified test parameters.</span>
+        
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># df : pandas.DataFrame</span>
+        <span class="c1">#     The dataset to perform data quality checks on.</span>
+        <span class="c1"># test_params : pandas.DataFrame, optional</span>
+        <span class="c1">#     A DataFrame specifying parameters for the data quality tests. If None, default parameters are used.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">timestamp</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span>
+
+        <span class="k">if</span> <span class="n">test_params</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Warning - Using default parameters. For best results edit parameters and reload using set_test_params() method&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_param_template</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span> <span class="o">=</span> <span class="n">test_params</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_info</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;field&#39;</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="s1">&#39;date_time&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">timestamp</span><span class="p">})</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">completeness</span> <span class="o">=</span> <span class="n">Completeness</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validity</span> <span class="o">=</span> <span class="n">Validity</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">uniqueness</span> <span class="o">=</span> <span class="n">Uniqueness</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timeliness</span> <span class="o">=</span> <span class="n">Timeliness</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">consistency</span> <span class="o">=</span> <span class="n">Consistency</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">accuracy</span> <span class="o">=</span> <span class="n">Accuracy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">raw_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reduce_counts</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Compiles and returns detailed error information across all data quality dimensions.</span>
+        
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># reduce_counts : bool, optional</span>
+        <span class="c1">#     If True, reduces error counts to boolean values (error present or not). Defaults to False.</span>
+            
+        <span class="c1"># Returns</span>
+        <span class="c1"># -------</span>
+        <span class="c1"># pandas.DataFrame</span>
+        <span class="c1">#     A DataFrame containing detailed error information for each record in the dataset.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">results_prep</span><span class="p">(</span><span class="n">reduce_counts</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span> <span class="nf">aggregate_rows</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reduce_counts</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Aggregates error counts by row, providing a high-level summary of errors for each record.</span>
+        
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># reduce_counts : bool, optional</span>
+        <span class="c1">#     If True, reduces error counts to boolean values before aggregation. Defaults to False.</span>
+            
+        <span class="c1"># Returns</span>
+        <span class="c1"># -------</span>
+        <span class="c1"># pandas.DataFrame</span>
+        <span class="c1">#     A DataFrame with aggregated error counts by row.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+
+        <span class="n">raw</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">results_prep</span><span class="p">(</span><span class="n">reduce_counts</span><span class="p">)</span>
+        <span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_|_&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">raw</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+        <span class="n">row_agg</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">cols</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()[</span><span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">cols</span><span class="p">),</span> <span class="n">key</span><span class="o">=</span><span class="n">cols</span><span class="o">.</span><span class="n">index</span><span class="p">)]</span>
+        <span class="n">row_agg</span><span class="p">[</span><span class="s1">&#39;total_count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">row_agg</span><span class="p">[[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">row_agg</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="s1">&#39;_count&#39;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">row_agg</span>
+
+    <span class="k">def</span> <span class="nf">aggregate_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reduce_counts</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Aggregates error counts across all data quality dimensions to produce a summarised view.</span>
+
+        <span class="c1"># This method computes the sum of errors for each field and metric combination, facilitating a high-level analysis </span>
+        <span class="c1"># of data quality issues across the dataset. The output is structured to provide clear insight into which areas </span>
+        <span class="c1"># of the dataset may require further investigation or remediation.</span>
+
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># reduce_counts : bool, optional</span>
+        <span class="c1">#     Indicates whether to reduce error counts to binary indicators (True for any errors, False for no errors). </span>
+        <span class="c1">#     Defaults to False, preserving actual count values.</span>
+
+        <span class="c1"># Returns</span>
+        <span class="c1"># -------</span>
+        <span class="c1"># pandas.DataFrame</span>
+        <span class="c1">#     A DataFrame with aggregated error counts for each field and metric, sorted by field names as they appear </span>
+        <span class="c1">#     in the original dataset.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="n">raw</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">results_prep</span><span class="p">(</span><span class="n">reduce_counts</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">skipna</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="s1">&#39;field_metric&#39;</span><span class="p">},</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_tuples</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_|_&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">out</span><span class="p">[</span><span class="s1">&#39;field_metric&#39;</span><span class="p">]],</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;metric&#39;</span><span class="p">,</span> <span class="s1">&#39;field&#39;</span><span class="p">])</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="n">out</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_list</span><span class="p">()},</span> <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;level_0&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;field&#39;</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="n">col</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)}))</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="p">[[</span><span class="s1">&#39;field&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_|_&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">raw</span><span class="o">.</span><span class="n">columns</span><span class="p">]))]</span>
+
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span> <span class="nf">results_prep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reduce_counts</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Prepares the data quality check results by merging errors from different dimensions and optionally reducing error counts.</span>
+
+        <span class="c1"># This method combines error information from completeness, validity, uniqueness, timeliness, consistency, and accuracy checks. </span>
+        <span class="c1"># It provides an option to reduce error counts to binary values, facilitating easier identification of records with any errors.</span>
+
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># reduce_counts : bool</span>
+        <span class="c1">#     If True, converts error counts to binary values (1 for error present, 0 for no error). Useful for simplifying error aggregation.</span>
+
+        <span class="c1"># Returns</span>
+        <span class="c1"># -------</span>
+        <span class="c1"># pandas.DataFrame</span>
+        <span class="c1">#     A DataFrame containing merged error data from all data quality checks, with options for reduced counts.</span>
+
+        <span class="c1"># Notes</span>
+        <span class="c1"># -----</span>
+        <span class="c1"># Error data from each dimension is corrected for missing values based on completeness checks before merging. </span>
+        <span class="c1"># This ensures that errors are accurately reflected even when data is missing.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        
+        <span class="c1"># Aggregate error counts for each dimension, optionally reducing to binary values</span>
+        <span class="k">def</span> <span class="nf">count_errors</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">dimension</span><span class="p">,</span> <span class="n">reduce_counts</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">df_overall</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_|_&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+                <span class="k">if</span> <span class="n">reduce_counts</span><span class="p">:</span>
+                    <span class="n">df_overall</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;Int64&#39;</span><span class="p">)</span>
+                <span class="n">df_overall</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">dimension</span> <span class="o">+</span> <span class="s1">&#39;_count_|_&#39;</span> <span class="o">+</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df_overall</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+                <span class="k">return</span> <span class="n">df_overall</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+<span class="c1"># ============ to correct completeness errors for comparison fields</span>
+        <span class="c1"># Get fields that are compared with via consistency and timeliness metrics</span>
+        <span class="k">def</span> <span class="nf">get_related_fields</span><span class="p">(</span><span class="n">test_params</span><span class="p">):</span>
+            <span class="n">related_fields</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">test_params</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Consistency_Compare&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                    <span class="n">related_fields</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Consistency_Compare_Field&#39;</span><span class="p">]</span>
+                <span class="c1"># Check for date relations and add to related fields if TRUE</span>
+                <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Consistency_Date_Relations&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                    <span class="n">related_fields</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Consistency_Date_Relations_Field&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="c1"># Check for date relations and add to related fields if TRUE</span>
+                <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Timeliness_Date_Diff&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                    <span class="n">related_fields</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Timeliness_Date_Diff_Field&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">pass</span>
+            <span class="k">return</span> <span class="n">related_fields</span>
+        
+        <span class="n">related_fields</span> <span class="o">=</span> <span class="n">get_related_fields</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">correct_missing</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">comp</span><span class="p">,</span> <span class="n">related_fields</span><span class="p">):</span>
+            <span class="n">field</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_|_&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">corrections</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">comp</span><span class="p">):</span>
+                <span class="c1"># Correct the primary field</span>
+                <span class="n">primary_correction</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">y</span> <span class="k">else</span> <span class="n">x</span>
+                
+                <span class="c1"># Check and correct the related field if necessary</span>
+                <span class="n">related_field</span> <span class="o">=</span> <span class="n">related_fields</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+                <span class="n">related_correction</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">related_field</span> <span class="ow">and</span> <span class="n">related_field</span> <span class="ow">in</span> <span class="n">y</span> <span class="k">else</span> <span class="n">primary_correction</span>
+                <span class="n">corrections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">related_correction</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">corrections</span>
+
+<span class="c1"># ============</span>
+
+        <span class="n">error_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;completeness&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">completeness</span><span class="o">.</span><span class="n">get_results</span><span class="p">(),</span>
+                      <span class="s1">&#39;uniqueness&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">uniqueness</span><span class="o">.</span><span class="n">get_results</span><span class="p">(),</span>
+                      <span class="s1">&#39;consistency&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">consistency</span><span class="o">.</span><span class="n">get_results</span><span class="p">(),</span>
+                      <span class="s1">&#39;timeliness&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeliness</span><span class="o">.</span><span class="n">get_results</span><span class="p">(),</span>
+                      <span class="s1">&#39;validity&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">validity</span><span class="o">.</span><span class="n">get_results</span><span class="p">(),</span>
+                      <span class="s1">&#39;accuracy&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">accuracy</span><span class="o">.</span><span class="n">get_results</span><span class="p">()}</span>
+
+        <span class="n">error_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">dimension</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">count_errors</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">dimension</span><span class="p">,</span> <span class="n">reduce_counts</span><span class="p">),</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+                      <span class="k">for</span> <span class="n">dimension</span><span class="p">,</span> <span class="n">df</span> <span class="ow">in</span> <span class="n">error_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+        <span class="n">temp_completeness</span> <span class="o">=</span> <span class="n">Completeness</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">)</span>
+        <span class="n">temp_completeness</span><span class="o">.</span><span class="n">run_metrics</span><span class="p">()</span>
+        <span class="n">completeness_overall</span> <span class="o">=</span> <span class="n">count_errors</span><span class="p">(</span><span class="n">temp_completeness</span><span class="o">.</span><span class="n">get_results</span><span class="p">(),</span> <span class="s1">&#39;completeness&#39;</span><span class="p">,</span> <span class="n">reduce_counts</span><span class="p">)</span>
+
+        <span class="n">combined_completeness_errors</span> <span class="o">=</span> <span class="n">completeness_overall</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_|_&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">row</span><span class="o">.</span><span class="n">index</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="n">x</span><span class="p">]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># Apply the corrections across dimensions with the new correct_missing function</span>
+        <span class="k">for</span> <span class="n">dimension</span> <span class="ow">in</span> <span class="n">error_dict</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">dimension</span> <span class="o">!=</span> <span class="s1">&#39;completeness&#39;</span><span class="p">:</span> <span class="c1"># do not apply correction to completeness dimension</span>
+                <span class="n">error_df</span> <span class="o">=</span> <span class="n">error_dict</span><span class="p">[</span><span class="n">dimension</span><span class="p">]</span>
+                <span class="n">error_dict</span><span class="p">[</span><span class="n">dimension</span><span class="p">]</span> <span class="o">=</span> <span class="n">error_df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">correct_missing</span><span class="p">,</span> <span class="n">comp</span><span class="o">=</span><span class="n">combined_completeness_errors</span><span class="p">,</span> <span class="n">related_fields</span><span class="o">=</span><span class="n">related_fields</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+        <span class="n">out</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">error_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span> <span class="nf">write_out</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">output_table</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Writes the provided DataFrame to a CSV file in the specified output directory.</span>
+        
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># out : pandas.DataFrame</span>
+        <span class="c1">#     The DataFrame to be written to a CSV file.</span>
+        <span class="c1"># output_table : str</span>
+        <span class="c1">#     The name of the output file (excluding the file extension).</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;writing to </span><span class="si">{}</span><span class="s1">...&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">output_table</span><span class="p">))</span>
+        <span class="n">out</span><span class="p">[</span><span class="s1">&#39;date_time_created&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/../outputs/</span><span class="si">{}</span><span class="s1">.csv&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">output_table</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8-sig&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_test_params</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Returns a deep copy of the test parameters currently set for data quality checks.</span>
+
+        <span class="c1"># Returns</span>
+        <span class="c1"># -------</span>
+        <span class="c1"># pandas.DataFrame</span>
+        <span class="c1">#     A DataFrame containing the test parameters for data quality dimensions.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Returns a deep copy of the dataset currently being used for data quality checks.</span>
+
+        <span class="c1"># Returns</span>
+        <span class="c1"># -------</span>
+        <span class="c1"># pandas.DataFrame</span>
+        <span class="c1">#     The dataset that data quality checks are being performed on.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">set_test_params</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_params</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Sets new test parameters for data quality checks and re-initialises dimension instances with these parameters.</span>
+
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># test_params : pandas.DataFrame</span>
+        <span class="c1">#     A DataFrame specifying the new parameters for data quality tests.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span> <span class="o">=</span> <span class="n">test_params</span>
+        <span class="c1"># Re-initialise data quality dimension instances with the new test parameters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">completeness</span> <span class="o">=</span> <span class="n">Completeness</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validity</span> <span class="o">=</span> <span class="n">Validity</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">uniqueness</span> <span class="o">=</span> <span class="n">Uniqueness</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timeliness</span> <span class="o">=</span> <span class="n">Timeliness</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">consistency</span> <span class="o">=</span> <span class="n">Consistency</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">accuracy</span> <span class="o">=</span> <span class="n">Accuracy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Using uploaded test parameters&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_param_template</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Generates a template DataFrame for specifying test parameters for each data quality dimension.</span>
+
+        <span class="c1"># The template includes default values and placeholder columns for arguments specific to each data quality test.</span>
+
+        <span class="c1"># Returns</span>
+        <span class="c1"># -------</span>
+        <span class="c1"># pandas.DataFrame</span>
+        <span class="c1">#     A DataFrame serving as a template for specifying data quality test parameters.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="n">rows</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+        <span class="c1"># Initialise instances to access default test parameters</span>
+        <span class="n">completeness</span> <span class="o">=</span> <span class="n">Completeness</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">uniqueness</span> <span class="o">=</span> <span class="n">Uniqueness</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">consistency</span> <span class="o">=</span> <span class="n">Consistency</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">timeliness</span> <span class="o">=</span> <span class="n">Timeliness</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">validity</span> <span class="o">=</span> <span class="n">Validity</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">accuracy</span> <span class="o">=</span> <span class="n">Accuracy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="c1"># Aggregate default parameters from all instances</span>
+        <span class="n">all_tests</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">completeness</span><span class="o">.</span><span class="n">tests</span><span class="p">,</span>
+                     <span class="o">**</span><span class="n">uniqueness</span><span class="o">.</span><span class="n">tests</span><span class="p">,</span>
+                     <span class="o">**</span><span class="n">consistency</span><span class="o">.</span><span class="n">tests</span><span class="p">,</span>
+                     <span class="o">**</span><span class="n">timeliness</span><span class="o">.</span><span class="n">tests</span><span class="p">,</span>
+                     <span class="o">**</span><span class="n">validity</span><span class="o">.</span><span class="n">tests</span><span class="p">,</span>
+                     <span class="o">**</span><span class="n">accuracy</span><span class="o">.</span><span class="n">tests</span><span class="p">}</span>
+        <span class="n">cols</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">all_tests</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">cols</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">]]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">cols</span><span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="s1">&#39;arg1&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="k">pass</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">cols</span><span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="s1">&#39;arg2&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+        <span class="c1"># Create the Date_Format column with placeholders</span>
+        <span class="n">cols_date_format</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Date_Format&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&quot;</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">]}</span> 
+
+        <span class="c1"># Create the DataFrame with &#39;Field&#39; and &#39;Date_Format&#39; as the first two columns, followed by other parameters</span>
+        <span class="n">df_template</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="o">**</span><span class="p">{</span><span class="s1">&#39;Field&#39;</span><span class="p">:</span> <span class="n">rows</span><span class="p">},</span> <span class="o">**</span><span class="n">cols_date_format</span><span class="p">,</span> <span class="o">**</span><span class="n">cols</span><span class="p">})</span>
+
+        <span class="c1"># reorder columns explicitly</span>
+        <span class="n">column_order</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">,</span> <span class="s1">&#39;Date_Format&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_template</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">col</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">,</span> <span class="s1">&#39;Date_Format&#39;</span><span class="p">]]</span>
+        <span class="n">df_template</span> <span class="o">=</span> <span class="n">df_template</span><span class="p">[</span><span class="n">column_order</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">df_template</span>
+
+    <span class="k">def</span> <span class="nf">save_user_lookup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_lookup</span><span class="p">,</span> <span class="n">file_name</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Saves a user-defined lookup table to the specified file within the lookups directory.</span>
+
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># user_lookup : pandas.DataFrame</span>
+        <span class="c1">#     The user-defined lookup table to save.</span>
+        <span class="c1"># file_name : str</span>
+        <span class="c1">#     The name of the file (excluding the file extension) to save the lookup table as.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+
+        <span class="n">user_lookup</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span> <span class="o">+</span> <span class="n">file_name</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8-sig&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">run_all_metrics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Executes all configured data quality checks across the dataset using the current test parameters.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">completeness</span><span class="o">.</span><span class="n">run_metrics</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">uniqueness</span><span class="o">.</span><span class="n">run_metrics</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">consistency</span><span class="o">.</span><span class="n">run_metrics</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timeliness</span><span class="o">.</span><span class="n">run_metrics</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validity</span><span class="o">.</span><span class="n">run_metrics</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">accuracy</span><span class="o">.</span><span class="n">run_metrics</span><span class="p">()</span></div>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Running DQMaRC application&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Anthony Lighterness and Michael Adcock
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Anthony Lighterness and Michael Adcock.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

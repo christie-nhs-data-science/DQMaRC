@@ -1,0 +1,77 @@
+.tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.tile {
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 30%;
+    max-width: 300px;
+    text-align: center;
+    color: #333;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tile img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0;
+}
+
+.tile h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+#description-area {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#description-text {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Light theme styles */
+html[data-theme="light"] .tile {
+    color: #333;
+}
+
+html[data-theme="light"] .tile h3 {
+    color: #333;
+}
+
+/* Dark theme styles */
+html[data-theme="dark"] .tile {
+    color: #fff;
+}
+
+html[data-theme="dark"] .tile h3 {
+    color: #fff;
+}
+
+/* Image in description area */
+#description-area img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}

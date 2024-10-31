@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Getting Started &#8212; DQMaRC 1.0.4 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=15c10f45" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=7ba0cc49"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/tabs.js?v=3030b3cb"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'getting_started/welcome_page';</script>
+    <script src="../_static/js/custom.js?v=d5440534"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Backend Python Tutorial" href="Backend_Tutorial.html" />
+    <link rel="prev" title="Welcome to the DQMaRC User Docs" href="../index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.0.4" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">DQMaRC 1.0.4 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Backend_Tutorial.html">Backend Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Frontend_Tutorial.html">Frontend ShinyPy Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment_guide.html">Deployment Guide</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api_reference/source.html">Source Documentation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/DataQuality.html">Data Quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Dimension.html">Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Accuracy.html">Accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Completeness.html">Completeness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Consistency.html">Consistency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Timeliness.html">Timeliness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Uniqueness.html">Uniqueness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/Validity.html">Validity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/ShinyApp.html">ShinyApp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference/UtilitiesDQMaRC.html">UtilitiesDQMaRC</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../third_party_licenses.html">Third-Party Licenses</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/getting_started/welcome_page.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Getting Started</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-data-quality">What is Data Quality?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-dqmarc">Why Use DQMaRC?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-does-dqmarc-work-the-role-of-metadata">How does DQMaRC Work: The Role of Metadata</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-access-dqmarc">How To Access DQMaRC?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-installation">Python Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-shiny-app-user-interface">The Shiny App User Interface</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cite-dqmarc">Cite DQMaRC</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="getting-started">
+<span id="welcome-page"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h1>
+<p>Welcome to <a class="reference internal" href="../api_reference/source.html#api-dqmarc"><span class="std std-ref">DQMaRC</span></a> (<strong>Data Quality Markup and Ready-to-Connect</strong>).
+<a class="reference internal" href="../api_reference/source.html#api-dqmarc"><span class="std std-ref">DQMaRC</span></a> is a Python-based tool for data quality profiling. We are pleased that you are interested to
+learn about <a class="reference internal" href="../api_reference/source.html#api-dqmarc"><span class="std std-ref">DQMaRC</span></a> and hope that it is useful for your data quality profiling needs. This guide will provide
+you with the foundational knowledge and practical steps needed to get started with <a class="reference internal" href="../api_reference/source.html#api-dqmarc"><span class="std std-ref">DQMaRC</span></a>, whether you’re a
+seasoned Python programmer or a non-technical user.</p>
+<section id="what-is-data-quality">
+<h2>What is Data Quality?<a class="headerlink" href="#what-is-data-quality" title="Link to this heading">#</a></h2>
+<p>Data quality (DQ) refers to the condition of a dataset, assessing whether it meets the needs of its intended use.
+High-quality data is critical for effective and accurate decision-making in any field, particularly in healthcare,
+finance, and research. DQ errors are indicative of real-world problems arising from behaviours, processes, or systems.</p>
+<p>DQMaRC evaluates data quality across six core dimensions as defined by the Data Management Association (DAMA)
+<a class="reference external" href="https://www.gov.uk/government/news/meet-the-data-quality-dimensions">[1]</a>:</p>
+<div class="tile-container">
+    <div class="tile" id="tile-completeness" onclick="showDescription('tile-completeness')">
+        <img src="../_static/images/completeness.png" alt="Completeness">
+    </div>
+    <div class="tile" id="tile-validity" onclick="showDescription('tile-validity')">
+        <img src="../_static/images/validity.png" alt="Validity">
+    </div>
+    <div class="tile" id="tile-consistency" onclick="showDescription('tile-consistency')">
+        <img src="../_static/images/consistency.png" alt="Consistency">
+    </div>
+    <div class="tile" id="tile-timeliness" onclick="showDescription('tile-timeliness')">
+        <img src="../_static/images/timeliness.png" alt="Timeliness">
+    </div>
+    <div class="tile" id="tile-uniqueness" onclick="showDescription('tile-uniqueness')">
+        <img src="../_static/images/uniqueness.png" alt="Uniqueness">
+    </div>
+    <div class="tile" id="tile-accuracy" onclick="showDescription('tile-accuracy')">
+        <img src="../_static/images/accuracy.png" alt="Accuracy">
+    </div>
+</div>
+<div id="description-area">
+    <p id="description-text">Click on a tile to learn more about each dimension.</p>
+</div></section>
+<section id="why-use-dqmarc">
+<h2>Why Use DQMaRC?<a class="headerlink" href="#why-use-dqmarc" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>In-Depth Cell-Level Markup</strong>: DQMaRC generates detailed cell-level markup of DQ issues, allowing precise identification of problematic data directly connected to the source.</p></li>
+<li><p><strong>Multi-Dimensional Analysis</strong>: Provides custom metrics to evaluate DQ across six key dimensions as defined by DAMA, ensuring a thorough assessment.</p></li>
+<li><p><strong>Plug-and-Play Functionality</strong>: DQMaRC offers readily available test parameters that allow users to quickly start assessing DQ without extensive setup or configuration.</p></li>
+<li><p><strong>Easy and Thorough Customisation</strong>: Users can easily customise DQ test parameters either programmatically or in Excel, tailoring the tool to specific needs.</p></li>
+<li><p><strong>Accessibility</strong>: Designed for both Python programmers and non-technical users, with a graphical user interface (GUI) built with Shiny for Python, lowering the barrier to entry.</p></li>
+<li><p><strong>Flexible and Interoperable</strong>: The DQMaRC Python API can be integrated into a diverse range of applications, IT infrastructures, data processing and analysis workflows.</p></li>
+</ol>
+<section id="how-does-dqmarc-work-the-role-of-metadata">
+<h3>How does DQMaRC Work: The Role of Metadata<a class="headerlink" href="#how-does-dqmarc-work-the-role-of-metadata" title="Link to this heading">#</a></h3>
+<p>Metadata is data about data. It provides context, meaning, and guidelines on how data should be captured, defined, structured, and represented. Metadata should be comprehensive,
+up-to-date, and thorough in its description of how data should be defined, captured, structured, and analysed.
+Robust metadata is the cornerstone of any DQ evaluation process as it forms the foundations of business rules and constraints during DQ assessment. <a class="reference internal" href="../api_reference/source.html#api-dqmarc"><span class="std std-ref">DQMaRC</span></a>
+uses metadata in the form of test parameters to perform DQ tests. The results of these tests generate a binary markup of 1’s and 0’s, i.e. flags indicating the presence
+or absence of an error for a given dimension of DQ.
+Overall, the workflow when using <a class="reference internal" href="../api_reference/source.html#api-dqmarc"><span class="std std-ref">DQMaRC</span></a> can be described in three key steps as illustrated in <a class="reference internal" href="#figworkflow1"><span class="std std-ref">Figure 1: image showing DQMaRC workflow.</span></a>:</p>
+<ol class="arabic simple">
+<li><p>Identify and prepare the source dataset.</p></li>
+<li><p>Identify and define the relevant metadata, test parameters, and data standards.</p></li>
+<li><p>Analyse the DQ results.</p></li>
+</ol>
+<figure class="align-default" id="id3">
+<span id="figworkflow1"></span><a class="reference internal image-reference" href="../_images/DQMaRC_method.png"><img alt="DQMaRC workflow" src="../_images/DQMaRC_method.png" style="width: 560.8000000000001px; height: 496.8px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Figure 1: image showing DQMaRC workflow.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="how-to-access-dqmarc">
+<span id="setup-python"></span><h2>How To Access DQMaRC?<a class="headerlink" href="#how-to-access-dqmarc" title="Link to this heading">#</a></h2>
+<p>See below how you can access <a class="reference internal" href="../api_reference/source.html#api-dqmarc"><span class="std std-ref">DQMaRC</span></a> either by installing it through pip, or by accessing the user friendly graphical user interface (GUI).</p>
+<section id="python-installation">
+<h3>Python Installation<a class="headerlink" href="#python-installation" title="Link to this heading">#</a></h3>
+<p>If you want to run <a class="reference internal" href="../api_reference/source.html#api-dqmarc"><span class="std std-ref">DQMaRC</span></a> as a Python user, please follow the tutorial provided in the <a class="reference internal" href="Backend_Tutorial.html#backend-tutorial"><span class="std std-ref">Backend Python Tutorial</span></a> section.</p>
+<p>To install <a class="reference internal" href="../api_reference/source.html#api-dqmarc"><span class="std std-ref">DQMaRC</span></a> into your python environment, please follow the instructions below.</p>
+<p>To view the package dependencies, you can access the <cite>requirements.txt</cite> and/or <cite>environment.yml</cite> file from the <a class="reference external" href="https://github.com/christie-nhs-data-science/DQMaRC">DQMaRC GitHub Repository</a>.</p>
+<dl class="simple">
+<dt>The key dependencies are:</dt><dd><ul class="simple">
+<li><p>Python (&gt;= 3.9)</p></li>
+<li><p>NumPy (&gt;= 1.16)</p></li>
+<li><p>pandas (&gt;=2.2)</p></li>
+<li><p>plotly (&gt;=5.22)</p></li>
+<li><p>shiny (&gt;=0.10)</p></li>
+<li><p>ipydatagrid (&gt;1.3)</p></li>
+<li><p>ipywidgets (&gt;8.1)</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Installation</strong></p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">Python Virtual Environment</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><ol class="arabic simple">
+<li><p><strong>Install Python&gt;=3.9</strong>:</p></li>
+</ol>
+<p>Make sure you have Python&gt;=3.9 installed. You can download it from the <a class="reference external" href="https://www.python.org/">Python</a> website.</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Install `virtualenv`</strong>:</p></li>
+</ol>
+<p>Install <cite>virtualenv</cite> if you don’t have it already:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>virtualenv
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>Navigate to the Appropriate Directory</strong>:</p></li>
+</ol>
+<p>Open a terminal and navigate to your project directory.</p>
+<ol class="arabic simple" start="4">
+<li><p><strong>Create your own python virtual environment (must have python &gt;=3.9)</strong></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>&lt;environment_name&gt;
+</pre></div>
+</div>
+<p>Replace <cite>&lt;environment_name&gt;</cite> with your desired environment name.</p>
+<ol class="arabic" start="5">
+<li><p><strong>Activate the Virtual Environment</strong>:</p>
+<blockquote>
+<div><p><strong>Windows</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;environment_name&gt;<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+</pre></div>
+</div>
+<p><strong>MacOS/Linux</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>&lt;environment_name&gt;/bin/activate
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<p>6. <strong>Download and Install DQMaRC</strong>:
+Using the distribution wheel file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>DQMaRC-1.0.0-py3-none-any.whl
+</pre></div>
+</div>
+<p>Using PyPi:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>DQMaRC
+</pre></div>
+</div>
+<p>Or clone directly from GitHub:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/The-Christie-NHS-FT/DQMaRC
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p><strong>Verify the Installation</strong>:</p></li>
+</ol>
+<p>You can verify that the environment is active and working by checking the installed packages:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>list
+</pre></div>
+</div>
+</div></div>
+</section>
+<section id="the-shiny-app-user-interface">
+<span id="setup-nonpython"></span><h3>The Shiny App User Interface<a class="headerlink" href="#the-shiny-app-user-interface" title="Link to this heading">#</a></h3>
+<p>If you prefer a graphical interface, please refer to the <a class="reference internal" href="Frontend_Tutorial.html#frontend-tutorial"><span class="std std-ref">Frontend ShinyPy Tutorial</span></a> section.
+This guide will walk you through the installation and use of the Shiny for Python interface to run DQMaRC without writing any code.
+We have built a frontend graphical user interface using <a class="reference external" href="https://shiny.posit.co/py/">shiny for python</a> to encourage non-python users to use <code class="docutils literal notranslate"><span class="pre">DQMaRC</span></code>.</p>
+<p>You can access a serverless, web-hosted version here: <a class="reference external" href="https://github.com/christie-nhs-data-science/DQMaRC/blob/main/DQMaRC_ShinyLiveEditor_link">DQMaRC Shiny Front End</a>.
+Please note this will run in your local web browser. For more information refer to <a class="reference external" href="https://shiny.posit.co/py/docs/shinylive.html">Shinylive web hosting</a></p>
+<p>If you installed <code class="docutils literal notranslate"><span class="pre">DQMaRC</span></code> using pip, you can also run the <code class="docutils literal notranslate"><span class="pre">shiny</span> <span class="pre">app</span></code> in terminal, bash, or Anaconda Powershell:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">Serverless Web-Browser</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">Cloned from GitHub</button><button aria-controls="panel-1-1-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-2" name="1-2" role="tab" tabindex="-1">Installed via Pip</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><p>You can access a serverless, web-hosted version here: <a class="reference external" href="https://github.com/christie-nhs-data-science/DQMaRC/blob/main/DQMaRC_ShinyLiveEditor_link">DQMaRC Shiny Front End</a>.</p>
+</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><p>If you cloned the <a class="reference external" href="https://placeholder.link">DQMaRC GitHub repo</a>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">shiny run --reload --launch-browser &quot;C:\Users\...\pip_env_dqmarc1\Lib\site-packages\DQMaRC\app.py&quot;</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-1-2" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-2" name="1-2" role="tabpanel" tabindex="0"><p>Once you have installed <code class="docutils literal notranslate"><span class="pre">DQMaRC</span></code> using pip and have your pip or conda virtual environment setup, run the following code in terminal or anaconda powershell.
+This will deploy the app.py script to your local web-browser at localhost.
+Please adjust the directory string below to point to where you have DQMaRC installed.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">shiny run --reload --launch-browser &quot;C:\Users\...\Lib\site-packages\DQMaRC\app.py&quot;</span>
+</pre></div>
+</div>
+<p>To find the location of where you installed <code class="docutils literal notranslate"><span class="pre">DQMaRC</span></code>, you can use the following command in terminal:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip show DQMaRC</span>
+</pre></div>
+</div>
+</div></div>
+<p>Here is an overview of the front-end user interface. This is explained in more detail in <a class="reference internal" href="Frontend_Tutorial.html#frontend-tutorial"><span class="std std-ref">Frontend ShinyPy Tutorial</span></a> section.</p>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/DQMaRC_method_shiny_GUI.png"><img alt="DQMaRC shiny frontend graphical user interface." src="../_images/DQMaRC_method_shiny_GUI.png" style="width: 672.7px; height: 423.1px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Figure 2: Example data processed in the DQMaRC frontend graphical user interface built in shiny for python.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="cite-dqmarc">
+<h2>Cite DQMaRC<a class="headerlink" href="#cite-dqmarc" title="Link to this heading">#</a></h2>
+<p>Please use the following citation if you use DQMaRC:</p>
+<p>Lighterness, A., Adcock, M.A., and Price, G. (2024). DQMaRC: A Python Tool for Structured Data Quality Profiling (Version 1.0.0) [Software]. Available from <a class="github reference external" href="https://github.com/christie-nhs-data-science/DQMaRC">christie-nhs-data-science/DQMaRC</a>.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<p>[1] Government Data Quality Hub. (2021, June 24). Meet the data quality dimensions. GOV.UK. <a class="reference external" href="https://www.gov.uk/government/news/meet-the-data-quality-dimensions">https://www.gov.uk/government/news/meet-the-data-quality-dimensions</a></p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to the DQMaRC User Docs</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Backend_Tutorial.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Backend Python Tutorial</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-data-quality">What is Data Quality?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-dqmarc">Why Use DQMaRC?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-does-dqmarc-work-the-role-of-metadata">How does DQMaRC Work: The Role of Metadata</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-access-dqmarc">How To Access DQMaRC?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-installation">Python Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-shiny-app-user-interface">The Shiny App User Interface</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cite-dqmarc">Cite DQMaRC</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Anthony Lighterness and Michael Adcock
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Anthony Lighterness and Michael Adcock.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

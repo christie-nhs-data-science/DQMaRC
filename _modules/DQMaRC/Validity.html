@@ -1,0 +1,740 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DQMaRC.Validity &#8212; DQMaRC 1.0.4 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=15c10f45" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../_static/documentation_options.js?v=7ba0cc49"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/thebelab-helper.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/DQMaRC/Validity';</script>
+    <script src="../../_static/js/custom.js?v=d5440534"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.0.4" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">DQMaRC 1.0.4 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/welcome_page.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/Backend_Tutorial.html">Backend Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/Frontend_Tutorial.html">Frontend ShinyPy Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/deployment_guide.html">Deployment Guide</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../api_reference/source.html">Source Documentation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/DataQuality.html">Data Quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/Dimension.html">Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/Accuracy.html">Accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/Completeness.html">Completeness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/Consistency.html">Consistency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/Timeliness.html">Timeliness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/Uniqueness.html">Uniqueness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/Validity.html">Validity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/ShinyApp.html">ShinyApp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api_reference/UtilitiesDQMaRC.html">UtilitiesDQMaRC</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../third_party_licenses.html">Third-Party Licenses</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for DQMaRC.Validity</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">pkg_resources</span> <span class="kn">import</span> <span class="n">resource_filename</span>
+<span class="kn">from</span> <span class="nn">.Dimension</span> <span class="kn">import</span> <span class="n">Dimension</span>
+<span class="c1"># from Dimension import Dimension # for shinylive version</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<div class="viewcode-block" id="Validity">
+<a class="viewcode-back" href="../../api_reference/Validity.html#DQMaRC.Validity">[docs]</a>
+<span class="k">class</span> <span class="nc">Validity</span><span class="p">(</span><span class="n">Dimension</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A subclass of Dimension focused on evaluating the validity of data within a dataset.</span>
+<span class="sd">    </span>
+<span class="sd">    This class performs various validity checks, including verifying NHS numbers, postcodes, future dates, date ranges, and ensuring data matches against specified lookup tables or falls within given numeric ranges.</span>
+<span class="sd">    </span>
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df : pandas.DataFrame</span>
+<span class="sd">        The dataset to be evaluated, imported via pandas&#39; read_csv() function.</span>
+<span class="sd">    test_params : pandas.DataFrame</span>
+<span class="sd">        The parameters defining how tests should be conducted, including specifics like date formats, lookup table names, and numeric ranges for validity checks.</span>
+<span class="sd">    date_format : str</span>
+<span class="sd">        The format used for parsing dates within the dataset. This should match the actual date format for accurate comparisons.</span>
+<span class="sd">    tests : dict</span>
+<span class="sd">        A dictionary mapping test names to their relevant information and methods, supporting various types of validity checks.</span>
+<span class="sd">    </span>
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    test_nhs_numbers(test)</span>
+<span class="sd">        Checks if NHS numbers in the dataset are valid according to the modulus 11 algorithm.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        test : str</span>
+<span class="sd">            The name of the test to be executed.</span>
+<span class="sd">        </span>
+<span class="sd">        The method checks if NHS numbers conform to the modulus 11 algorithm, marking them as valid or invalid accordingly.</span>
+
+<span class="sd">    test_postcode(test)</span>
+<span class="sd">        Validates the format of postcodes in the dataset using a regular expression.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        test : str</span>
+<span class="sd">            The name of the test to be executed, indicating the column to be checked for postcode validity.</span>
+<span class="sd">        </span>
+<span class="sd">        Uses a regular expression to match UK postcode formats. Postcodes that do not match the pattern are flagged as invalid.</span>
+
+<span class="sd">    test_against_lookup_tables(test)</span>
+<span class="sd">        Verifies if values in the dataset match against specified lookup tables.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        test : str</span>
+<span class="sd">            The name of the test to be executed, indicating the column and the associated lookup table for validation.</span>
+<span class="sd">        </span>
+<span class="sd">        The lookup table is expected to be a CSV file containing valid codes or values. Values not found in the lookup table are flagged as invalid.</span>
+
+<span class="sd">    test_ranges(test)</span>
+<span class="sd">        Checks if numeric values in the dataset fall within specified ranges.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        test : str</span>
+<span class="sd">            The name of the test to be executed, indicating the column and the numeric range for validation.</span>
+<span class="sd">        </span>
+<span class="sd">        The valid range is specified as two numbers separated by &#39;||&#39;. Values outside this range are flagged as invalid.</span>
+
+<span class="sd">    validate_nhs_number(nhs_number)</span>
+<span class="sd">        A helper method to validate a single NHS number using the modulus 11 algorithm.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        nhs_number : str or int</span>
+<span class="sd">            The NHS number to validate. It can be a string or integer; any spaces or non-numeric characters will be ignored.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            Returns True if the NHS number is valid, otherwise False.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        The method first checks for null or empty values, then verifies the length of the number. For a valid NHS number:</span>
+<span class="sd">        - The sum of the products of the first 9 digits and their weights, subtracted from 11, should equal the 10th digit (check digit).</span>
+<span class="sd">        - If the result of the subtraction is 11, it is replaced with 0 to match the check digit.</span>
+<span class="sd">        - A result of 10 indicates an invalid NHS number.</span>
+
+<span class="sd">    test_future_dates(test)</span>
+<span class="sd">        Identifies dates in the dataset that are in the future relative to the current date.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        test : str</span>
+<span class="sd">            The name of the test to be executed, indicating the column to be checked for future dates.</span>
+<span class="sd">        </span>
+<span class="sd">        Dates that are beyond the current datetime are considered invalid for this test.</span>
+
+<span class="sd">    min_max_dates(test)</span>
+<span class="sd">        Validates if dates in the dataset fall within a specified minimum and maximum date range.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        test : str</span>
+<span class="sd">            The name of the test to be executed, indicating the column and the date range for validation.</span>
+<span class="sd">        </span>
+<span class="sd">        Dates outside the specified minimum and maximum range are flagged as invalid. The range is defined by &#39;min_date&#39; and &#39;max_date&#39; test parameters.</span>
+
+<span class="sd">    test_pattern_validity(test)</span>
+<span class="sd">        Checks if values conform to an expected user-specified pattern.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        test : str</span>
+<span class="sd">            The name of the test to be executed. It is expected that test_params will include</span>
+<span class="sd">            the regex pattern for validation.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">test_params</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Initialises the Validity object with a dataset and test parameters.</span>
+        
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># df : pandas.DataFrame</span>
+        <span class="c1">#     The dataset to be evaluated.</span>
+        <span class="c1"># test_params : pandas.DataFrame</span>
+        <span class="c1">#     The parameters defining how tests should be conducted.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+
+        <span class="n">Dimension</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">test_params</span><span class="p">)</span>
+
+        <span class="c1"># Define various tests for validity checks</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tests</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Validity_Dates_Future&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;method&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_future_dates</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">},</span>
+            <span class="s1">&#39;Validity_Date_Range&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;method&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">min_max_dates</span><span class="p">,</span> 
+                                    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> 
+                                    <span class="s1">&#39;arg1&#39;</span><span class="p">:</span> <span class="s1">&#39;Validity_Date_Range_Min&#39;</span><span class="p">,</span> 
+                                    <span class="s1">&#39;arg2&#39;</span><span class="p">:</span> <span class="s1">&#39;Validity_Date_Range_Max&#39;</span><span class="p">},</span>
+            <span class="s1">&#39;Validity_NHS_Number&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;method&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_nhs_numbers</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">},</span>
+            <span class="s1">&#39;Validity_Postcode_UK&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;method&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_postcode</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">},</span>
+            <span class="c1"># &#39;Validity_Lookup_Table&#39;: {&#39;method&#39;: self.test_against_lookup_tables, </span>
+            <span class="c1">#                           &#39;default&#39;: False, </span>
+            <span class="c1">#                           &#39;arg1&#39;: &#39;Validity_Lookup_Table_Filename&#39;},</span>
+            <span class="s1">&#39;Validity_Lookup_Table&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;method&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_against_lookup_tables</span><span class="p">,</span> 
+                                      <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> 
+                                      <span class="s1">&#39;arg1&#39;</span><span class="p">:</span> <span class="s1">&#39;Validity_Lookup_Type&#39;</span><span class="p">,</span>
+                                      <span class="s1">&#39;arg2&#39;</span><span class="p">:</span> <span class="s1">&#39;Validity_Lookup_Codes&#39;</span><span class="p">},</span>
+            <span class="s1">&#39;Validity_Range&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;method&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_ranges</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;arg1&#39;</span><span class="p">:</span> <span class="s1">&#39;Validity_Range_Numeric&#39;</span><span class="p">},</span>
+            <span class="s1">&#39;Validity_Pattern&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;method&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_pattern_validity</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;arg1&#39;</span><span class="p">:</span> <span class="s1">&#39;Validity_Pattern_Regex&#39;</span><span class="p">}</span>
+            <span class="p">}</span>
+        
+<div class="viewcode-block" id="Validity.test_nhs_numbers">
+<a class="viewcode-back" href="../../api_reference/Validity.html#DQMaRC.Validity.test_nhs_numbers">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_nhs_numbers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Validates NHS numbers in a specified column of the dataset.</span>
+        
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># test : str</span>
+        <span class="c1">#     The name of the test to be executed.</span>
+        
+        <span class="c1"># The method checks if NHS numbers conform to the modulus 11 algorithm, marking them as valid or invalid accordingly.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">extra_args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+            <span class="k">return</span> <span class="o">~</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">validate_nhs_number</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">run_metric</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Validity.test_postcode">
+<a class="viewcode-back" href="../../api_reference/Validity.html#DQMaRC.Validity.test_postcode">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_postcode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Validates the format of postcodes in a specified column against a UK postcode regular expression pattern.</span>
+        
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># test : str</span>
+        <span class="c1">#     The name of the test to be executed, indicating the column to be checked for postcode validity.</span>
+        
+        <span class="c1"># Uses a regular expression to match UK postcode formats. Postcodes that do not match the pattern are flagged as invalid.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">extra_args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+            <span class="k">return</span> <span class="o">~</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+                <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">bool</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;^([A-Z]{1,2}\d[A-Z\d]? ?\d[A-Z]</span><span class="si">{2}</span><span class="s1">|GIR ?0A</span><span class="si">{2}</span><span class="s1">)$&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">())))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">run_metric</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span></div>
+
+
+    <span class="c1"># def test_against_lookup_tables(self, test):</span>
+    <span class="c1">#     # &quot;&quot;&quot;</span>
+    <span class="c1">#     # Verifies if values in a specified column match against a predefined lookup table of valid values.</span>
+        
+    <span class="c1">#     # Parameters</span>
+    <span class="c1">#     # ----------</span>
+    <span class="c1">#     # test : str</span>
+    <span class="c1">#     #     The name of the test to be executed, indicating the column and the associated lookup table for validation.</span>
+        
+    <span class="c1">#     # The lookup table is expected to be a CSV file containing valid codes or values. Values not found in the lookup table are flagged as invalid.</span>
+    <span class="c1">#     # &quot;&quot;&quot;</span>
+    <span class="c1">#     def func(col, extra_args=None):</span>
+    <span class="c1">#         lookup_name = self.test_params[self.test_params[&#39;Field&#39;] == col][self.tests[test][&#39;arg1&#39;]].item()</span>
+
+    <span class="c1">#         lookup_path = resource_filename(&#39;DQMaRC&#39;, f&#39;data/lookups/{lookup_name}&#39;)</span>
+    <span class="c1">#         lookup = pd.read_csv(lookup_path)</span>
+
+
+    <span class="c1">#         lookup = lookup.rename({&#39;Code2&#39;: &#39;Code&#39;}, axis=1)</span>
+    <span class="c1">#         return ~self.df[col].apply(lambda x: str(x).strip() in set(lookup[&#39;Code&#39;].astype(str)))</span>
+
+    <span class="c1">#     self.run_metric(test, func)</span>
+
+<div class="viewcode-block" id="Validity.test_against_lookup_tables">
+<a class="viewcode-back" href="../../api_reference/Validity.html#DQMaRC.Validity.test_against_lookup_tables">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_against_lookup_tables</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">extra_args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+            <span class="c1"># Retrieve the lookup type and codes (if any) from test parameters</span>
+            <span class="n">lookup_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">col</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">tests</span><span class="p">[</span><span class="n">test</span><span class="p">][</span><span class="s1">&#39;arg1&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+            <span class="n">lookup_codes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">col</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">tests</span><span class="p">[</span><span class="n">test</span><span class="p">][</span><span class="s1">&#39;arg2&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="n">lookup_type</span> <span class="o">==</span> <span class="s1">&#39;File&#39;</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="c1"># First path using resource_filename</span>
+                    <span class="n">infile</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">lookup_codes</span><span class="si">}</span><span class="s1">&#39;</span>
+                    <span class="n">lookup</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">infile</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+                    <span class="c1"># Second path using the parent directory of the script</span>
+                    <span class="n">lookup_path</span> <span class="o">=</span> <span class="n">resource_filename</span><span class="p">(</span><span class="s1">&#39;DQMaRC&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;data/lookups/</span><span class="si">{</span><span class="n">lookup_codes</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+                    <span class="n">lookup</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">lookup_path</span><span class="p">)</span>
+
+                <span class="c1"># Extract valid codes from the first column</span>
+                <span class="n">valid_codes_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">lookup</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+                
+            <span class="k">elif</span> <span class="n">lookup_type</span> <span class="o">==</span> <span class="s1">&#39;Values&#39;</span><span class="p">:</span>
+                <span class="c1"># Split comma-separated codes into a set</span>
+                <span class="n">valid_codes_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">code</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">code</span> <span class="ow">in</span> <span class="n">lookup_codes</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Lookup type must be &#39;File&#39; or &#39;Values&#39;&quot;</span><span class="p">)</span>
+
+            <span class="c1"># Apply validation by checking if each value is in the valid codes set</span>
+            <span class="k">return</span> <span class="o">~</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">in</span> <span class="n">valid_codes_set</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">run_metric</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Validity.test_ranges">
+<a class="viewcode-back" href="../../api_reference/Validity.html#DQMaRC.Validity.test_ranges">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_ranges</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Checks if numeric values in a specified column fall within a defined range.</span>
+        
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># test : str</span>
+        <span class="c1">#     The name of the test to be executed, indicating the column and the numeric range for validation.</span>
+        
+        <span class="c1"># The valid range is specified as two numbers separated by &#39;||&#39;. Values outside this range are flagged as invalid.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">extra_args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+            <span class="c1"># ranges = self.test_params[self.test_params[&#39;Field&#39;] == col][self.tests[test][&#39;arg1&#39;]].item().split(&#39;||&#39;)</span>
+            <span class="n">ranges</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">col</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">tests</span><span class="p">[</span><span class="n">test</span><span class="p">][</span><span class="s1">&#39;arg1&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">)</span> <span class="c1"># to make consistent</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">float</span><span class="p">(</span><span class="n">ranges</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">or</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">float</span><span class="p">(</span><span class="n">ranges</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">run_metric</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Validity.validate_nhs_number">
+<a class="viewcode-back" href="../../api_reference/Validity.html#DQMaRC.Validity.validate_nhs_number">[docs]</a>
+    <span class="k">def</span> <span class="nf">validate_nhs_number</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nhs_number</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Validates an NHS number using the modulus 11 algorithm.</span>
+
+        <span class="c1"># An NHS number is valid if it is 10 digits long, passes the modulus 11 check, and the last digit (check digit) matches the calculated result. The algorithm involves multiplying each of the first 9 digits by a weight, decreasing from 10 to 2, summing these products, and applying a modulus 11 operation.</span>
+
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># nhs_number : str or int</span>
+        <span class="c1">#     The NHS number to validate. It can be a string or integer; any spaces or non-numeric characters will be ignored.</span>
+
+        <span class="c1"># Returns</span>
+        <span class="c1"># -------</span>
+        <span class="c1"># bool</span>
+        <span class="c1">#     Returns True if the NHS number is valid, otherwise False.</span>
+
+        <span class="c1"># Notes</span>
+        <span class="c1"># -----</span>
+        <span class="c1"># The method first checks for null or empty values, then verifies the length of the number. For a valid NHS number:</span>
+        <span class="c1"># - The sum of the products of the first 9 digits and their weights, subtracted from 11, should equal the 10th digit (check digit).</span>
+        <span class="c1"># - If the result of the subtraction is 11, it is replaced with 0 to match the check digit.</span>
+        <span class="c1"># - A result of 10 indicates an invalid NHS number.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">nhs_number</span><span class="p">)</span> <span class="ow">or</span> <span class="n">nhs_number</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="c1"># number must be 10 digits long</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">nhs_number</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">nhs_number</span><span class="p">))</span><span class="o">.</span><span class="n">split</span><span class="p">())))</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">nhs_number</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">10</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">10</span> <span class="o">-</span> <span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nhs_number</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])]</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="mi">11</span> <span class="o">-</span> <span class="nb">sum</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">%</span> <span class="mi">11</span>
+
+            <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="mi">11</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">elif</span> <span class="n">result</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="k">return</span> <span class="n">result</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="n">nhs_number</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid input NHS Number: not a valid integer&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">False</span></div>
+
+    
+<div class="viewcode-block" id="Validity.test_future_dates">
+<a class="viewcode-back" href="../../api_reference/Validity.html#DQMaRC.Validity.test_future_dates">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_future_dates</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Identifies and flags dates in a specified column that are in the future relative to the current datetime.</span>
+        
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># test : str</span>
+        <span class="c1">#     The name of the test to be executed, indicating the column to be checked for future dates.</span>
+        
+        <span class="c1"># Dates that are beyond the current datetime are considered invalid for this test.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">extra_args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+            <span class="n">date_format_field1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_date_format</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
+            <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">date_format_field1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+                <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">inner</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">run_metric</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Validity.min_max_dates">
+<a class="viewcode-back" href="../../api_reference/Validity.html#DQMaRC.Validity.min_max_dates">[docs]</a>
+    <span class="k">def</span> <span class="nf">min_max_dates</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Validates if dates in a specified column fall within a given minimum and maximum date range.</span>
+        
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># test : str</span>
+        <span class="c1">#     The name of the test to be executed, indicating the column and the date range for validation.</span>
+        
+        <span class="c1"># Dates outside the specified minimum and maximum range are flagged as invalid. The range is defined by &#39;min_date&#39; and &#39;max_date&#39; test parameters.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">extra_args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+            <span class="n">date_format_field1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_date_format</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
+            <span class="n">min_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">col</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">tests</span><span class="p">[</span><span class="n">test</span><span class="p">][</span><span class="s1">&#39;arg1&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span> <span class="nb">format</span><span class="o">=</span><span class="n">date_format_field1</span><span class="p">)</span>
+            <span class="n">max_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">col</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">tests</span><span class="p">[</span><span class="n">test</span><span class="p">][</span><span class="s1">&#39;arg2&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span> <span class="nb">format</span><span class="o">=</span><span class="n">date_format_field1</span><span class="p">)</span>
+
+            <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="c1"># return (pd.to_datetime(x, format=self.date_format) &lt; min_date) | (pd.to_datetime(x, format=self.date_format) &gt; max_date)</span>
+                    <span class="k">return</span> <span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">date_format_field1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">min_date</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">date_format_field1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_date</span><span class="p">)</span>
+                <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">inner</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">run_metric</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Validity.test_pattern_validity">
+<a class="viewcode-back" href="../../api_reference/Validity.html#DQMaRC.Validity.test_pattern_validity">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_pattern_validity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="c1"># Validates the format of data items in specified columns against a user-defined regex pattern.</span>
+
+        <span class="c1"># Parameters</span>
+        <span class="c1"># ----------</span>
+        <span class="c1"># test : str</span>
+        <span class="c1">#     The name of the test to be executed. It is expected that test_params will include</span>
+        <span class="c1">#     the regex pattern for validation.</span>
+        <span class="c1"># &quot;&quot;&quot;</span>
+        <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">extra_args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+            <span class="c1"># Fetch the regex pattern from test_params</span>
+            <span class="n">pattern</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">test_params</span><span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">col</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">tests</span><span class="p">[</span><span class="n">test</span><span class="p">][</span><span class="s1">&#39;arg1&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+
+            <span class="k">def</span> <span class="nf">check_pattern</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+                <span class="c1"># If value is NaN, treat it as valid (return False for no error)</span>
+                <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="kc">False</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">try</span><span class="p">:</span>
+                <span class="c1"># Return True for error (non-match) and False for no error (match)</span>
+                        <span class="k">return</span> <span class="ow">not</span> <span class="nb">bool</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+                    <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                        <span class="k">return</span> <span class="kc">False</span>
+
+            <span class="c1"># Apply the pattern check across the column and return the result</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">check_pattern</span><span class="p">)</span>
+
+        <span class="c1"># Execute the function across the DataFrame</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">run_metric</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Anthony Lighterness and Michael Adcock
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Anthony Lighterness and Michael Adcock.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
