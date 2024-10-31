@@ -1,12 +1,13 @@
 from setuptools import setup, find_packages
-from pathlib import Path
+# from pathlib import Path
+from DQMaRC.__version__ import __version__
 
 with open("requirements.txt", encoding="utf-8-sig") as f:
     requirements = f.read().splitlines()
 
 setup(
     name='DQMaRC',
-    version='1.0.2',
+    version=__version__,
     author='Anthony Lighterness and Michael Adcock',
     author_email='tony.lighterness@gmail.com',
     
