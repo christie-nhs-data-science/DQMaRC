@@ -1,6 +1,11 @@
 name: Publish Python 🐍 distribution 📦 to PyPI and TestPyPI
 
-on: push
+# on: push # if you want it triggered on every push
+
+on:
+  push:
+    paths:
+      - "setup.py" # trigger if change to setup (e.g. version change)
 
 jobs:
   build:
