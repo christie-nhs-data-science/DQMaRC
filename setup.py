@@ -4,7 +4,7 @@ import os
 
 # Read the version string from the package without importing it
 version = {}
-with open(os.path.join("your_package", "__version__.py")) as f:
+with open(os.path.join("DQMaRC", "__version__.py")) as f:
     exec(f.read(), version)
 
 with open("requirements.txt", encoding="utf-8-sig") as f:
