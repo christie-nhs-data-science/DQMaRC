@@ -1,13 +1,18 @@
 from setuptools import setup, find_packages
 # from pathlib import Path
-from DQMaRC.__version__ import __version__
+import os
+
+# Read the version string from the package without importing it
+version = {}
+with open(os.path.join("your_package", "__version__.py")) as f:
+    exec(f.read(), version)
 
 with open("requirements.txt", encoding="utf-8-sig") as f:
     requirements = f.read().splitlines()
 
 setup(
     name='DQMaRC',
-    version=__version__,
+    version=version["__version__"],  # Use the extracted version
     author='Anthony Lighterness and Michael Adcock',
     author_email='tony.lighterness@gmail.com',
     
