@@ -25,7 +25,7 @@ citation_path = "./CITATION.cff"
 if os.path.exists(citation_path):
     with open(citation_path, "r+") as citation_file:
         citation_content = citation_file.read()
-        citation_content = re.sub(r"(version: .*)", f"version: {__version__}", citation_content)
+        citation_content = re.sub(r"(version: .*)", f"version: {version}", citation_content)
         citation_file.seek(0)
         citation_file.write(citation_content)
         citation_file.truncate()
