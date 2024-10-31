@@ -19,6 +19,16 @@ for filename in ["README.md", "README.rst"]:
         file.seek(0)
         file.write(content)
         file.truncate()
+        
+# Update CITATION.cff dynamically
+citation_path = "./CITATION.cff"
+if os.path.exists(citation_path):
+    with open(citation_path, "r+") as citation_file:
+        citation_content = citation_file.read()
+        citation_content = re.sub(r"(version: .*)", f"version: {__version__}", citation_content)
+        citation_file.seek(0)
+        citation_file.write(citation_content)
+        citation_file.truncate()
 
 setup(
     name='DQMaRC',
